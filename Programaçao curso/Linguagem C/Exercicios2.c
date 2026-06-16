@@ -1,3 +1,4 @@
+//Digite numero inteiro e diga se o numero e positivo ou negativo ou se e zero
 # include <stdio.h>
 
 int main ()
