@@ -31,11 +31,11 @@ int main() {
     // Write C code here
     int numero;
 
-    do {
+    while (numero <= 0){
         printf("Digite um numero positivo: ");
         scanf("%d", &numero);
 
-    } while (numero <= 0);
+    } 
     printf("Numero valido: %d\n", numero);
 
     return 0;
@@ -43,23 +43,45 @@ int main() {
 
 //O programa deve ler números inteiros até o utilizador introduzir 0 No final, deve mostrar a soma dos números introduzidos.
 
+
 #include <stdio.h>
 
 int main (){
     
     int numero,soma=0;
     
-    do{
+    while(numero != 0){
     printf("Digite um numero ou 0 para sair !: \n");
     scanf("%d", &numero);
     
-    if(numero > 0){
     soma +=numero;
-    }
     
-    }while(numero != 0);
+    }
     printf("A soma total é: %d", soma);
     
     
 }
 
+//Digite numero inteiro e diga se o numero e positivo ou negativo ou se e zero
+# include <stdio.h>
+
+int main ()
+{
+    
+    int numero;
+    
+    printf("digite um numero !!\n");
+    scanf ("%d", &numero);
+    
+     if (numero > 0 ){
+         printf("positivo");
+     }
+         else if (numero < 0){
+            printf("negativo");
+         }
+         else {
+             printf("0");
+         }
+         
+      return 0;
+ }
