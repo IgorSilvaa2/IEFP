@@ -1,0 +1,15 @@
+Sudo = Administrador.
+Sudo usermod -aG sudo User = adiciona usuario com privilegios de admin.
+Sudo ssh@User = Para acessar o servidor.
+su "User" = para logar no usuario.
+Sftp = para gerir arquivos no servidor.
+Sudo adduser User = adiciona um usuario.
+pwd = diz aonde esta.
+ls = listar a pasta (abrir).
+touch = adiciona ficheiros (touch nome do arquivo).
+cd /home/User= muda o diretorio do admin para do usuario .
+ls -lsa = Mostra os ficheiros escondidos.
+ls -l= mostra as premiçoes e informaçoes de ficheiros.
+chmod numero "nome do ficheiro" = para dar permiçoes no ficheiro(7= full,4= read , 2 write,)
+cd..= volta astras do ficheiro.
+
