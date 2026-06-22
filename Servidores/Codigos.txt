@@ -4,6 +4,8 @@ Sudo ssh@User = Para acessar o servidor.
 su "User" = para logar no usuario.
 Sftp = para gerir arquivos no servidor.
 Sudo adduser User = adiciona um usuario.
+Sudo -l = ve a autorizaçao do usuario.
+nano "nome do ficheiro"= para a=editar um ficheiro.
 pwd = diz aonde esta.
 ls = listar a pasta (abrir).
 touch = adiciona ficheiros (touch nome do arquivo).
@@ -12,4 +14,5 @@ ls -lsa = Mostra os ficheiros escondidos.
 ls -l= mostra as premiçoes e informaçoes de ficheiros.
 chmod numero "nome do ficheiro" = para dar permiçoes no ficheiro(7= full,4= read , 2 write,)
 cd..= volta astras do ficheiro.
-
+Exit = sai do usuario.
+ls -R = lista tos os arquivos e suas subpastas.
