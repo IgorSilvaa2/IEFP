@@ -89,16 +89,17 @@ int main ()
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <stdio.h>
+#include <stdbool.h>
 
 int main() {
-    int vet[12],positivo=0,soma=0,maior=0,menor,posicao1,posicao2=0,impar,par,pesquisa;
+    int vet[12],positivo=0,soma=0,maior,menor,posicao1,posicao2,impar,par,pesquisa,flag= 0;
     float media;
     printf("Digite valores inteiros para o  vetor! \n ");
     
     //1-
     //le o vetor
     for(int i = 0; i<12;i++){
-        printf("Digite os 10 valores %d: ", (i+1));
+        printf("Digite o %d° numero: ", (i+1));
         scanf("%d", &vet[i]);
     }
     
@@ -116,6 +117,7 @@ int main() {
     printf(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
     
     menor = vet[0];
+    maior = vet[0];
     //3-
     for(int i = 0; i<10;i++){
         if(vet[i] > maior){
@@ -152,15 +154,18 @@ printf(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
     printf("\nO total de numero par é : %d\nO total de numeros impar é : %d ",par,impar);
     //6
     printf(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-    printf("\nDigite um numero que deseja ver se esta no vetor! :");
-    scanf("%d",&pesquisa);
-    for(int i=0;i<10;i++){
+    
+    do{
+        printf("\nDigite um numero que deseja ver se esta no vetor! :");
+        scanf("%d",&pesquisa);
+        for(int i=0;i<10;i++){
         if(pesquisa == vet[i]){
             posicao1 = i;
             printf("\nEntre 1 e 10 o numero repete na posiçao: %d",(posicao1+1));
+            flag = 1;
+            }
         }
-    }
-    
+    }while(flag != 1 );
     
     return 0;
     }
