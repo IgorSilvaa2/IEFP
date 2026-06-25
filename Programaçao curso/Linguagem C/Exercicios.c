@@ -169,3 +169,115 @@ printf(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
     
     return 0;
     }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    //Exercicios de Matriz 
+
+    //1- Leitura e apresentação de uma matriz 3×3 Lê uma matriz 3×3 de números inteiros.Mostra a matriz no ecrã em formato de
+tabela.
+    #include <stdio.h>
+
+int main (){
+    int Mat[3][3];
+    for(int i =0;i<3;i++){
+        for(int j=0;j< 3;j++){
+            printf("Digite o numero da Linha %d e coluna %d !\n",(i+1) ,(j+1));
+            scanf("%d", &Mat[i][j]);
+        }
+    }
+    
+    for(int i =0;i<3;i++){
+        printf("\n");
+        for(int j=0;j< 3;j++){
+            printf("%d  ", Mat[i][j]);
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+//2 - Lê novamente uma matriz 3×3.Calcula e apresenta a soma de todos os seus elementos.
+#include <stdio.h>
+int main(){
+    int mat[3][3],soma=0;
+    
+    for(int i =0;i<3;i++){
+        for(int j=0;j<3;j++){
+            printf("Digite numero inteiro para a linha %d, Coluna %d: ",(i+1),(j+1));
+            scanf("%d",&mat[i][j]);
+            soma += mat[i][j];
+        }
+    }
+    printf("%d",soma);
+     
+}
+
+//3- Lê uma matriz 4×4 de números inteiros. Determina e apresenta: o maior valor existente na matriz, a posição (linha e coluna) onde esse valor se encontra.
+
+#include <stdio.h>
+int main(){
+    int mat[4][4],maior,Linha,Coluna;
+    maior = mat[1][1];
+    
+    for(int i =0;i<4;i++){
+        for(int j=0;j<4;j++){
+            printf("Digite numero inteiro para a linha %d, Coluna %d: ",(i+1),(j+1));
+            scanf("%d",&mat[i][j]);
+            if(mat[i][j] > maior){
+                Linha= i;
+                Coluna= j;
+                maior = mat[i][j];
+            }
+            
+        }
+    }
+    printf("O maior numero e %d esta na linha %d, e coluna %d",maior,(Linha+1), (Coluna+1));
+     
+}
+
+//4- Lê uma matriz 3×3. Mostra apenas os elementos da diagonal principal, ou seja:
+/*matriz[0][0]
+matriz[1][1]
+matriz[2][2]*/
+
+#include <stdio.h>
+int main(){
+    int mat[3][3];
+    
+    for(int i =0;i<3;i++){
+        for(int j=0;j<3;j++){
+            printf("Digite numero inteiro para a linha %d, Coluna %d: ",(i+1),(j+1));
+            scanf("%d",&mat[i][j]);
+        }
+    }
+    
+    for(int i =0;i<3;i++){
+        printf("\n");
+        for(int j=0;j< 3;j++){
+            printf("%d ",mat[i][j]);
+        }
+    }
+     printf("\nOs numeros da diagonais é :%d %d %d",mat[0][0],mat[1][1],mat[2][2]);
+}
+
+//5-Lê uma matriz 3×3. Calcula e apresenta a soma dos elementos da diagonal principal.
+
+
+#include <stdio.h>
+int main(){
+    int mat[3][3];
+    
+    for(int i =0;i<3;i++){
+        for(int j=0;j<3;j++){
+            printf("Digite numero inteiro para a linha %d, Coluna %d: ",(i+1),(j+1));
+            scanf("%d",&mat[i][j]);
+        }
+    }
+    
+    for(int i =0;i<3;i++){
+        printf("\n");
+        for(int j=0;j< 3;j++){
+            printf("%d ",mat[i][j]);
+        }
+    }
+     printf("\nA soma dos numeros da diagonail é :%d",(mat[0][0]+mat[1][1]+mat[2][2]));
+}

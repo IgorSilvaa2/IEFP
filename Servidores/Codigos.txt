@@ -16,3 +16,19 @@ chmod numero "nome do ficheiro" = para dar permiçoes no ficheiro(7= full,4= rea
 cd..= volta astras do ficheiro.
 Exit = sai do usuario.
 ls -R = lista tos os arquivos e suas subpastas.
+# 1. Compactar a pasta Documentos em Documentos.zip
+zip -r Documentos.zip Documentos
+
+# 2. Criar a pasta Backup no diretório pessoal
+mkdir -p ~/Backup
+
+# 3. Mover o ficheiro ZIP para Backup
+mv Documentos.zip ~/Backup/
+
+# 4. Entrar na pasta Backup e descompactar
+cd ~/Backup
+unzip Documentos.zip
+
+# 5. Verificar os ficheiros
+ls -l
+ls -l Documentos
