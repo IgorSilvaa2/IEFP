@@ -171,7 +171,7 @@ printf(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////
-    //Exercicios de Matriz 
+    //EXERCICIOS DE MATRIZ
 
     //1- Leitura e apresentação de uma matriz 3×3 Lê uma matriz 3×3 de números inteiros.Mostra a matriz no ecrã em formato de
 tabela.
@@ -283,6 +283,7 @@ int main(){
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
+//EXERCICIOS DE STRUCT
 //1-Cria uma struct Pessoa com: int idade; float altura; float peso;
 //O programa deve:
 // ler os dados de uma pessoa;
@@ -320,3 +321,89 @@ int main() {
 // mostrar os dados;
 // indicar se está aprovado ou reprovado.
 //Considera aprovado quem tiver nota maior ou igual a 10.
+
+#include <stdio.h>
+
+struct pessoa{
+    int numero;
+    int idade;
+    float nota;
+};
+int main() {
+   struct pessoa aluno;
+   
+   printf("Digite os dados so Aluno !!\n");
+   printf("Numero do aluno: ");
+   scanf("%d", &aluno.numero);
+   printf("idade do aluno: ");
+   scanf("%d", &aluno.idade);
+   printf("Nota do aluno: ");
+   scanf("%f", &aluno.nota);
+   
+   printf("Numero: %d - Idade: %d  - Nota: %1.f", aluno.numero, aluno.idade, aluno.nota);
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//3-Cria uma struct Produto com:
+//int codigo; float preco; int quantidade;
+//O programa deve:
+// ler os dados de um produto;
+// calcular o valor total em stock. Fórmula: valorTotal = preco * quantidade;
+
+#include <stdio.h>
+
+struct pessoa{
+    int codigo;
+    int quantidade;
+    float preco;
+};
+int main() {
+    struct pessoa produto;
+    
+    printf("Digite os dados do produto !!\n");
+   printf("codigo do produto:");
+   scanf("%d", &produto.codigo);
+   printf("quantidade do produto: ");
+   scanf("%d", &produto.quantidade);
+   printf("Preço do produto: ");
+   scanf("%f", &produto.preco);
+   
+   float valorTotal = produto.preco * produto.quantidade;
+   printf("Valor total e stock: %.2f",valorTotal);
+    
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//4-Cria uma struct Retangulo com:
+//float largura; float altura;
+//O programa deve:
+// ler a largura e a altura;
+// calcular a área;
+// calcular o perímetro.
+//Fórmulas: area = largura * altura; perimetro = 2 * (largura + altura);
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+struct retangulo{
+    float altura;
+    float largura;
+};
+int main() {
+    struct retangulo d1 ;
+    
+    printf("Digite a largura e altura do retangulo !!\n");
+   printf("largura: ");
+   scanf("%f", &d1.largura);
+   printf("altura: ");
+   scanf("%f", &d1.altura);
+   
+   float area = d1.largura * d1.altura;
+   float perimetro = 2* (d1.largura+d1.altura);
+   printf("a area do retangulo é: %.2f  - O perimetro do retanuglo é: %.2f", area, perimetro);
+    
+    return 0;
+}
