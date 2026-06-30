@@ -281,3 +281,42 @@ int main(){
     }
      printf("\nA soma dos numeros da diagonail é :%d",(mat[0][0]+mat[1][1]+mat[2][2]));
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//1-Cria uma struct Pessoa com: int idade; float altura; float peso;
+//O programa deve:
+// ler os dados de uma pessoa;
+// apresentar idade, altura e peso;
+// calcular e mostrar o IMC.
+// Fórmula: imc = peso / (altura * altura);
+
+#include <stdio.h>
+
+struct pessoa{
+    int idade;
+    float altura;
+    float peso;
+};
+int main() {
+    float imc;
+    struct pessoa p1;
+    printf("digite a idade, altura e peso !\n");
+    printf("Idade: ");
+    scanf("%d", &p1.idade);
+    printf("altura: ");
+    scanf("%f", &p1.altura);
+    printf("Peso: ");
+    scanf("%f", &p1.peso);
+    imc = p1.peso / (p1.altura *p1.altura );
+    printf ("O IMC é: %f", imc);
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+//2-Cria uma struct Aluno com: int numero; int idade; float nota;
+//O programa deve:
+// ler os dados de um aluno;
+// mostrar os dados;
+// indicar se está aprovado ou reprovado.
+//Considera aprovado quem tiver nota maior ou igual a 10.
