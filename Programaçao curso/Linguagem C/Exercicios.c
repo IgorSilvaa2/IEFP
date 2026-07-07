@@ -407,3 +407,58 @@ int main() {
     
     return 0;
 }
+///////////////////////////////////////////////////////////////////////////////////////////
+// Online C compiler to run C program online
+//1-Lê uma matriz 3x3 e mostra a soma de cada coluna.
+// Online C compiler to run C program online
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int mat[3][3],soma,vet[3];
+    //leitura da matriz
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            printf("Digite os valores para linha %d, coluna %d: ",i,j);
+            scanf("%d", &mat[i][j]);
+        }
+    }
+    //imprime a matriz
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+        printf("%d ",mat[i][j]);
+        }
+        printf("\n");
+    }
+    //imprime a diagonal da matriz
+    for(int i=0;i<3;i++){
+        printf("%d", mat[i][i]);
+    }
+    printf("\n");
+    //imprime a diagonal contraria da matriz
+    for(int i=0;i<3;i++){
+        printf("%d", mat[i][(3-1-i)]);
+    }
+     
+    //soma das colunas sem vetor 
+    for (int j=0;j<3;j++){
+        int soma=0;
+        for(int i=0;i<3;i++){
+            soma += mat[i][j];
+            
+        }
+        printf("\nSoma da coluna %d = %d\n ",(j+1),soma);
+    }
+    //soma das colunas com vetor
+    for (int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            vet[j] += mat[i][j];
+        }
+    }
+    //imprimi a soma das colunas pelo vetor .
+    for(int j=0;j<3;j++){
+        printf("%d\n",vet[j]);
+    }
+
+    return 0;
+}

@@ -4,24 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo de tabela</title>
+    <style>
+        td{
+            border:solid 1px;
+        }
+        th{
+            border:solid 1px;
+        }
+    </style>
 </head>
 <body>
     <h1>Criaçao de uma tabela</h1>
-    <table width="380" style="border: solid 10px;">
+    <table width="380" style="border: solid 2px;">
         <tr>
-            <td style="height: 37px;align-items: center; vertical-align: middle;">Vendas/Mes</td>
-            <th style="align-items: left;vertical-align: bottom;">Janeiro</th>
-            <th style="align-items: left;vertical-align: bottom;">Fevereiro></th>
-            <th style="align-items: left;vertical-align: bottom;">Março></th>
+            <td style="height: 37px center; vertical-align: top;">Vendas/Mes</td>
+            <th style="align-items: left;vertical-align: top;">Janeiro</th>
+            <th style="align-items: left;vertical-align: top;">Fevereiro</th>
+            <th style="align-items: left;vertical-align: top;">Março</th>
         </tr>
         <tr>
-            <td>
                 <td style="height: 36px;align-items: right;vertical-align: top;"></td>
                 <th style="vertical-align: middle;">10</th>
-                <th style="vertical-align: middle;">15></th>
-                <th style="vertical-align: middle;">15></th>
-            </td>
+                <th style="vertical-align: middle;">15</th>
+                <th style="vertical-align: middle;">15</th>    
         </tr>
+        <br>
     </table>
+    <h2>Tabela 2</h2>
+    <table width="380" style="border: solid 2px;background-color: brown;">
+        <tr>
+            <td style="height: 37px;align-items: center; vertical-align: top;background-color: rgb(238, 192, 209);">Vendas/Mes</td>
+            <th style="align-items: left;vertical-align: top;background-color: rgb(238, 192, 209);">Janeiro</th>
+            <th style="align-items: left;vertical-align: top;background-color: rgb(238, 192, 209);">Fevereiro</th>
+            <th style="align-items: left;vertical-align: top;background-color: rgb(238, 192, 209);">Março</th>
+        </tr>
+        <tr>
+                <td style="height: 36px;align-items: right;vertical-align: middle;background-color: rgb(238, 192, 209);">Dias</td>
+                <th style="vertical-align: middle;background-color: rgb(238, 192, 209);">10</th>
+                <th style="vertical-align: middle;background-color: rgb(238, 192, 209);">15</th>
+                <th style="vertical-align: middle;background-color: rgb(238, 192, 209);">15</th>    
+        </tr>
+        <br>
+    </table>
+
 </body>
 </html>
