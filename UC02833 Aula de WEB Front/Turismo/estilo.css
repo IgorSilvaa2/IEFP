@@ -2,6 +2,7 @@ body{
     background-color: rgba(116, 153, 255, 0.637);/*cor d efundo da pagina*/
     font-family: Verdana, Geneva, Tahoma, sans-serif;/*tipo de letra nao serifada*/
     
+    
 h1{
     text-align: center;/*texto alinhado ao centro*/
     width: 90%;/*largura para o titulo*/
@@ -61,4 +62,5 @@ footer{
     background-color: black;
     color: white;
     text-align: center;
+    margin-top: 100vh;
 }
