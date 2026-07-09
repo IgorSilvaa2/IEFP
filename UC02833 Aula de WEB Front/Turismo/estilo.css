@@ -1,0 +1,35 @@
+body{
+    background-color: rgba(255, 246, 116, 0.904);/*cor d efundo da pagina*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;/*tipo de letra nao serifada*/
+}
+h1{
+    text-align: center;/*texto alinhado ao centro*/
+    width: 90%;/*largura para o titulo*/
+    background-color: darkblue;/*cor do fundo*/
+    color: aliceblue;/*cor da letra*/
+    margin-left: auto;/*centra o h1 da pagina*/
+    margin-right: auto;/*centra o h1 da pagina*/
+    border-radius: 20px;/*arredonda o background*/
+}
+main {
+max-width: 1200px;
+text-align: center;/*texto alinhado ao centro*/
+margin-right: auto;
+margin-left: auto;
+
+}
+
+.linha {
+display: flex;
+gap: 10px;
+width: 100%;
+width: 900px;
+}
+
+.coluna-interna {
+flex: 1;
+background-color: #ffffff;
+padding: 5px;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
