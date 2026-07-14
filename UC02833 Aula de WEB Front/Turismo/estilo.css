@@ -64,3 +64,9 @@ footer{
     text-align: center;
     margin-top: 100vh;
 }
+.aside{
+    position: absolute;
+    top: 180px;/* Distancia do topo da tela */
+    right: 5px;/* Distancia do direita da tela */
+    z-index: 5;/* fica a frente de outros element */
+}
