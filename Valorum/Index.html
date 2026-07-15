@@ -6,12 +6,27 @@
     <title>Valorum</title>
     <style>
         body{
+            font-family: Arial, Helvetica, sans-serif;
             background-color: rgb(9, 31, 58);
+            background-image: url(fundo.png);
+            min-height: 100vh;     
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
         }
         .where{
             color: whitesmoke;
             font-size: 90px;
-            margin: 1px;
+            margin: 0px; /* Mudado para 0 para controlar melhor o espaçamento das palavras */
+            line-height: 1.1; /* Junta um pouco as linhas do texto */
+            
+        }
+        .where2{
+            color: whitesmoke;
+            font-size: 24px;
+            margin: 15px; /* Mudado para 0 para controlar melhor o espaçamento das palavras */
+            line-height: 1.1; /* Junta um pouco as linhas do texto */
             
         }
         .menu{
@@ -20,14 +35,63 @@
             text-align: center;  
             background-color: rgba(255, 255, 255, 0.089);     
         }
+        .textoprincipal{    
+            display: flex;
+            flex-direction: column; /* Mantém as palavras do texto empilhadas uma por baixo da outra */
+        }
+        .logo{
+            max-width: 500px; /* Ajuste este valor para o tamanho que preferir */
+            height: auto;
+        }
+        .banner-conteudo{
+            display: flex;
+            align-items: center; /* Alinha verticalmente ao centro */
+            justify-content: center; /* Centraliza o conjunto na página */
+            gap: 250px; /* Cria um espaço de 50px entre o texto e a logo */
+            margin-top: 200px; /* Afasta o bloco todo do menu do topo */
+         }
+         .marcas-footer {
+            margin-top: 120px;          /* Afasta as marcas do bloco de cima */
+            width: 100%;
+            /*overflow: hidden;           /* Esconde os logos que saem do ecrã */
+            padding: 20px 0;
+            position: relative;
+}
     </style>
 </head>
 <body>
+   
     <nav class="menu">
         <h1 style="color: rgb(30, 254, 253);">Valorum</h1>
     </nav>
-    <h2 class="where">Where</h2>
-    <h2 class="where">everyone </h2>
-    <h2 class="where">can grow.</h2>
+
+    <div class="banner-conteudo">
+        <div class="textoprincipal">
+            <h2 class="where">Where</h2>
+            <h2 class="where">everyone </h2>
+            <h2 class="where">can </h2>  
+            <h2 class="where">grow.</h2> 
+            <br><br>
+            <h4 class="where2">A platform that democratizes access to capital,</h4>
+            <h4 class="where2">allowing good ideas to prosper regardless of the </h4>
+            <h4 class="where2">origin or financial level of those who create them.</h4>
+        </div>
+
+        <div class="logo">
+            <img src="logo (ícone).png" alt="logo valorum" width="500px" >
+        </div>
+
+    </div>
+
+    
 </body>
+<footer>
+    <div class="marcas-footer">
+        <marquee behavior="" direction="">
+                <img src="carrossel de parceiros.png" alt="imagem patrocionio" width="auto"  margin-top: 200px;>
+        </marquee>
+        
+    </div>
+    
+</footer>
 </html>
