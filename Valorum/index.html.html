@@ -32,11 +32,16 @@
             line-height: 1.1; /* Junta um pouco as linhas do texto */
             
         }
-        .menu h1{
-            border: 1px solid white; 
-            border-radius: 10px;
-            text-align: center;  
-            background-color: rgba(255, 255, 255, 0.089);     
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            background-color: rgba(6, 18, 36, 0.8); /* Fundo semi-transparente */
+            border: 1px solid #0055ff; /* Borda azul brilhante */
+            border-radius: 4px;
+            color: #ffffff;
+            text-decoration: none;
         }
         .textoprincipal{    
             display: flex;
@@ -64,8 +69,11 @@
 </head>
 <body>
    
-    <nav class="menu">
-        <h1 style="color: rgb(30, 254, 253);">Valorum</h1>
+    <nav class="navbar">
+        <h1 style="color: rgb(30, 254, 253); ">Valorum</h1>
+        <h3 style="color: white;">Docs</h3>
+        <h3 style="color: white;">Community</h3>
+        <h3 style="color: white;">$Valor</h3>
     </nav>
 
     <div class="banner-conteudo">
