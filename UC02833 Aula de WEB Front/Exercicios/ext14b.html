@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ext14b</title>
+    <style>
+        .esquerdo{ 
+            width: 150px;
+            text-align: left;
+        }
+        .direita{
+            flex: 1;
+            text-align: left;
+        }
+        .linha{
+            width: 900px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        body{
+            background-color: rgba(128, 128, 128, 0.438);
+        }
+        form{
+            border: 1px grey solid; 
+            padding: 40px; 
+            width: 70%; 
+            border-radius: 10px; 
+            background-color: whitesmoke;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="margin-left: 20%;">Inscrição</h1>
+    </header>
+
+    <main>
+        <section>
+            <form  action="mailto:boxigor.pt@gmail.com"method="post">
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="nome">Nome:* </label>
+                    </div>
+                    <div class="direita">
+                        <input type="text" name="nome" size="60" required maxlength="100" placeholder="Coloque o nome">
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="email">Mail:* </label>
+                    </div>
+                    <div class="direita">
+                        <input type="email" name="E-mail" size="40" required maxlength="40" placeholder="nome@dominio.com">
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="senha">Password:* </label>
+                    </div>
+                    <div class="direita">           
+                        <input name="senha" type="password" size="10" required maxlength="40">
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="senha">Password:* </label>
+                    </div>
+                    <div class="direita">           
+                        <input name="senha" type="password" size="10" required maxlength="40">
+                    </div>         
+                </div>
+
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="sexo">Sexo: </label>
+                    </div>
+                    <div class="direita">
+                            <input type="radio" name="sexo" value="1">Masculino <br>
+                            <input type="radio" name="sexo" value="2">Feminino <br>             
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="senha">Morada: </label>
+                    </div>
+                    <div class="direita">           
+                        <input type="text" name="nome" size="60" required maxlength="100" >
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="senha">Codigo Postal: </label>
+                    </div>
+                    <div class="direita">           
+                        <input type="text" name="nome" size="45" required maxlength="100" >
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="interesse">Interesse: </label>
+                    </div>
+                    <div class="direita">
+                            <input type="checkbox" name="interesse" value="1">Programação <br>
+                            <input type="checkbox" name="interesse" value="2">Webdesign <br>
+                            <input type="checkbox" name="interesse" value="2">Imagem <br>
+                            <input type="checkbox" name="interesse" value="2">Video <br>             
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="tipo">Tipo: </label>
+                    </div>
+                    <div class="direita">
+                        <select name="tipo" id="tipo">
+                            <option value="tipo">Formando</option>
+                            <option value="sugestao">sugetões</option>
+                        </select>
+                    </div>
+                </div>
+
+                </div>
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="mensagem">Sobre: </label>
+                    </div>
+                    <div class="direita">             
+                        <textarea name="msg" cols="80" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <div >   
+                    <p style="margin-left: 20%; margin-right: auto;">
+                        <input  type="submit" value="OK" >
+                        <input  type="reset" value="Limpar">
+                        <input  type="button" value="Criador"
+                        onclick="javascript:alert('Igor Silva')">
+                    </p>
+                </div>
+
+            </form>
+        </section>
+    </main>
+    
+    
+</body>
+</html>

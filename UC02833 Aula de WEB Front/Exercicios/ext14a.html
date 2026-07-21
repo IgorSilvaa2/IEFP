@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ext14a</title>
+    <style>
+        .esquerdo{ 
+            width: 150px;
+            text-align: right;
+        }
+        .direita{
+            flex: 1;
+            text-align: left;
+        }
+        .linha{
+            width: 900px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        form{
+            border: 1px grey solid; 
+            padding: 40px; 
+            width: 70%; 
+            border-radius: 10px; 
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="margin-left: 20%;">Comentários</h1>
+    </header>
+
+    <main>
+        <section>
+                <form  action="mailto:boxigor.pt@gmail.com"method="post">
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="nome">Nome: </label>
+                    </div>
+                    <div class="direita">
+                        <input type="text" name="nome" size="60" required maxlength="100" placeholder="Coloque o nome">
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="email">E-mail: </label>
+                    </div>
+                    <div class="direita">
+                        <input type="email" name="E-mail" size="40" required maxlength="40" placeholder="nome@dominio.com">
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="assunto">Assunto: </label>
+                    </div>
+                    <div class="direita">
+                        <select name="assunto" id="sugestao">
+                            <option value="sugestao">soluções</option>
+                            <option value="sugestao">sugetões</option>
+                            <option value="sugestao">nenhuma</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="mensagem">Mensagem: </label>
+                    </div>
+                    <div class="direita">             
+                        <textarea name="msg" cols="80" rows="4"></textarea>
+                    </div>
+                </div>
+                
+                <div class="linha">
+                    <div class="esquerdo">
+                        <label for="senha">Password: </label>
+                    </div>
+                    <div class="direita">           
+                        <input name="senha" type="password" size="10" required maxlength="40">
+                    </div>
+                </div>
+
+                <div style="margin-left: 20%;">   
+                    <input  type="submit" value="OK" >
+                    <input  type="reset" value="Limpar">
+                </div>
+
+                </form>
+        </section>
+    </main>
+    
+    
+</body>
+</html>
