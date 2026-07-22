@@ -1,3 +1,4 @@
+//1- Cria um programa que leia as notas de 10 alunos para um vetor.Cada nota deve estar entre 0 e 20. Se o utilizador introduzir uma nota inválida, o programa deve voltar a pedir essa mesma nota.Depois de preencher o vetor, o programa deve mostrar:Todas as notas introduzidas;A média da turma;A maior nota;A menor nota;Quantos alunos tiveram nota acima da média;Quantos alunos foram aprovados;A posição do aluno com a melhor nota;As notas por ordem inversa.
 #include <stdio.h>
 
 int main() {
@@ -60,7 +61,7 @@ int main() {
 
 //matriz Exercicio 2  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>// 
 
-// Online C compiler to run C program online
+// 2- Lê uma matriz nxn.O programa deve calcular a soma da diagonal principal e a soma da diagonal secundária.No final, deve indicar qual das diagonais tem maior soma ou se são iguais.
 #include <stdio.h>
 
 int main() {
@@ -104,6 +105,7 @@ int main() {
 };
 
 //Struct Exercicio 3  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+//3- Cria uma struct Produto com os campos codigo, preco e quantidade.Lê os dados de 5 produtos para um vetor de structs.O programa deve mostrar o valor total em stock de cada produto, o código do produto com maior valor em stock e a soma total do stock da loja.O valor em stock é calculado por preco * quantidade.
 int main (){
     
     struct produto vet_produtos[5];
@@ -137,3 +139,6 @@ int main (){
     
     
 }
+
+//Struct Exercicio 4  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+//4- Cria uma struct Aluno com os campos numero, idade e nota. Lê os dados de n alunos.O programa deve mostrar os dados de todos os alunos, a média das notas, quantos alunos foram aprovados, o número do aluno com melhor nota, os alunos com idade maior ou igual a 18 anos.Um aluno é aprovado se tiver nota maior ou igual a 10.
