@@ -60,42 +60,37 @@ int main() {
 
 //matriz Exercicio 2  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>// 
 
+// Online C compiler to run C program online
 #include <stdio.h>
 
-int main (){
-    int l,c, soma=0,somab=0;
+int main() {
     
-    printf("Digite a quantidade de linhas da matriz ! :");
-    scanf("%d", &l);
-    printf("Digite a quantidade de colunas da matriz ! :");
-    scanf("%d", &c);
+    int n,soma=0,somab=0;
+    printf("Digite o tamanho da matriz :");
+    scanf("%d", &n);
     
-    int mat[l][c];
+    int mat[n][n];
     
-    for (int i= 0; i< l; i++){
-        for (int j= 0; j<c ; j++){
-            printf("Digite o valor da linha %d, e coluna %d :", (i+1),(j+1));
-            scanf("%d",&mat[i][j]);
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n; j++){
+            printf("Digite o valor para linha %d, coluna %d:",(i+1), (j+1));
+            scanf("%d", &mat[i][j]);
         }
     }
     
-    printf(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n");
-    for (int i= 0; i< l; i++){
-        somab += mat[i][(l-1-i)];
-        for (int j= 0; j< c; j++){
-            printf(" %d -", mat[i][j]);
+    for (int i = 0; i < n; i++){
+        somab += mat[i][(n-1-i)];
+        for (int j = 0; j < n; j++){
+            printf("%d -", mat[i][j]);
             if(i == j){
-                soma += mat[i][j];
+                soma += mat[i][j]; 
             }
         }
         printf("\n");
     }
     
-    
-    
-    printf("Soma da diagonal principal %d \n", soma);
-    printf("Soma da diagonal secundaria %d \n", somab);
-    
-    
-    
+    printf("Soma da diagonal principal: %d\n", soma);
+    printf("Soma da diagonal invertida: %d\n", somab);
+
+    return 0;
 }
