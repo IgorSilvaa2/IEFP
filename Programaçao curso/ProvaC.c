@@ -94,3 +94,46 @@ int main() {
 
     return 0;
 }
+
+#include <stdio.h>
+
+ struct produto{
+    int codigo;
+    int quantidade;
+    float preco;
+};
+
+//Struct Exercicio 3  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+int main (){
+    
+    struct produto vet_produtos[5];
+    int soma=0,maior=0;
+    
+    
+    for(int i=0;i<5;i++){
+    printf("Cadastro do produto %d\n", (i+1));
+    
+    printf("Codigo do produto:");
+    scanf("%d", &vet_produtos[i].codigo);
+    
+    printf("Quantidade do produto:");
+    scanf("%d", &vet_produtos[i].quantidade);
+    
+    printf("Preço do produto:");
+    scanf("%f", &vet_produtos[i].preco);
+    
+    printf("A quantidade em stock do produto %d é: %d",(i+1), vet_produtos[i].quantidade);
+    printf("\n>>>>>>>>>>>>>>>>>>>>>>>\n");
+    
+    if(vet_produtos[i].quantidade > vet_produtos[maior].quantidade){
+        maior = i;
+    }
+    
+    soma += vet_produtos[i].quantidade;
+    }
+    
+    printf("Stock total: %d\n", soma);
+    printf("O codigo do produto com maior stock é: %d", vet_produtos[maior].codigo);
+    
+    
+}
