@@ -6,95 +6,175 @@
     <title>Valorum</title>
     <style>
         body{
-            flex: 1;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: rgb(9, 31, 58);
             background-image: url(fundo.png);
-            min-height: 100vh;     
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            margin: 0;
-            padding: 10px;
-            box-sizing: border-box; /* Garante que as margens internas não estoure a largura */
+            background-size: cover; /* 2. Garante que a imagem cobre toda a tela sem distorcer */
+            background-position: center; /* 3. Centra a imagem na horizontal e vertical */
+            background-repeat: no-repeat; /* 4. Evita que a imagem se repita se a tela for muito grande */
+            min-height: 100vh;  /* 5. Faz o fundo ocupar no mínimo a altura total da janela */
+            margin: 0;  /* Margem zero para colar o menu nas bordas da tela */
+            background-color:  rgba(10, 22, 40, 1);
+   
         }
-        .where{
-            color: whitesmoke;
-            font-size: 4.8rem;
-            margin: 0px; /* Mudado para 0 para controlar melhor o espaçamento das palavras */
-            line-height: 1.1; /* Junta um pouco as linhas do texto */
-            
-        }
-        .where2{
-            color: whitesmoke;
-            font-size: 1.0rem;
-            margin: 15px; /* Mudado para 0 para controlar melhor o espaçamento das palavras */
-            line-height: 1.1; /* Junta um pouco as linhas do texto */
-            
-        }
-        .navbar {
+        header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 12px 24px;
-            background-color: rgba(6, 18, 36, 0.8); /* Fundo semi-transparente */
-            border: 1px solid #0055ff; /* Borda azul brilhante */
+            width: 1440px ;
+            padding: 20px 40px;
             border-radius: 4px;
-            color: #ffffff;
-            text-decoration: none;
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: rgba(255, 255, 255, 0.04); /* 1. Fundo branco ou escuro bem transparente */ 
+            backdrop-filter: blur(12px); /* 2. O SEGREDO: Desfoca tudo o que estiver ATRÁS do elemento */
+            -webkit-backdrop-filter: blur(12px); /* Suporte para navegadores Safari */
+            border: 1px solid rgba(255, 255, 255, 0.15);/* 3. Uma borda fina e clara para simular o reflexo do vidro */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* 5. Sombra suave para dar profundidade */
+            
+
         }
-        .textoprincipal{    
+        nav a{
+            color: #b0b8c1;
+            font-size: 20px;/* Aumenta o tamanho das letras do menu */
+            fonte font-weight: 500; /* Deixa a letra ligeiramente mais espessa */
+            text-decoration: none; /* remove o sublinhado */
+            transition: color 0.3s; /* Faz a mudança de cor suave ao passar o rato */
+        }
+        nav {
             display: flex;
-            flex-direction: column; /* Mantém as palavras do texto empilhadas uma por baixo da outra */
+            gap: 30px;
+    
+             /* O TRUQUE: Empurra o menu para o centro exato da barra */
+            margin-left: auto;
+            margin-right: auto; 
+}
+        nav a:hover {
+            color: #00ffc8;
+        }
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #00ffc8;
+            letter-spacing: 1px;
+            font-family:Georgia, serif;
+            margin: 0;
+            padding-left: 40px;
+        }
+        h2{
+            color: white;
+            margin: 0;
+            font-family:Georgia, serif;
+        }
+        h4{
+            color: white;
+            margin: 0;
+            font-family:Georgia, serif;
+        }
+        .container {
+            width: 1440px 688px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            margin-top: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 1px;
+             
         }
         .logo{
-            max-width: 500px; /* Ajuste este valor para o tamanho que preferir */
-            margin-bottom: 200px;
+            margin-bottom: 10%;
+            margin-right: 13%;
         }
-        .banner-conteudo{
-            display: flex;
-            align-items: center; /* Alinha verticalmente ao centro */
-            justify-content: center; /* Centraliza o conjunto na página */
-            gap: 90px; /* Cria um espaço de 50px entre o texto e a logo */
-            margin-top: 100px; /* Afasta o bloco todo do menu do topo */
-         }
-         .marcas-footer {
-            margin-top: 120px;          /* Afasta as marcas do bloco de cima */
-            width: 100%;
-            /*overflow: hidden;           /* Esconde os logos que saem do ecrã */
-            padding: 20px 0;
-            position: relative;
-}
+        .where {
+        color: #ffffff;
+        width: 640px ;
+        font-size: 5rem;          /* Letras grandes como na sua imagem */
+        font-weight: bold;
+        line-height: 1.10;        /* Deixa as linhas bem juntinhas na vertical */
+        margin: 0 0 2px 0;       /* Cria o espaço ideal para o parágrafo de baixo */ 
+        max-width: 300px; /* Força o título a quebrar palavra por palavra */        
+        display: block;
+        margin-left: 20%;
+        }
+        .where2 {
+        color: #b0b8c1;
+        font-size: 1.3rem;
+        font-weight: normal;
+        line-height: 1.4;
+        margin-left: 20%;
+        
+        
+        }
+        /* Contentor para alinhar os botões lado a lado */
+        .btn {
+        background-color: rgba(255, 255, 255, 0.05); /* Fundo muito transparente */
+        color: #cbd5e1; /* Cor do texto (branco acinzentado) */
+        border: 1px solid rgba(255, 255, 255, 0.1); /* Borda subtil e transparente */
+        border-radius: 4px; /* Cantos ligeiramente arredondados */
+        padding: 10px 24px; /* Espaçamento interno (vertical e horizontal) */
+        font-family: Georgia, serif; /* Fonte com serifa igual à da imagem */
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease; /* Efeito suave ao passar o rato */      
+        }
+        /* Efeito visual ao passar o rato (Hover) */
+        .btn:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Fica ligeiramente mais claro */
+        }
+        .button-container {
+        display: flex;
+        gap: 16px;          /* Controla o espaço exato entre os dois botões */
+        margin-left: 20%;   /* Alinha o bloco com o texto de cima */
+        margin-top: 1px;   /* Empurra os botões para baixo do parágrafo */
+        }
+
     </style>
 </head>
 <body>
-   
-    <nav class="navbar">
-        <h1 style="color: rgb(30, 254, 253); ">Valorum</h1>
-        <h3 style="color: white;">Docs</h3>
-        <h3 style="color: white;">Community</h3>
-        <h3 style="color: white;">$Valor</h3>
-    </nav>
 
-    <div class="banner-conteudo">
-        <div class="textoprincipal">
-            <h2 class="where">Where</h2>
-            <h2 class="where">everyone </h2>
-            <h2 class="where">can </h2>  
-            <h2 class="where">grow.</h2> 
-            <br><br>
-            <h4 class="where2">A platform that democratizes access to capital,</h4>
-            <h4 class="where2">allowing good ideas to prosper regardless of the </h4>
-            <h4 class="where2">origin or financial level of those who create them.</h4>
+   <header>
+        <div>
+            <h1>Valorum</h1>
         </div>
+            
+        
 
-        <div class="logo">
-            <img src="logo.png" alt="logo valorum" width="400px" >
+        <nav >
+            <a href="#docs">Docs <span style="font-size: 0.7rem;">▼</span></a>
+            <a href="#community">Community <span style="font-size: 0.7rem;">▼</span></a>
+            <a href="#valor">$Valor <span style="font-size: 0.7rem;">▼</span></a>
+            <a href="#language"><span class="globe-icon">🌐</span></a>
+        </nav>
+          
+   </header>
+        
+
+    <main>
+        <div class="container">
+            <div >
+               <h2 class="where">where everyone can grow.</h2>
+                <br><br>
+                <p class="where2">
+                A platform that democratizes access to capital, 
+                allowing good ideas to prosper regardless of the 
+                origin or financial level of those who create them.
+                </p>
+            </div>
+
+            <div class="logo">
+                <img src="logo.png" alt="logo valorum" width="540px" >
+            </div>
+
         </div>
+        
+        <div class="button-container">
+                <button class="btn">launch app</button>
+                <button class="btn">learn more</button>
+        </div>
+    </main>
 
-    </div>
 
-    
 </body>
 <footer>
     <div class="marcas-footer">
