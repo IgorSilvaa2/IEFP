@@ -18,7 +18,7 @@
         header {
             display: flex;
             align-items: center;
-            width: 1440px ;
+            max-width: 1440px ;
             padding: 20px 40px;
             border-radius: 4px;
             margin-top: 25px;
@@ -44,7 +44,6 @@
         nav {
             display: flex;
             gap: 30px;
-    
              /* O TRUQUE: Empurra o menu para o centro exato da barra */
             margin-left: auto;
             margin-right: auto; 
@@ -72,38 +71,33 @@
             font-family:Georgia, serif;
         }
         .container {
-            width: 1440px 688px;
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            margin-top: 150px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-bottom: 1px;
-             
+        display: flex;
+        max-width: 1440px;
+        margin: 130px auto 0 auto; /* Afasta do header e centra na tela */
+        padding: 0 40px;
         }
         .logo{
-            margin-bottom: 10%;
-            margin-right: 13%;
+        margin-left: auto;
+        margin-right: auto;
         }
-        .where {
+        .texto1 {
         color: #ffffff;
-        width: 640px ;
-        font-size: 5rem;          /* Letras grandes como na sua imagem */
+        font-size: 6rem;          /* Letras grandes como na sua imagem */
         font-weight: bold;
         line-height: 1.10;        /* Deixa as linhas bem juntinhas na vertical */
-        margin: 0 0 2px 0;       /* Cria o espaço ideal para o parágrafo de baixo */ 
-        max-width: 300px; /* Força o título a quebrar palavra por palavra */        
-        display: block;
-        margin-left: 20%;
+        margin: 0 0 2px 0;       /* Cria o espaço ideal para o parágrafo de baixo */         
+        display: flex;
+        flex-direction: column;
+        max-width: 640px; /* Limita a largura para o texto quebrar igual ao design */
+        text-align: left;
+        margin-top: 5%;
         }
-        .where2 {
+        .texto2 {
         color: #b0b8c1;
-        font-size: 1.3rem;
+        font-size: 1.9rem;
         font-weight: normal;
         line-height: 1.4;
-        margin-left: 20%;
-        
+        flex-direction: column;
         
         }
         /* Contentor para alinhar os botões lado a lado */
@@ -122,13 +116,13 @@
         .btn:hover {
         background-color: rgba(255, 255, 255, 0.1); /* Fica ligeiramente mais claro */
         }
-        .button-container {
+        .botoes-container{
         display: flex;
-        gap: 16px;          /* Controla o espaço exato entre os dois botões */
-        margin-left: 20%;   /* Alinha o bloco com o texto de cima */
-        margin-top: 1px;   /* Empurra os botões para baixo do parágrafo */
+        gap: 25px; /* Espaço entre os dois botões */
         }
-
+        .marcas-footer{
+            margin-top: 10%;
+        }
     </style>
 </head>
 <body>
@@ -137,9 +131,6 @@
         <div>
             <h1>Valorum</h1>
         </div>
-            
-        
-
         <nav >
             <a href="#docs">Docs <span style="font-size: 0.7rem;">▼</span></a>
             <a href="#community">Community <span style="font-size: 0.7rem;">▼</span></a>
@@ -153,24 +144,24 @@
     <main>
         <div class="container">
             <div >
-               <h2 class="where">where everyone can grow.</h2>
+               <h2 class="texto1">where everyone can grow.</h2>
                 <br><br>
-                <p class="where2">
-                A platform that democratizes access to capital, 
-                allowing good ideas to prosper regardless of the 
-                origin or financial level of those who create them.
+                <p class="texto2">
+                    A platform that democratizes access to capital, 
+                    allowing good ideas to prosper regardless of the 
+                    origin or financial level of those who create them.
                 </p>
+                <div class="botoes-container">
+                    <button class="btn">launch app</button>
+                    <button class="btn">learn more</button>
+                </div>
             </div>
 
             <div class="logo">
                 <img src="logo.png" alt="logo valorum" width="540px" >
             </div>
 
-        </div>
-        
-        <div class="button-container">
-                <button class="btn">launch app</button>
-                <button class="btn">learn more</button>
+
         </div>
     </main>
 
