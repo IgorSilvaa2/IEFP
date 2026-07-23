@@ -18,11 +18,12 @@
         header {
             display: flex;
             align-items: center;
+            width: 1440px ;
             padding: 20px 40px;
             border-radius: 4px;
             margin-top: 25px;
-            margin-left: 13%;
-            margin-right: 13%;
+            margin-left: auto;
+            margin-right: auto;
             padding-top: 5px;
             padding-bottom: 5px;
             background-color: rgba(255, 255, 255, 0.04); /* 1. Fundo branco ou escuro bem transparente */ 
@@ -56,46 +57,76 @@
             font-weight: 700;
             color: #00ffc8;
             letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-left: 2%;
-            font-family:Arial, Helvetica, sans-serif;
+            font-family:Georgia, serif;
             margin: 0;
+            padding-left: 40px;
         }
         h2{
             color: white;
             margin: 0;
+            font-family:Georgia, serif;
         }
         h4{
             color: white;
             margin: 0;
+            font-family:Georgia, serif;
         }
         .container {
-            width: 1000px;
+            width: 1440px 688px;
             display: flex;
             align-items: center;
             margin-bottom: 10px;
-            margin-top: 130px;
-            margin-left: 25%;
-            padding-bottom: 80px;
-            
+            margin-top: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 1px;
+             
+        }
+        .logo{
+            margin-bottom: 10%;
+            margin-right: 13%;
         }
         .where {
         color: #ffffff;
+        width: 640px ;
         font-size: 5rem;          /* Letras grandes como na sua imagem */
         font-weight: bold;
-        line-height: 0.80;        /* Deixa as linhas bem juntinhas na vertical */
-        margin: 0 0 30px 0;       /* Cria o espaço ideal para o parágrafo de baixo */
-    
-        /* Força o título a quebrar palavra por palavra */
-        max-width: 300px;         
+        line-height: 1.10;        /* Deixa as linhas bem juntinhas na vertical */
+        margin: 0 0 2px 0;       /* Cria o espaço ideal para o parágrafo de baixo */ 
+        max-width: 300px; /* Força o título a quebrar palavra por palavra */        
         display: block;
+        margin-left: 20%;
         }
         .where2 {
         color: #b0b8c1;
         font-size: 1.3rem;
         font-weight: normal;
-        line-height: 1.1;
-        margin: 0;
+        line-height: 1.4;
+        margin-left: 20%;
+        
+        
+        }
+        /* Contentor para alinhar os botões lado a lado */
+        .btn {
+        background-color: rgba(255, 255, 255, 0.05); /* Fundo muito transparente */
+        color: #cbd5e1; /* Cor do texto (branco acinzentado) */
+        border: 1px solid rgba(255, 255, 255, 0.1); /* Borda subtil e transparente */
+        border-radius: 4px; /* Cantos ligeiramente arredondados */
+        padding: 10px 24px; /* Espaçamento interno (vertical e horizontal) */
+        font-family: Georgia, serif; /* Fonte com serifa igual à da imagem */
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease; /* Efeito suave ao passar o rato */      
+        }
+        /* Efeito visual ao passar o rato (Hover) */
+        .btn:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Fica ligeiramente mais claro */
+        }
+        .button-container {
+        display: flex;
+        gap: 16px;          /* Controla o espaço exato entre os dois botões */
+        margin-left: 20%;   /* Alinha o bloco com o texto de cima */
+        margin-top: 1px;   /* Empurra os botões para baixo do parágrafo */
         }
 
     </style>
@@ -113,9 +144,7 @@
             <a href="#docs">Docs <span style="font-size: 0.7rem;">▼</span></a>
             <a href="#community">Community <span style="font-size: 0.7rem;">▼</span></a>
             <a href="#valor">$Valor <span style="font-size: 0.7rem;">▼</span></a>
-            <a href="#language">
-                <span class="globe-icon">🌐</span>
-            </a>
+            <a href="#language"><span class="globe-icon">🌐</span></a>
         </nav>
           
    </header>
@@ -133,13 +162,18 @@
                 </p>
             </div>
 
-            <div >
-                <img src="logo.png" alt="logo valorum" width="500px" >
+            <div class="logo">
+                <img src="logo.png" alt="logo valorum" width="540px" >
             </div>
-        </div>
 
+        </div>
         
+        <div class="button-container">
+                <button class="btn">launch app</button>
+                <button class="btn">learn more</button>
+        </div>
     </main>
+
 
 </body>
 <footer>
