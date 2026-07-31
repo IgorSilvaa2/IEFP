@@ -192,3 +192,70 @@ int main() {
     
     return 0;
 }
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Exercício 8 Crie um programa que peça ao utilizador para introduzir um número inteiro. O programa deve apresentar a tabuada desse número de 1 a 10. 
+ 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Digite um numero: ";
+    cin >> n;
+    
+    cout << "Tabuado do " << n<< "\n";
+    for(int i=0;i<10;i++){
+        cout << n <<" x "<< (i+1)<< " = "<< (n*(i+1))<< "\n";
+        
+        }
+    
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Exercício 9 Crie um programa que peça repetidamente ao utilizador para introduzir números. O programa deve continuar a pedir números até que o utilizador introduza o número 0. No final, o programa deve apresentar a soma de todos os números introduzidos (exceto o 0). 
+ 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n,soma;
+    
+    while(n != 0){
+    cout << "Digite um numero: ";
+    cin >> n;
+    soma += n;
+    }
+    
+    cout << "soma dos numero: "<<soma;
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Exercício 10 Crie um programa que peça ao utilizador para introduzir um número inteiro positivo. O programa deve calcular e mostrar o fatorial desse número. Exemplo: 5!= 5 × 4 × 3 × 2 × 1 = 120 
+ 
+// Exercício 10 Crie um programa que peça ao utilizador para introduzir um número inteiro positivo. O programa deve calcular e mostrar o fatorial desse número. Exemplo: 5!= 5 × 4 × 3 × 2 × 1 = 120 
+ 
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n=0,fator=0,n2;
+    
+    while(n <= 0){
+    cout << "Digite um numero positivo: ";
+    cin >> n;
+    }
+    
+    fator = n;
+    cout << n<<"!= ";
+    for(int i=n;i>1;i--){
+           fator = fator * (i-1);
+           cout << i<< "x";
+    }
+    cout <<"1 = "<< fator;
+    
+    return 0;
+}
