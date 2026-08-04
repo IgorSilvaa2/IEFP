@@ -501,3 +501,342 @@ int main() {
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //Matriz 
+
+/*Exercício 1 - Crie um programa que leia
+os valores de uma matriz 3×3.
+O programa deve:
+- pedir ao utilizador para introduzir os
+valores da matriz
+- mostrar a matriz no ecrã no formato de
+tabela*/
+#include <iostream>
+#include <string>
+using namespace std;
+
+    void separador (){
+        cout << "\n>>>>>>>>>>>>>>>>>>>>>>>>>>> // >>>>>>>>>>>>>>>>\n";
+    }
+    
+int main() {
+    
+    
+    int mat [3][3];
+    
+    cout << "Digite o valor para matriz \n";
+    
+    for(int i = 0; i<3;i++){
+        for(int j = 0; j<3;j++){
+            cout << "Digite o valor para linha "<< (i+1)<< " e linha "<< (j+1)<<" :";
+            cin >> mat[i][j];    
+        }
+        cout<<"\n";
+    }
+    
+    separador();
+
+    for(int i = 0; i<3;i++){
+        for(int j = 0; j<3;j++){
+            cout << mat[i][j]<< " ";
+        }
+        cout << "\n";
+    }
+
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*Exercício 2 - Crie um programa que leia
+uma matriz 3×3.
+O programa deve calcular e mostrar a
+soma de todos os valores da matriz.*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+    void separador (){
+        cout << "\n>>>>>>>>>>>>>>>>>>>>>>>>>>> // >>>>>>>>>>>>>>>>\n";
+    }
+    
+int main() {
+    
+    
+    int mat [3][3],soma=0;
+    
+    cout << "Digite o valor para matriz \n";
+    
+    for(int i = 0; i<3;i++){
+        for(int j = 0; j<3;j++){
+            cout << "Digite o valor para linha "<< (i+1)<< " e linha "<< (j+1)<<" :";
+            cin >> mat[i][j];    
+        }
+        cout<<"\n";
+    }
+    
+    separador();
+
+    for(int i = 0; i<3;i++){
+        for(int j = 0; j<3;j++){
+            cout << mat[i][j]<< " ";
+        soma += mat[i][j];
+        }
+        cout << "\n";
+    }
+    
+    separador();
+    cout<< soma;
+
+    return 0;
+}
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+/*Exercício 3 - Crie um programa que leia
+uma matriz 3×3.
+O programa deve determinar e mostrar o
+maior valor existente na matriz.*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+    void separador (){
+        cout << "\n>>>>>>>>>>>>>>>>>>>>>>>>>>> // >>>>>>>>>>>>>>>>\n";
+    }
+    
+int main() {
+    
+    
+    int mat [3][3],soma=0,maior;
+    
+    cout << "Digite o valor para matriz \n";
+    
+    for(int i = 0; i<3;i++){
+        for(int j = 0; j<3;j++){
+            cout << "Digite o valor para linha "<< (i+1)<< " e linha "<< (j+1)<<" :";
+            cin >> mat[i][j];    
+        }
+        cout<<"\n";
+    }
+    
+    separador();
+
+    for(int i = 0; i<3;i++){
+        for(int j = 0; j<3;j++){
+            cout << mat[i][j]<< " ";
+            soma += mat[i][j];
+            
+        }
+        cout << "\n";
+    }
+    
+    maior = mat[0][0];
+    for(int i = 0; i<3;i++){
+        for(int j = 0; j<3;j++){
+            if(mat[i][j] > maior){
+                maior = mat[i][j];
+            }
+        }
+    }
+    
+    separador();
+    cout<< "A soma da matriz e: "<< soma;
+    separador();
+    cout<< "O maior numero da matriz e: "<< maior;
+    
+
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*Exercício 4 - Crie um programa que leia
+uma matriz 3×3.
+O programa deve calcular e mostrar a
+soma de cada linha da matriz.*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+    void separador (){
+        cout << "\n>>>>>>>>>>>>>>>>>>>>>>>>>>> // >>>>>>>>>>>>>>>>\n";
+    }
+    
+int main() {
+    
+    
+    int mat [3][3],soma=0,maior,soma_linha;
+    
+    cout << "Digite o valor para matriz \n";
+    
+    for(int i = 0; i<3;i++){
+        for(int j = 0; j<3;j++){
+            cout << "Digite o valor para linha "<< (i+1)<< " e linha "<< (j+1)<<" :";
+            cin >> mat[i][j];    
+        }
+        cout<<"\n";
+    }
+    
+    separador();
+
+    for(int i = 0; i<3;i++){
+        for(int j = 0; j<3;j++){
+            cout << mat[i][j]<< " ";
+            soma += mat[i][j];
+        }
+        cout << "\n";
+    }
+    
+    maior = mat[0][0];
+    for(int i = 0; i<3;i++){
+        soma_linha=0;
+        for(int j = 0; j<3;j++){
+            if(mat[i][j] > maior){
+                maior = mat[i][j];
+            }
+            soma_linha += mat[i][j];
+        }
+        cout<< "Soma da "<<(i+1)<< "º linha:"<<soma_linha;
+        cout<< "\n";
+    }
+    
+    separador();
+    cout<< "A soma da matriz e: "<< soma;
+    separador();
+    cout<< "O maior numero da matriz e: "<< maior;
+    
+
+    return 0;
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*Exercício 5 – Crie um programa que leia
+uma matriz 3×3.
+O programa deve calcular e mostrar a
+soma de cada coluna da matriz.*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+    void separador (){
+        cout << "\n>>>>>>>>>>>>>>>>>>>>>>>>>>> // >>>>>>>>>>>>>>>>\n";
+    }
+    
+int main() {
+    
+    
+    int mat [3][3],soma=0,maior,soma_linha,soma_coluna;
+    
+    cout << "Digite o valor para matriz \n";
+    
+    for(int i = 0; i<3;i++){
+        for(int j = 0; j<3;j++){
+            cout << "Digite o valor para linha "<< (i+1)<< " e linha "<< (j+1)<<" :";
+            cin >> mat[i][j];    
+        }
+        cout<<"\n";
+    }
+    
+    separador();
+
+    for(int i = 0; i<3;i++){
+        for(int j = 0; j<3;j++){
+            cout << mat[i][j]<< " ";
+            soma += mat[i][j];
+        }
+        cout << "\n";
+    }
+    
+    maior = mat[0][0];
+    for(int i = 0; i<3;i++){
+        soma_linha=0;
+        soma_coluna=0;
+        for(int j = 0; j<3;j++){
+            if(mat[i][j] > maior){
+                maior = mat[i][j];
+            }
+            soma_linha += mat[i][j];
+            soma_coluna += mat[j][i];
+        }
+        cout<< "\nSoma da "<<(i+1)<< "º linha:"<<soma_linha;
+        cout<< "\n";
+        cout<< "Soma da "<<(i+1)<< "º coluna:"<<soma_coluna;
+    }
+    
+    separador();
+    cout<< "A soma da matriz e: "<< soma;
+    separador();
+    cout<< "O maior numero da matriz e: "<< maior;
+    
+
+    return 0;
+}
+
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+/*Exercício 6 – Crie um programa que leia
+uma matriz 3×3.
+O programa deve mostrar os elementos
+da diagonal principal.*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+    void separador (){
+        cout << "\n>>>>>>>>>>>>>>>>>>>>>>>>>>> // >>>>>>>>>>>>>>>>\n";
+    }
+    
+int main() {
+    
+    
+    int mat [3][3],soma=0,maior,soma_linha,soma_coluna;
+    
+    cout << "Digite o valor para matriz \n";
+    
+    for(int i = 0; i<3;i++){
+        for(int j = 0; j<3;j++){
+            cout << "Digite o valor para linha "<< (i+1)<< " e linha "<< (j+1)<<" :";
+            cin >> mat[i][j];    
+        }
+        cout<<"\n";
+    }
+    
+    separador();
+
+    for(int i = 0; i<3;i++){
+        for(int j = 0; j<3;j++){
+            cout << mat[i][j]<< " ";
+            soma += mat[i][j];
+        }
+        cout << "\n";
+    }
+    
+    maior = mat[0][0];
+    for(int i = 0; i<3;i++){
+        soma_linha=0;
+        soma_coluna=0;
+        for(int j = 0; j<3;j++){
+            if(mat[i][j] > maior){
+                maior = mat[i][j];
+            }
+            soma_linha += mat[i][j];
+            soma_coluna += mat[j][i];
+        }
+        cout<< "\nSoma da "<<(i+1)<< "º linha:"<<soma_linha;
+        cout<< " -- ";
+        cout<< "Soma da "<<(i+1)<< "º coluna:"<<soma_coluna;
+        cout<< "\n";
+        cout <<"Elemento da diagonal: "<<mat[i][i];
+    }
+    
+    separador();
+    cout<< "A soma da matriz e: "<< soma;
+    separador();
+    cout<< "O maior numero da matriz e: "<< maior;
+    
+
+    return 0;
+}
