@@ -233,8 +233,6 @@ int main() {
 }
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-// Exercício 10 Crie um programa que peça ao utilizador para introduzir um número inteiro positivo. O programa deve calcular e mostrar o fatorial desse número. Exemplo: 5!= 5 × 4 × 3 × 2 × 1 = 120 
  
 // Exercício 10 Crie um programa que peça ao utilizador para introduzir um número inteiro positivo. O programa deve calcular e mostrar o fatorial desse número. Exemplo: 5!= 5 × 4 × 3 × 2 × 1 = 120 
  
@@ -259,3 +257,247 @@ int main() {
     
     return 0;
 }
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//Struct com vetor.
+
+// Exercício 1 - Crie uma struct chamada Aluno com os seguintes campos:
+//- nome
+//- idade
+//- nota
+//O programa deve:
+//- ler os dados de um aluno
+//- mostrar os dados no ecrã
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Aluno {
+    string nome;    
+    int idade;
+    float nota;
+};
+int main() {
+    
+    struct Aluno p1;
+     cout << "Digite o seu nome: ";
+     cin >> p1.nome;
+     
+     cout << "Digite o sua idade: ";
+     cin >> p1.idade;
+     
+     cout << "Digite a nota: ";
+     cin >> p1.nota;
+     
+     cout << p1.nome << "\n" << p1.idade << "\n"<<p1.nota;
+
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Exercício 2 – Crie um programa que utilize a struct Aluno.
+//O programa deve:
+// - criar um vetor para 3 alunos
+// - ler os dados de cada aluno
+// - mostrar os dados de todos os alunos
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Aluno {
+    string nome;    
+    int idade;
+    float nota;
+};
+
+void separador (){
+    cout << ">>>>>>>>>>>>>>> ///// >>>>>>>>>>>>>>>>\n";
+}
+int main() {
+    Aluno p1[3];
+    
+    for(int i = 0;i<3;i++){
+        cout << "Digite o "<< (i+1)<< "º nome: ";
+        cin >> p1[i].nome;
+        cout << "Digite a "<< (i+1)<< "º idade: ";
+        cin >> p1[i].idade;
+        cout << "Digite a "<< (i+1)<< "º nota: ";
+        cin >> p1[i].nota;
+        separador();
+    }
+     
+     for(int i = 0;i<3;i++){
+     cout << p1[i].nome << "\n" << p1[i].idade << "\n"<<p1[i].nota << endl;
+     separador();
+     
+    }
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*Exercício 3 – Crie um programa com uma struct Aluno.
+O programa deve:
+- ler os dados de 5 alunos
+- Calcular e mostrar a média das notas*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Aluno {
+    string nome;    
+    int idade;
+    float nota;
+};
+
+void separador (){
+    cout << ">>>>>>>>>>>>>>> ///// >>>>>>>>>>>>>>>>\n";
+}
+int main() {
+    Aluno p1[5];
+    float media=0;
+    
+    for(int i = 0;i<5;i++){
+        cout << "Digite o "<< (i+1)<< "º nome: ";
+        cin >> p1[i].nome;
+        cout << "Digite a "<< (i+1)<< "º idade: ";
+        cin >> p1[i].idade;
+        cout << "Digite a "<< (i+1)<< "º nota: ";
+        cin >> p1[i].nota;
+        separador();
+        media += p1[i].nota;
+    }
+     
+     for(int i = 0;i<5;i++){
+     cout << p1[i].nome << "\n" << p1[i].idade << "\n"<<p1[i].nota << endl;
+     separador();
+    }
+    
+    cout << "A media dos Alunos é: "<<(media/5);
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+/*Exercício 4 – Crie um programa que:
+- Leia os dados de 5 alunos
+- determine qual é o aluno com a melhor nota
+- mostre o nome e a nota desse aluno*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Aluno {
+    string nome;    
+    int idade;
+    float nota;
+};
+
+void separador (){
+    cout << "\n>>>>>>>>>>>>>>> ///// >>>>>>>>>>>>>>>>\n";
+}
+int main() {
+    Aluno p1[5];
+    float media=0,melhor;
+    string melhor_aluno;
+    
+    for(int i = 0;i<5;i++){
+        cout << "Digite o "<< (i+1)<< "º nome: ";
+        cin >> p1[i].nome;
+        cout << "Digite a "<< (i+1)<< "º idade: ";
+        cin >> p1[i].idade;
+        cout << "Digite a "<< (i+1)<< "º nota: ";
+        cin >> p1[i].nota;
+        separador();
+        media += p1[i].nota;
+    }
+     
+     melhor = p1[0].nota;
+     melhor_aluno = p1[0].nome;
+     
+     for(int i = 0;i<5;i++){
+     cout << p1[i].nome << "\n" << p1[i].idade << "\n"<<p1[i].nota << endl;
+     separador();
+     
+        if (p1[i].nota > melhor)
+        {
+            melhor = p1[i].nota;
+            melhor_aluno = p1[i].nome;
+        }
+    }
+    
+    cout << "A media dos Alunos é: "<<(media/5);
+    separador();
+    cout << "O melhor Aluno é: "<< melhor_aluno<< " - sua nota é: "<< melhor ;
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+/*Exercício 5 – Crie um programa que:
+- leia os dados de 5 alunos
+- considere que a nota mínima para aprovação é 10
+- indique quantos alunos estão aprovados*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Aluno {
+    string nome;    
+    int idade;
+    float nota;
+};
+
+void separador (){
+    cout << "\n>>>>>>>>>>>>>>> ///// >>>>>>>>>>>>>>>>\n";
+}
+int main() {
+    Aluno p1[5];
+    float media=0,melhor,aprovado=0;
+    string melhor_aluno;
+    
+    for(int i = 0;i<5;i++){
+        cout << "Digite o "<< (i+1)<< "º nome: ";
+        cin >> p1[i].nome;
+        cout << "Digite a "<< (i+1)<< "º idade: ";
+        cin >> p1[i].idade;
+        cout << "Digite a "<< (i+1)<< "º nota: ";
+        cin >> p1[i].nota;
+        separador();
+        media += p1[i].nota;
+    }
+     
+     melhor = p1[0].nota;
+     melhor_aluno = p1[0].nome;
+     
+     for(int i = 0;i<5;i++){
+     cout << p1[i].nome << "\n" << p1[i].idade << "\n"<<p1[i].nota << endl;
+     separador();
+     
+        if (p1[i].nota > melhor)
+        {
+            melhor = p1[i].nota;
+            melhor_aluno = p1[i].nome;
+        }
+        if (p1[i].nota >= 10)
+        {
+            aprovado = aprovado+1;
+        }
+    }
+    
+    cout << "A media dos Alunos é: "<<(media/5);
+    separador();
+    cout << "O melhor Aluno é: "<< melhor_aluno<< " - sua nota é: "<< melhor ;
+    separador();
+    cout << "Alunos aprovados: "<< aprovado;
+    
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//Matriz 
