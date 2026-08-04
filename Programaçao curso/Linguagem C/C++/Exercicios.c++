@@ -240,12 +240,12 @@ int main() {
 using namespace std;
 
 int main() {
-    int n=0,fator=0,n2;
+    int n=0,fator,n2;
     
-    while(n <= 0){
+    do{
     cout << "Digite um numero positivo: ";
     cin >> n;
-    }
+    }while(n <= 0);
     
     fator = n;
     cout << n<<"!= ";
@@ -792,7 +792,7 @@ using namespace std;
 int main() {
     
     
-    int mat [3][3],soma=0,maior,soma_linha,soma_coluna;
+    int mat [3][3],soma=0,maior,soma_linha,soma_coluna,soma_diagonal=0,soma_inversa=0;
     
     cout << "Digite o valor para matriz \n";
     
@@ -816,8 +816,8 @@ int main() {
     
     maior = mat[0][0];
     for(int i = 0; i<3;i++){
-        soma_linha=0;
-        soma_coluna=0;
+    soma_linha=0;
+    soma_coluna=0;
         for(int j = 0; j<3;j++){
             if(mat[i][j] > maior){
                 maior = mat[i][j];
@@ -825,6 +825,8 @@ int main() {
             soma_linha += mat[i][j];
             soma_coluna += mat[j][i];
         }
+        soma_diagonal += mat[i][i];
+        soma_inversa += mat[i][(3-1-3)];
         cout<< "\nSoma da "<<(i+1)<< "º linha:"<<soma_linha;
         cout<< " -- ";
         cout<< "Soma da "<<(i+1)<< "º coluna:"<<soma_coluna;
@@ -836,7 +838,58 @@ int main() {
     cout<< "A soma da matriz e: "<< soma;
     separador();
     cout<< "O maior numero da matriz e: "<< maior;
+    separador ();
+    cout << "A soma da diagonal é: "<< soma_diagonal;
+    separador();
+    cout << "A soma da diagonal é: "<< soma_inversa;
     
 
     return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// treino vetor
+#include <iostream>
+#include <string>
+using namespace std;
+
+void separador (){
+    cout << "\n>>>>>>>>>>>>>>>>>>>>>>>>>>> // >>>>>>>>>>>>>>>>\n";
+}
+    
+int main() {
+    
+int n,menor,maior,anterior;
+    
+cout << "Digite o tamanho do vetor: ";
+cin >> n;
+cout<<"\n";
+int vet[n];
+        
+        for (int i=0 ;i<n;i++){
+            cout<< "Digite o "<<(i+1)<< "° numero do vetor: ";
+            cin>> vet[i];
+            
+            if(i == 0 || vet[i] > maior){
+                maior = vet[i];
+            }
+            if (i== 0 || vet[i]< menor){
+                menor = vet[i];
+            }
+        }
+        cout << maior<< " "<<menor;
+        separador ();
+        
+        /*for(int i=menor;i<=maior;i++){
+        cout << i<<" ";
+        }*/
+        
+        
+        for(int i= 0;i<n;i++){
+            if (vet[i]> vet[i-1]){
+                cout << vet[i];
+            }
+        }
+        
+    
 }
