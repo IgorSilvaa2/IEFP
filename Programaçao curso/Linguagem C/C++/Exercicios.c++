@@ -868,8 +868,7 @@ int main() {
     
     for(int i=0;i<n;i++){
         for(int j=0;j<n-1;j++){
-            if(vet[j] > vet[(j+1)])
-            {
+            if(vet[j] > vet[(j+1)]){
                 troca=vet[(j+1)];
                 vet[(j+1)]=vet[j];
                 vet[j]=troca;
@@ -878,7 +877,7 @@ int main() {
     }
     
     for(int i=0;i<n;i++){
-    cout << vet[(i)]<< " \n";
+    cout << vet[i]<< " \n";
     }
     return 0;
 }
