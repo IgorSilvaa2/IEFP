@@ -1,6 +1,6 @@
 body {
     color: #F4F0EA;
-    background: #FCE4DC;
+    background: #fff;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -71,7 +71,8 @@ a:focus {
 .top-bar {
     position: relative;
     height: 60px;
-    background: #2F4A39;
+    background: #2F3F37 !important;
+    
 }
 
 .top-bar .top-bar-left {
@@ -210,14 +211,14 @@ a:focus {
         position: absolute;
         width: 100%;
         top: 60px;
-        padding: 20px 60px;
-        background: linear-gradient(to top,#fce4dcb0 0%, #fce4dcb0, #fa8ec4ad) !important;
+        padding: 1px 60px;
+        background: #FCE4DC  !important;
         z-index: 9;
     }
     
     .navbar.nav-sticky {
         padding: 10px 60px;
-        background: #6F8D77 !important;
+        background: linear-gradient(to top #ffff #FCE4DC) !important;
     }
     
     .navbar a.nav-link {
@@ -231,7 +232,7 @@ a:focus {
 @media (max-width: 991.98px) {   
     .navbar {
         padding: 15px;
-        background: #2F3F37 !important;
+        background: #FCE4DC !important;
     }
     
     .navbar a.nav-link {
@@ -252,7 +253,8 @@ a:focus {
     width: 100%;
     margin-bottom: 45px;
     height: calc(100vh - 60px);
-    background: #FCE4DC;
+    /*background: #FCE4DC;*/
+    background-color: #ffff;
     overflow: hidden;
 }
 
@@ -263,7 +265,7 @@ a:focus {
 .hero .hero-image {
     position: relative;
     text-align: right;
-     filter: drop-shadow(0px 1px 1px rgb(0, 0, 0));
+    /*filter: drop-shadow(0px 1px 1px rgb(0, 0, 0));*/
 }
 
 .hero .hero-image img {
