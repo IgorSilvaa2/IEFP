@@ -410,8 +410,6 @@ int main() {
 ///////////////////////////////////////////////////////////////////////////////////////////
 // Online C compiler to run C program online
 //1-Lê uma matriz 3x3 e mostra a soma de cada coluna.
-// Online C compiler to run C program online
-// Online C compiler to run C program online
 #include <stdio.h>
 
 int main() {
