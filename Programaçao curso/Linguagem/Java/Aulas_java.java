@@ -53,6 +53,7 @@ public class Aulas_java {
         
         String nome,morada;
         int telefone,numerocc;
+        float salariobruto,salarioliquido;
         
         System.out.print("Digite o seu nome: ");
         nome = entrada.nextLine();
@@ -65,6 +66,12 @@ public class Aulas_java {
 
         System.out.print("Digite o seu Numero do CC: ");
         numerocc = entrada.nextInt();
+        
+        System.out.print("Digite o seu salaraio bruto para saber o valor liquido: ");
+        salariobruto = entrada.nextFloat();
+        
+        salarioliquido = (salariobruto * 0.1f ) + (salariobruto * 0.21f);
+        System.out.println("O Salario liquido é:" + (salariobruto  - salarioliquido));
         
         System.out.println(nome + "\n" + morada + "\n" + telefone + "\n" + numerocc);
 

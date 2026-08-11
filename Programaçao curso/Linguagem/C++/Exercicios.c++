@@ -892,3 +892,23 @@ int vet[n];
         
     
 }
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int notas[] = {12, 15, 18, 10, 16},maior;
+    
+    int *p = notas;
+    maior = *p;
+    for (p; p != notas +5;p++ ){
+        if ()
+        cout <<*p<< endl;
+    }
+
+    return 0;
+}
