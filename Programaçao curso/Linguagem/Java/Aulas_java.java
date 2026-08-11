@@ -24,12 +24,9 @@ public class Aulas_java {
         nome = entrada.nextLine();
         System.out.println("O nome inserido foi : " + nome);
         
-        System.out.print("Insira sua situação profissional, d = desempregado. f = Em formação");
-        situacao = entrada.nextLine();
-        
-
-        
-        
+        System.out.print("Insira sua situação profissional, d = desempregado, f = Em formação: ");
+        situacao = entrada.nextLine().charAt(0);
+        System.out.println("A situação inserida foi: "+ situacao);
         
     }
     
