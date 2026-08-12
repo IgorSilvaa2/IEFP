@@ -71,7 +71,7 @@ a:focus {
 .top-bar {
     position: relative;
     height: 60px;
-    background: #2F3F37 !important;
+    background: #18291e !important;
     
 }
 
@@ -212,13 +212,13 @@ a:focus {
         width: 100%;
         top: 60px;
         padding: 1px 60px;
-        background: #FCE4DC  !important;
+        background: #ffff  !important;
         z-index: 9;
     }
     
     .navbar.nav-sticky {
         padding: 10px 60px;
-        background: linear-gradient(to top #ffff #FCE4DC) !important;
+        background: linear-gradient(#ffff #B7848C) !important;
     }
     
     .navbar a.nav-link {
