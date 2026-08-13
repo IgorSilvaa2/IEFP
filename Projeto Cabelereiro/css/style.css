@@ -5,13 +5,13 @@ body {
 }
 
 h1,
-h2, 
-h3, 
+h2,
+h3,
 h4,
-h5, 
+h5,
 h6 {
-    color: #C9A24F;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.288);
+    color: #d49f2c;
+    text-shadow: 1px 1px 1px #0000007e;
 }
 
 a {
@@ -22,7 +22,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: #C8A45A;
+    color: #d49f2c;
     outline: none;
     text-decoration: none;
 }
@@ -39,7 +39,7 @@ a:focus {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #C8A45A;
+    background: #d49f2c;
     width: 44px;
     height: 44px;
     text-align: center;
@@ -71,8 +71,8 @@ a:focus {
 .top-bar {
     position: relative;
     height: 60px;
-    background: #18291e !important;
-    
+    background: #071f14 !important;
+
 }
 
 .top-bar .top-bar-left {
@@ -95,15 +95,15 @@ a:focus {
     height: 60px;
     padding: 0 10px;
     text-align: center;
-    border-left: 1px solid #C8A45A;
+    border-left: 1px solid #d49f2c;
 }
 
 .top-bar .text:last-child {
-    border-right: 1px solid #C8A45A;
+    border-right: 1px solid #d49f2c;
 }
 
 .top-bar .text h2 {
-    color: #ffff;
+    color: #d49f2c;
     font-weight: 600;
     font-size: 16px;
     letter-spacing: 1px;
@@ -111,7 +111,7 @@ a:focus {
 }
 
 .top-bar .text p {
-    color: #ffff;
+    color: #d49f2c;
     font-size: 12px;
     font-weight: 400;
     margin: 0;
@@ -131,17 +131,17 @@ a:focus {
     width: 60px;
     height: 100%;
     font-size: 22px;
-    color: #ffff;
-    border-right: 1px solid #C9A24F;
+    color: #d49f2c;
+    border-right: 1px solid #d49f2c;
 }
 
 .top-bar .social a:first-child {
-    border-left: 1px solid #C9A24F;
+    border-left: 1px solid #d49f2c;
 }
 
 .top-bar .social a:hover {
     color: #f8f9fa;
-    background: #C9A24F;
+    background: #d49f2c;
 }
 
 @media (min-width: 992px) {
@@ -158,18 +158,19 @@ a:focus {
     position: relative;
     transition: .5s;
     z-index: 999;
+
 }
 
 .navbar.nav-sticky {
     position: fixed;
     top: 0;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 5px #d49f2c;
 }
 
 .navbar .navbar-brand {
     margin: 0;
-    color: #6F8D77;
+    color: #071f14;
     font-size: 45px;
     line-height: 0px;
     font-weight: 600;
@@ -190,12 +191,14 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link.active {
     padding: 10px 10px 8px 10px;
     color: #000000;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.288);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.562);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    background: rgba(256, 256, 256, .1);
+    color: #d49f2c;
+    text-decoration: underline #d49f2c;
+    text-underline-offset: 8px;
     transition: none;
 }
 
@@ -203,7 +206,7 @@ a:focus {
     margin-top: 0;
     border: 0;
     border-radius: 0;
-    background: #6F8D77;
+    background: #00000042;
 }
 
 @media (min-width: 992px) {
@@ -212,15 +215,16 @@ a:focus {
         width: 100%;
         top: 60px;
         padding: 1px 60px;
-        background: #ffff  !important;
+        background: #ffff !important;
+
         z-index: 9;
     }
-    
+
     .navbar.nav-sticky {
         padding: 10px 60px;
-        background: linear-gradient(#ffff #B7848C) !important;
+        background: #ffffff !important;
     }
-    
+
     .navbar a.nav-link {
         padding: 8px 15px;
         font-size: 14px;
@@ -229,16 +233,16 @@ a:focus {
     }
 }
 
-@media (max-width: 991.98px) {   
+@media (max-width: 991.98px) {
     .navbar {
         padding: 15px;
-        background: #FCE4DC !important;
+        background: #ffffff !important;
     }
-    
+
     .navbar a.nav-link {
         padding: 5px;
     }
-    
+
     .navbar .dropdown-menu {
         box-shadow: none;
     }
@@ -254,7 +258,13 @@ a:focus {
     margin-bottom: 45px;
     height: calc(100vh - 60px);
     /*background: #FCE4DC;*/
-    background-color: #ffff;
+    background-image: url('logo_canto.png');
+    background-size: cover;
+    /* Faz a imagem esticar e cobrir o fundo */
+    background-position: center;
+    /* Centraliza a imagem na tela */
+    background-repeat: no-repeat;
+    /* Impede que a imagem se repita */
     overflow: hidden;
 }
 
@@ -284,7 +294,7 @@ a:focus {
 }
 
 .hero .hero-text h1 {
-    color: #435f51;
+    color: #071f14;
     font-size: 50px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -293,7 +303,7 @@ a:focus {
 }
 
 .hero .hero-text p {
-    color: #435f51;
+    color: #071f14;
     font-size: 18px;
     margin-bottom: 25px;
     box-shadow: #1C1B1D solid;
@@ -305,7 +315,7 @@ a:focus {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #C8A45A;
+    color: #d49f2c;
     background: none;
     border: 2px solid #F4F0EA;
     border-radius: 0;
@@ -313,7 +323,7 @@ a:focus {
 }
 
 .hero .hero-text .btn:hover {
-    color: #C8A45A;
+    color: #d49f2c;
     background: #2F4A39;
 }
 
@@ -343,7 +353,7 @@ a:focus {
     display: block;
     width: 80px;
     height: 80px;
-    background: #ff6f91;
+    background: #F3B6BE;
     border-radius: 50%;
     animation: pulse-border 1500ms ease-out infinite;
 }
@@ -358,13 +368,13 @@ a:focus {
     display: block;
     width: 80px;
     height: 80px;
-    background: #ff6f91;
+    background: #E68E9C;
     border-radius: 50%;
     transition: all 200ms;
 }
 
 .hero .btn-play:hover:after {
-    background-color: darken(#2F3F37, 10%);
+    background-color: darken(#F3B6BE, 10%);
 }
 
 .hero .btn-play img {
@@ -387,14 +397,15 @@ a:focus {
 }
 
 @keyframes pulse-border {
-  0% {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-    opacity: 0;
-  }
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+    }
 }
 
 #videoModal .modal-dialog {
@@ -423,15 +434,15 @@ a:focus {
     .hero .hero-text {
         padding-left: 15px;
     }
-    
+
     .hero .hero-text h1 {
         font-size: 35px;
     }
-    
+
     .hero .hero-text p {
         font-size: 16px;
     }
-    
+
     .hero .hero-text .btn {
         padding: 12px 30px;
         font-size: 15px;
@@ -444,11 +455,11 @@ a:focus {
         font-size: 30px;
         font-weight: 600;
     }
-    
+
     .hero .hero-text p {
         font-size: 14px;
     }
-    
+
     .hero .hero-text .btn {
         padding: 10px 25px;
         font-size: 15px;
@@ -462,11 +473,11 @@ a:focus {
         font-size: 25px;
         font-weight: 600;
     }
-    
+
     .hero .hero-text p {
         font-size: 14px;
     }
-    
+
     .hero .hero-text .btn {
         padding: 8px 20px;
         font-size: 14px;
@@ -524,7 +535,7 @@ a:focus {
     .page-header h2 {
         font-size: 35px;
     }
-    
+
     .page-header a {
         font-size: 18px;
     }
@@ -661,7 +672,7 @@ a:focus {
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
-    background: rgba(183,132,140,.08);
+    background: rgba(183, 132, 140, .08);
 }
 
 .service .service-img {
@@ -739,7 +750,7 @@ a:focus {
     justify-content: flex-start;
     flex-direction: row;
     margin-bottom: 30px;
-    background: rgba(183,132,140,.08);
+    background: rgba(183, 132, 140, .08);
     transition: .3s;
 }
 
@@ -962,7 +973,7 @@ a:focus {
 .blog .blog-item {
     position: relative;
     margin: 0 15px;
-    background: rgba(183,132,140,.08);
+    background: rgba(183, 132, 140, .08);
     overflow: hidden;
 }
 
@@ -1159,8 +1170,8 @@ a:focus {
 
 .portfolio img {
     position: relative;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -1200,7 +1211,8 @@ a:focus {
     background: none;
     border-radius: 0;
     border: none;
-    border-bottom: 1px solid #C8A45A;;
+    border-bottom: 1px solid #C8A45A;
+    ;
 }
 
 .contact .contact-form .btn {
@@ -1230,7 +1242,7 @@ a:focus {
     .contact .container-fluid {
         background: none;
     }
-    
+
     .contact .contact-form {
         padding: 90px 0;
     }
@@ -1299,7 +1311,7 @@ a:focus {
 
 .footer .footer-contact h2,
 .footer .footer-link h2,
-.footer .footer-newsletter h2{
+.footer .footer-newsletter h2 {
     position: relative;
     margin-bottom: 30px;
     font-size: 22px;
@@ -1414,6 +1426,7 @@ a:focus {
 }
 
 @media (max-width: 767.98px) {
+
     .footer .copyright p,
     .footer .copyright .col-md-6:last-child p {
         margin: 5px 0;
