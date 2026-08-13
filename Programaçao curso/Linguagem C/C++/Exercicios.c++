@@ -841,7 +841,7 @@ int main() {
     return 0;
 }
 
-/*Vetor treino*/
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 /*Vetor treino*/
 
@@ -881,3 +881,135 @@ int main() {
     }
     return 0;
 }
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+//ponteiros//
+
+/* Exercício 1
+Cria uma variável int numero = 10 e um ponteiro que
+aponte para ela. Mostra:
+• o valor de numero;
+• o endereço de numero;
+• o valor guardado no ponteiro;
+• o valor obtido através de *ponteiro. */
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int numero =10;
+    int *p = &numero;
+
+    cout << numero<< endl;
+    cout << &numero << endl;
+    cout << &p<< endl;
+    cout << *p<< endl;
+
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+/*Exercício 2
+Cria:
+int pontos = 20;
+int *p = &pontos;
+Usa apenas o ponteiro para alterar pontos para 50. */
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int pontos =20;
+    int *p = &pontos;
+
+    *p = 50;
+    cout << pontos;
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+/*Exercício 3
+int x = 5;
+int *p = &x;
+*p = 12;
+cout << x;  verifiquei soente o codigo
+*/
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int x =5;
+    int *p = &x;
+    *p = 12;
+    cout << x;
+
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+/*Exercício 4
+int *p = NULL;
+cout << *p;
+Explica qual é o problema. tenta pegar um ponteiro que nao aponta pra nenhum endereço da memoria.
+*/
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+/*Exercício 5
+int valores[] = {4, 8, 12};
+int *p = valores;
+Mostra o primeiro elemento usando apenas p.
+*/
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int valores[] = {4, 8, 12};
+    int *p = valores;
+
+    cout << *p<< endl;
+
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+/*Exercício 6
+Usando o mesmo array, mostra:
+4
+8
+12
+sem utilizar valores[0], valores[1] ou valores[2].
+*/
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int valores[3] = {4, 8, 12};
+    
+    for (int *p = valores; p != valores +3;p++ ){
+        cout <<*p<< endl;
+    }
+
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
