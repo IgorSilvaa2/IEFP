@@ -35,7 +35,7 @@ public class Aulas_java {
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-// Exercicio 1
+// Exercicio 1 le valores e testa uma candiçao sem if (operador ternario)
 
 
 package javaapplication2;
@@ -53,7 +53,8 @@ public class Aulas_java {
         
         String nome,morada;
         int telefone,numerocc;
-        float salariobruto,salarioliquido;
+        float salariobruto,salarioliquido,salariomin;
+        
         
         System.out.print("Digite o seu nome: ");
         nome = entrada.nextLine();
@@ -70,12 +71,48 @@ public class Aulas_java {
         System.out.print("Digite o seu salaraio bruto para saber o valor liquido: ");
         salariobruto = entrada.nextFloat();
         
-        salarioliquido = (salariobruto * 0.1f ) + (salariobruto * 0.21f);
-        System.out.println("O Salario liquido é:" + (salariobruto  - salarioliquido));
+        System.out.print("Qual e o salario minimo?: ");
+        salariomin = entrada.nextFloat();
+        
+        salariobruto = salariobruto >= salariomin ? salariobruto - salariobruto * 0.1f  - salariobruto * 0.21f : salariobruto;
         
         System.out.println(nome + "\n" + morada + "\n" + telefone + "\n" + numerocc);
+        System.out.println("O Salario é:" + salariobruto );
 
         
     }
     
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//Desenvolva um pequeno programa que verifique se um caracter que é passado ao programa(pode ultilizar uma variavel para simular esse caracter ) é maiusculo e se o for, avise o ultilizador de que o mesmo é mausculo;
+
+package javaapplication2;
+
+import java.io.PrintStream; //importa a classe printStream//
+import java.io.UnsupportedEncodingException; // Importa a classe para tratar a exceção que //
+import java.util.Scanner;
+
+public class Aulas_java {
+
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        //Define UTF-98 na janela do NetBeans
+        System.setOut(new PrintStream(System.out, true, "UTF8"));
+
+        Scanner entrada = new Scanner(System.in);
+
+        char c;
+
+        System.out.print("Digite uma letra: ");
+        c = entrada.nextLine().charAt(0);
+
+        if (c >= 65 && c <= 90) {
+            System.out.print("O caracter " + c + " e maiuscula !" + "\n");
+            System.out.print("A mesma letra minuscula : " + (char) (c + 32) + "\n");
+        } else {
+            System.out.print("O caracter " + c + " e minusculo !" + c + "\n");
+            System.out.print("A letra e Minuscula ! : " + (char) (c - 32) + "\n");
+
+        }
+    }
 }
