@@ -1315,3 +1315,37 @@ int main() {
 
     return 0;
 }
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Exercício 7 – Crie uma função que receba um vetor e devolva quantos números pares existem.
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+int vetor (int a[], int b ){
+    int par=0;
+    for (int i=0;i<b;i++){
+        if ((a[i] % 2) == 0){
+            par = par +1;
+        }
+    }
+    return par;
+}
+int main() {
+    
+    int a;
+    cout << "Digite o tamanho do vetor : ";
+    cin >> a;
+
+    int vet[a];
+
+    for (int i =0;i<a;i++){
+        cout << "Digite o "<< (i+1)<< " valor :" ;
+        cin >> vet[i];
+    }
+
+    cout << "Existe " << vetor(vet,a)<< " numeros par !";
+
+    return 0;
+}
