@@ -1,0 +1,1111 @@
+<!-- =========================================================
+         CSS
+         Todo o estilo está neste arquivo para facilitar seus testes.
+         Depois, se quiser, você pode mover para:
+         assets/css/style.css
+         ========================================================= -->
+    <style>
+        /* =========================================================
+           1. VARIÁVEIS GLOBAIS
+           Altere estas cores para mudar o visual do site inteiro.
+           ========================================================= */
+        :root {
+            --bg: #081d35;
+            --bg-secondary: #0d2746;
+            --card: #132f50;
+            --card-hover: #183a60;
+
+            --text: #f2f5f8;
+            --text-soft: #b9c4d0;
+            --text-muted: #8290a0;
+
+            --accent: #12e6e6;
+            --accent-soft: #3bd6d6;
+
+            --border: rgba(255, 255, 255, 0.10);
+            --border-strong: rgba(255, 255, 255, 0.18);
+
+            --container: 1120px;
+            --radius: 12px;
+            --radius-small: 7px;
+
+            --shadow: 0 18px 50px rgba(0, 0, 0, 0.20);
+
+            --transition: 180ms ease;
+        }
+
+        /* =========================================================
+           2. RESET BÁSICO
+           Mantém o comportamento mais consistente entre navegadores.
+           ========================================================= */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            font-family:
+                Inter,
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            color: var(--text);
+            background:
+                radial-gradient(
+                    circle at 80% 12%,
+                    rgba(18, 230, 230, 0.08),
+                    transparent 28%
+                ),
+                linear-gradient(
+                    180deg,
+                    #071a30 0%,
+                    var(--bg) 35%,
+                    #071c35 100%
+                );
+
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        /* Remove margem padrão de elementos de texto */
+        h1,
+        h2,
+        h3,
+        h4,
+        p {
+            margin-top: 0;
+        }
+
+        /* =========================================================
+           3. CLASSES UTILITÁRIAS
+           São classes reutilizáveis em várias partes do site.
+           ========================================================= */
+
+        .container {
+            width: min(calc(100% - 40px), var(--container));
+            margin-inline: auto;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section--small {
+            padding: 55px 0;
+        }
+
+        .section-title {
+            margin-bottom: 38px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(2rem, 4vw, 3.4rem);
+            line-height: 1.08;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            max-width: 700px;
+            margin: -20px auto 40px;
+
+            color: var(--text-soft);
+            text-align: center;
+        }
+
+        .accent {
+            color: var(--accent);
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+
+            min-height: 42px;
+            padding: 0 18px;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius-small);
+
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.045);
+
+            transition:
+                transform var(--transition),
+                background-color var(--transition),
+                border-color var(--transition);
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            border-color: var(--border-strong);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .button--accent {
+            color: #03131f;
+            border-color: transparent;
+            background: var(--accent);
+            font-weight: 700;
+        }
+
+        .button--accent:hover {
+            background: #4ff3f3;
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: rgba(19, 47, 80, 0.72);
+            box-shadow: var(--shadow);
+        }
+
+        /* =========================================================
+           4. HEADER / MENU
+           ========================================================= */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            padding: 12px 0;
+
+            background: rgba(5, 19, 35, 0.78);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+
+            min-height: 54px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .brand-mark {
+            width: 12px;
+            height: 12px;
+
+            border-radius: 50%;
+            background: var(--accent);
+
+            box-shadow: 0 0 20px rgba(18, 230, 230, 0.55);
+        }
+
+        .brand-text {
+            color: var(--accent);
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .main-nav a {
+            position: relative;
+
+            color: var(--text-soft);
+            font-size: 0.92rem;
+
+            transition: color var(--transition);
+        }
+
+        .main-nav a:hover {
+            color: var(--text);
+        }
+
+        .main-nav a::after {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+
+            width: 0;
+            height: 1px;
+
+            background: var(--accent);
+
+            transition: width var(--transition);
+        }
+
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-language {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 34px;
+            height: 34px;
+
+            border: 1px solid var(--border);
+            border-radius: 50%;
+
+            color: var(--text-soft);
+            background: transparent;
+        }
+
+        .mobile-menu-button {
+            display: none;
+
+            width: 42px;
+            height: 42px;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius-small);
+
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        /* =========================================================
+           5. HERO / PRIMEIRA DOBRA
+           ========================================================= */
+
+        .hero {
+            position: relative;
+            padding: 80px 0 45px;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+
+            position: absolute;
+            inset: auto 0 0;
+
+            height: 180px;
+
+            pointer-events: none;
+
+            background:
+                linear-gradient(
+                    to top,
+                    var(--bg),
+                    transparent
+                );
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 2;
+
+            display: grid;
+            grid-template-columns: minmax(0, 0.95fr) minmax(380px, 1.05fr);
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-content {
+            max-width: 560px;
+        }
+
+        .hero-title {
+            margin-bottom: 22px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(3.4rem, 7vw, 7rem);
+            line-height: 0.88;
+            letter-spacing: -0.045em;
+        }
+
+        .hero-description {
+            max-width: 470px;
+            margin-bottom: 28px;
+
+            color: var(--text-soft);
+            font-size: 1rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .hero-art {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 540px;
+        }
+
+        /*
+           Esta é uma ilustração temporária feita apenas com CSS.
+           Para colocar sua arte real:
+
+           1. Coloque a imagem em:
+              assets/images/hero-valor.png
+
+           2. Remova a div .hero-symbol
+           3. Descomente a tag <img> que deixei no HTML.
+        */
+        .hero-symbol {
+            position: relative;
+
+            width: min(90%, 480px);
+            aspect-ratio: 1 / 1;
+
+            border: 3px solid var(--accent);
+            border-radius: 48% 52% 44% 56% / 42% 50% 50% 58%;
+
+            transform: rotate(-18deg);
+
+            box-shadow:
+                0 0 30px rgba(18, 230, 230, 0.18),
+                inset 0 0 35px rgba(18, 230, 230, 0.10);
+        }
+
+        .hero-symbol::before,
+        .hero-symbol::after {
+            content: "";
+
+            position: absolute;
+
+            border: 2px solid rgba(18, 230, 230, 0.45);
+            border-radius: 50%;
+        }
+
+        .hero-symbol::before {
+            inset: 11%;
+        }
+
+        .hero-symbol::after {
+            inset: 25%;
+        }
+
+        .hero-glow {
+            position: absolute;
+
+            width: 620px;
+            height: 180px;
+
+            border-radius: 50%;
+            background: rgba(34, 146, 255, 0.18);
+            filter: blur(45px);
+
+            transform: rotate(-5deg);
+
+            pointer-events: none;
+        }
+
+        /* =========================================================
+           6. PARCEIROS / LOGOS
+           ========================================================= */
+
+        .partners {
+            position: relative;
+            z-index: 5;
+            padding: 35px 0 55px;
+        }
+
+        .partners-list {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            align-items: center;
+            gap: 28px;
+        }
+
+        .partner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 48px;
+
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 1.1rem;
+            font-weight: 700;
+
+            opacity: 0.82;
+            filter: grayscale(1);
+
+            transition:
+                opacity var(--transition),
+                transform var(--transition);
+        }
+
+        .partner:hover {
+            opacity: 1;
+            transform: translateY(-2px);
+        }
+
+        /* =========================================================
+           7. PROBLEM / CHANGE
+           ========================================================= */
+
+        .problem-change-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 38px;
+        }
+
+        .content-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 34px;
+        }
+
+        .content-block:nth-child(2) {
+            grid-column: 1 / -1;
+            margin-top: 10px;
+        }
+
+        .content-block:nth-child(2) .content-text {
+            order: 2;
+        }
+
+        .content-block:nth-child(2) .content-visual {
+            order: 1;
+        }
+
+        .content-heading {
+            margin-bottom: 12px;
+
+            font-size: 1.45rem;
+            font-weight: 500;
+        }
+
+        .content-text p {
+            color: var(--text-soft);
+            font-size: 0.95rem;
+        }
+
+        .content-visual {
+            min-height: 260px;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.05),
+                    rgba(255, 255, 255, 0.015)
+                ),
+                var(--card);
+        }
+
+        /* =========================================================
+           8. ECOSSISTEMA / COMO FUNCIONA
+           ========================================================= */
+
+        .ecosystem-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 180px;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .ecosystem-list {
+            display: grid;
+            gap: 32px;
+        }
+
+        .ecosystem-item {
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .ecosystem-item::before {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            top: 7px;
+
+            width: 3px;
+            height: 46px;
+
+            border-radius: 4px;
+            background: var(--accent);
+
+            opacity: 0.72;
+        }
+
+        .ecosystem-item h3 {
+            margin-bottom: 7px;
+
+            font-size: 1.35rem;
+            font-weight: 500;
+        }
+
+        .ecosystem-item p {
+            margin-bottom: 0;
+            max-width: 690px;
+
+            color: var(--text-soft);
+        }
+
+        .ecosystem-icons {
+            display: grid;
+            gap: 22px;
+        }
+
+        .ecosystem-icon {
+            display: grid;
+            place-items: center;
+
+            min-height: 100px;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.025);
+
+            font-size: 2.5rem;
+        }
+
+        .ecosystem-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            margin-top: 34px;
+        }
+
+        /* =========================================================
+           9. FRASE / MANIFESTO
+           ========================================================= */
+
+        .manifesto {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 460px;
+
+            overflow: hidden;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(18, 230, 230, 0.08),
+                    transparent 35%
+                );
+        }
+
+        .manifesto-background {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px;
+
+            color: rgba(255, 255, 255, 0.13);
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(2rem, 5.5vw, 5rem);
+            font-weight: 700;
+            line-height: 1.15;
+            text-align: center;
+
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .manifesto-main {
+            position: relative;
+            z-index: 2;
+
+            margin: 0;
+            padding: 30px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: clamp(2.1rem, 5vw, 4.3rem);
+            text-align: center;
+        }
+
+        /* =========================================================
+           10. FAQ
+           ========================================================= */
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .faq-intro h2 {
+            margin-bottom: 8px;
+
+            font-size: clamp(1.8rem, 3vw, 3rem);
+            font-weight: 400;
+            line-height: 1.1;
+        }
+
+        .faq-intro p {
+            color: var(--text-soft);
+        }
+
+        .faq-list {
+            border-top: 1px solid var(--border);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            width: 100%;
+            min-height: 56px;
+            padding: 12px 0;
+
+            border: 0;
+
+            color: var(--text);
+            background: transparent;
+
+            text-align: left;
+        }
+
+        .faq-question span:last-child {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+
+            transition: transform var(--transition);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 0 18px;
+
+            color: var(--text-soft);
+            font-size: 0.94rem;
+        }
+
+        .faq-item.is-open .faq-answer {
+            display: block;
+        }
+
+        .faq-item.is-open .faq-question span:last-child {
+            transform: rotate(45deg);
+        }
+
+        /* =========================================================
+           11. EQUIPE
+           ========================================================= */
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(160px, 1fr));
+            gap: 20px;
+
+            overflow-x: auto;
+
+            padding-bottom: 10px;
+            scrollbar-width: thin;
+        }
+
+        .team-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            min-height: 310px;
+            padding: 20px;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.28),
+                    transparent 55%
+                ),
+                var(--card);
+
+            transition:
+                transform var(--transition),
+                background var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-4px);
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.22),
+                    transparent 55%
+                ),
+                var(--card-hover);
+        }
+
+        .team-name {
+            margin: 0;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            text-align: center;
+        }
+
+        /* =========================================================
+           12. FOOTER
+           ========================================================= */
+
+        .footer {
+            padding: 70px 0 30px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.4fr repeat(3, 1fr);
+            gap: 50px;
+        }
+
+        .newsletter h3,
+        .footer-column h3 {
+            margin-bottom: 16px;
+
+            font-size: 1.25rem;
+            font-weight: 500;
+        }
+
+        .newsletter p {
+            max-width: 300px;
+            color: var(--text-soft);
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 8px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+
+            transition: color var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--text);
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 30px;
+
+            margin-top: 75px;
+            padding-top: 28px;
+
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-logo {
+            font-size: clamp(2.5rem, 5vw, 4.4rem);
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+        }
+
+        .footer-copy {
+            margin: 7px 0 0;
+
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .social-link {
+            display: grid;
+            place-items: center;
+
+            width: 38px;
+            height: 38px;
+
+            border: 1px solid var(--border);
+            border-radius: 50%;
+
+            color: var(--text-soft);
+            background: rgba(255, 255, 255, 0.02);
+
+            transition:
+                color var(--transition),
+                background var(--transition);
+        }
+
+        .social-link:hover {
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        /* =========================================================
+           13. ACESSIBILIDADE
+           Mostra um contorno claro quando o usuário navega pelo teclado.
+           ========================================================= */
+
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+        }
+
+        /* =========================================================
+           14. RESPONSIVIDADE
+           ========================================================= */
+
+        @media (max-width: 980px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .hero-content {
+                max-width: 700px;
+            }
+
+            .hero-art {
+                min-height: 380px;
+            }
+
+            .hero-symbol {
+                max-width: 380px;
+            }
+
+            .partners-list {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .content-block {
+                grid-template-columns: 1fr;
+            }
+
+            .content-block:nth-child(2) .content-text,
+            .content-block:nth-child(2) .content-visual {
+                order: initial;
+            }
+
+            .ecosystem-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ecosystem-icons {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-top {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 760px) {
+            .section {
+                padding: 60px 0;
+            }
+
+            .main-nav {
+                position: absolute;
+                top: calc(100% + 1px);
+                left: 0;
+                right: 0;
+
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+
+                padding: 12px 20px 20px;
+
+                background: rgba(5, 19, 35, 0.97);
+                border-bottom: 1px solid var(--border);
+            }
+
+            .main-nav.is-open {
+                display: flex;
+            }
+
+            .main-nav a {
+                padding: 13px 0;
+            }
+
+            .header-language {
+                margin-right: 6px;
+            }
+
+            .mobile-menu-button {
+                display: inline-grid;
+                place-items: center;
+            }
+
+            .header-actions {
+                display: flex;
+                align-items: center;
+            }
+
+            .hero {
+                padding-top: 55px;
+            }
+
+            .hero-title {
+                font-size: clamp(3.2rem, 18vw, 5.2rem);
+            }
+
+            .partners-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .problem-change-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-block:nth-child(2) {
+                grid-column: auto;
+            }
+
+            .ecosystem-icons {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                align-items: flex-start;
+                flex-direction: column;
+                margin-top: 50px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .container {
+                width: min(calc(100% - 28px), var(--container));
+            }
+
+            .hero-art {
+                min-height: 320px;
+            }
+
+            .partners-list {
+                grid-template-columns: 1fr 1fr;
+                gap: 18px;
+            }
+
+            .partner {
+                font-size: 0.95rem;
+            }
+
+            .ecosystem-icons {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .manifesto {
+                min-height: 380px;
+            }
+        }
+
+        /* =========================================================
+           15. REDUÇÃO DE MOVIMENTO
+           Para pessoas que preferem menos animações.
+           ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
