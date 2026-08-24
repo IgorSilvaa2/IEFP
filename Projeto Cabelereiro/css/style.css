@@ -15,7 +15,7 @@ h6 {
 }
 
 a {
-    color: #F4F0EA;
+    color: #F3B6BE;
     transition: .3s;
 }
 
@@ -39,7 +39,7 @@ a:focus {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #d49f2c;
+    background: #071f14;
     width: 44px;
     height: 44px;
     text-align: center;
@@ -52,7 +52,7 @@ a:focus {
 }
 
 .back-to-top:hover {
-    background: #8E646D;
+    background: #F3B6BE;
 }
 
 .back-to-top:hover i {
@@ -60,7 +60,7 @@ a:focus {
 }
 
 .back-to-top i {
-    color: #B7848C;
+    color: #F3B6BE;
     padding-top: 10px;
 }
 
@@ -496,7 +496,7 @@ a:focus {
     margin-bottom: 45px;
     padding: 150px 0 90px 0;
     text-align: center;
-    background: #C8A45A;
+    background: #F3E3D5;
 }
 
 .page-header h2 {
@@ -514,7 +514,7 @@ a:focus {
 }
 
 .page-header a:hover {
-    color: #F4F0EA;
+    color: #F3B6BE;
 }
 
 .page-header a::after {
