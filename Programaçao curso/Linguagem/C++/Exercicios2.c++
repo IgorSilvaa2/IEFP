@@ -1403,3 +1403,35 @@ int main() {
 
     matriz(mat);
 }
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*Exercício 10 – Crie uma struct Aluno com
+nome e Nota.
+Crie uma função que receba um aluno e
+mostre os seus dados.*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Aluno {
+    string nome;
+    float nota;
+};
+
+void Recebe_Aluno (Aluno a) {
+    cout <<"Nome do Aluno: "<< a.nome<< "\n";
+    cout <<"Nota do Aluno: "<< a.nota;
+
+}
+
+int main() {
+    struct Aluno a;
+
+    cout << "Digite o nome do aluno: ";
+    cin >> a.nome;
+    cout << "Digite a nota do aluno: ";
+    cin >> a.nota;
+
+
+    Recebe_Aluno(a);
+}
