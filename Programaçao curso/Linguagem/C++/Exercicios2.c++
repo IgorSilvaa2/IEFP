@@ -1349,3 +1349,57 @@ int main() {
 
     return 0;
 }
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*Exercício 8 – Crie uma função que receba
+uma variável por referência e, altere o seu
+valor para o dobro. O programa deve mostrar
+o valor antes e depois.*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void Dobro (int &a) {
+    a = a* 2;
+    cout << "O dobro do numero e: "<< a;
+}
+
+int main() {
+    int numero;
+
+    cout<< "Digite um numero: ";
+    cin >> numero;
+
+    cout<< "Numero digitado: "<< numero << "\n";
+    
+    Dobro (numero);
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*Exercício 9 – Crie uma função que receba
+uma matriz 3x3 e mostre todos os elementos*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void matriz (int a[3][3]) {
+    for (int i = 0; i<3; i++){
+        for (int j = 0; j<3; j++){
+            cout << a[i][j]<< "  ";
+        }
+        cout << "\n";
+    }
+}
+
+int main() {
+    int mat[3][3];
+
+    for (int i = 0; i<3; i++){
+        for (int j = 0; j<3; j++){
+            cout << "Digite o numero para linha "<< (i+1)<< " coluna "<< (j+1)<< " : ";
+            cin >> mat [i][j];
+        }
+    }
+
+    matriz(mat);
+}
