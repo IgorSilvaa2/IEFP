@@ -1289,29 +1289,31 @@ devolver a média dos valores.*/
 
 using namespace std;
 
-float vetor (int a[],int tamanho ){
-    float media=0;
-        for( int i= 0;i<tamanho;i++){
-            media += a[i]; 
-        }
-        return  (media / tamanho);
+float vetor(int a[], int tamanho)
+{
+    float media = 0;
+    for (int i = 0; i < tamanho; i++)
+    {
+        media += a[i];
+    }
+    return (media / tamanho);
 }
 
-int main() {
-    
+int main()
+{
+
     int a;
-    cout << "Digite o tamanho do vetor: " ;
+    cout << "Digite o tamanho do vetor: ";
     cin >> a;
     int vet[a];
 
-    for(int i = 0; i< a; i++){
-        cout << "Digite o valor "<< (i+1) << ": ";
-        cin >> vet[i];  
+    for (int i = 0; i < a; i++)
+    {
+        cout << "Digite o valor " << (i + 1) << ": ";
+        cin >> vet[i];
     }
 
-    cout << vetor(vet,a);
-    
-    
+    cout << vetor(vet, a);
 
     return 0;
 }
@@ -1322,30 +1324,34 @@ int main() {
 
 using namespace std;
 
-
-int vetor (int a[], int b ){
-    int par=0;
-    for (int i=0;i<b;i++){
-        if ((a[i] % 2) == 0){
-            par = par +1;
+int vetor(int a[], int b)
+{
+    int par = 0;
+    for (int i = 0; i < b; i++)
+    {
+        if ((a[i] % 2) == 0)
+        {
+            par = par + 1;
         }
     }
     return par;
 }
-int main() {
-    
+int main()
+{
+
     int a;
     cout << "Digite o tamanho do vetor : ";
     cin >> a;
 
     int vet[a];
 
-    for (int i =0;i<a;i++){
-        cout << "Digite o "<< (i+1)<< " valor :" ;
+    for (int i = 0; i < a; i++)
+    {
+        cout << "Digite o " << (i + 1) << " valor :";
         cin >> vet[i];
     }
 
-    cout << "Existe " << vetor(vet,a)<< " numeros par !";
+    cout << "Existe " << vetor(vet, a) << " numeros par !";
 
     return 0;
 }
@@ -1359,20 +1365,22 @@ o valor antes e depois.*/
 #include <string>
 using namespace std;
 
-void Dobro (int &a) {
-    a = a* 2;
-    cout << "O dobro do numero e: "<< a;
+void Dobro(int &a)
+{
+    a = a * 2;
+    cout << "O dobro do numero e: " << a;
 }
 
-int main() {
+int main()
+{
     int numero;
 
-    cout<< "Digite um numero: ";
+    cout << "Digite um numero: ";
     cin >> numero;
 
-    cout<< "Numero digitado: "<< numero << "\n";
-    
-    Dobro (numero);
+    cout << "Numero digitado: " << numero << "\n";
+
+    Dobro(numero);
 }
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 /*Exercício 9 – Crie uma função que receba
@@ -1382,22 +1390,28 @@ uma matriz 3x3 e mostre todos os elementos*/
 #include <string>
 using namespace std;
 
-void matriz (int a[3][3]) {
-    for (int i = 0; i<3; i++){
-        for (int j = 0; j<3; j++){
-            cout << a[i][j]<< "  ";
+void matriz(int a[3][3])
+{
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << a[i][j] << "  ";
         }
         cout << "\n";
     }
 }
 
-int main() {
+int main()
+{
     int mat[3][3];
 
-    for (int i = 0; i<3; i++){
-        for (int j = 0; j<3; j++){
-            cout << "Digite o numero para linha "<< (i+1)<< " coluna "<< (j+1)<< " : ";
-            cin >> mat [i][j];
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << "Digite o numero para linha " << (i + 1) << " coluna " << (j + 1) << " : ";
+            cin >> mat[i][j];
         }
     }
 
@@ -1413,18 +1427,20 @@ mostre os seus dados.*/
 #include <string>
 using namespace std;
 
-struct Aluno {
+struct Aluno
+{
     string nome;
     float nota;
 };
 
-void Recebe_Aluno (Aluno a) {
-    cout <<"Nome do Aluno: "<< a.nome<< "\n";
-    cout <<"Nota do Aluno: "<< a.nota;
-
+void Recebe_Aluno(Aluno a)
+{
+    cout << "Nome do Aluno: " << a.nome << "\n";
+    cout << "Nota do Aluno: " << a.nota;
 }
 
-int main() {
+int main()
+{
     struct Aluno a;
 
     cout << "Digite o nome do aluno: ";
@@ -1432,6 +1448,288 @@ int main() {
     cout << "Digite a nota do aluno: ";
     cin >> a.nota;
 
+    Recebe_Aluno(a);
+}
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*Exercício 11 – Crie um programa que leia os
+dados de 3 alunos e utilize uma função para
+determinar o aluno com melhor nota*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Aluno
+{
+    string nome;
+    float nota;
+};
+void Recebe_Aluno(Aluno a[])
+{
+    int melhor = a[0].nota;
+    for (int i = 0; i < 3; i++)
+    {
+        if (a[i].nota > melhor)
+        {
+            melhor = i;
+        }
+    }
+    cout << "O aluno com a melhor nota e: " << a[melhor].nome << " Sua nota e: " << a[melhor].nota;
+}
+
+int main()
+{
+    struct Aluno a[3];
+
+    for (int i = 0; i < 3; i++)
+    {
+        cout << "Digite o nome do " << (i + 1) << "º aluno : ";
+        cin >> a[i].nome;
+        cout << "Digite a nota do " << (i + 1) << "º aluno : ";
+        cin >> a[i].nota;
+    }
 
     Recebe_Aluno(a);
+}
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/* Exercício – Crie um programa que gira a compra de itens numa loja através de funções com ponteiro e referência.
+
+O programa deve:
+Criar uma função para atualizar o dinheiro por ponteiro. Ela deve retirar o custo da poção do dinheiro total.
+Se o dinheiro não for suficiente, a função não altera o valor e mostra uma mensagem de erro.
+Criar uma função para atualizar a quantidade de poções por referência. Ela deve adicionar 1 unidade ao inventário do jogador.
+No main, definir que o jogador começa com 50 moedas e 0 poções.
+Simular a compra de uma poção que custa 20 moedas, chamando as duas funções.
+Mostrar o dinheiro e a quantidade de poções no final.*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool compra(int *a)
+{
+    if (*a >= 20)
+    {
+        *a = *a - 20;
+        cout << "Compra efetuada !" << endl;
+        return true;
+    }
+    else
+    {
+        cout << "Saldo insuficiente !" << "\n"
+             << endl;
+        return false;
+    }
+}
+
+void quantidade(int &a)
+{
+    a = a + 1;
+}
+
+int main()
+{
+
+    int Saldo = 50, Pocoes = 0;
+    string escolha;
+
+    do
+    {
+        cout << "Deseja iniciar uma compra ? Preço $20" << "\n"
+             << "Sim" << "\n"
+             << "Não" << endl;
+        cin >> escolha;
+
+        if (escolha == "s" || escolha == "sim")
+        {
+            if (compra(&Saldo))
+            {
+                ;
+                quantidade(Pocoes);
+            }
+            cout << "Saldo = " << Saldo << "\n"
+                 << endl;
+        }
+        else if (escolha == "n" || escolha == "nao")
+        {
+            cout << "\n"
+                 << "Compra finalizada ! " << endl;
+        }
+    } while (escolha == "s" || escolha == "sim");
+
+    cout << "Seu saldo: " << Saldo << endl;
+    cout << "Quantidade de poções: " << Pocoes << endl;
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*Exercício 12 – Crie um programa com um
+menu:
+1 – Soma
+2 – Subtração
+3 – Multiplicação
+Cada operação deve ser feita numa função
+diferente.*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int Soma(int a)
+{
+    int numero;
+    cout << "Digite o numero que quer somar: ";
+    cin >> numero;
+    cout << "O resultado da soma e: ";
+    return a + numero;
+}
+int Subtracao(int a)
+{
+    int numero;
+    cout << "Digite o numero que quer Subtrair: ";
+    cin >> numero;
+    cout << "O resultado da subtração e: ";
+    return a - numero;
+}
+int Multiplicacao(int a)
+{
+    int numero;
+    cout << "Digite o numero que quer Multiplicar: ";
+    cin >> numero;
+    cout << "O resultado da multiplicação e: ";
+    return a * numero;
+}
+
+int main()
+{
+    int escolha, numero;
+
+    do
+    {
+        cout << "\nDigite um numero: ";
+        cin >> numero;
+        cout << "escolha uma opcao ! " << endl;
+        cout << "1 - Soma " << "\n"
+             << "2 - Subtração " << "\n"
+             << "3 - Multiplicação " << "\n";
+        cin >> escolha;
+
+        if (escolha == 1)
+        {
+            cout << Soma(numero);
+        }
+        else if (escolha == 2)
+        {
+            cout << Subtracao(numero);
+        }
+        else if (escolha == 3)
+        {
+            cout << Multiplicacao(numero);
+        }
+        else
+        {
+            cout << "Opçao invalida !! " << endl;
+        }
+    } while (escolha < 1 || escolha > 3);
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*Exercício 13 – Crie uma função que:
+- receba um número n
+- crie um vetor dinamicamente com new
+- preencha o vetor
+- mostre os valores*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+void New (int a[], int b) {
+    for(int i =0; i<b; i++){
+        cout << a[i]<< " ";
+     }
+
+}
+
+int main() {
+    int tamanho;
+
+    cout <<"Digite o tamanho do vetor: ";
+    cin >> tamanho;
+
+    int* vetor = new int[tamanho];
+
+    for(int i =0; i<tamanho; i++){
+        cout << "Digite o "<< (i+1)<< "º numero: ";
+        cin >> vetor[i];
+    }
+
+    New(vetor,tamanho);
+
+     delete[] vetor; 
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+/*Exercício 14 – Crie um programa que leia 10
+números. Utilize funções para:
+- calcular a média
+- encontrar o maior valor
+- contar números positivos*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+float Media(float a[])
+{
+    float media = 0;
+    for (int i = 0; i < 10; i++)
+    {
+        media = media + a[i];
+    }
+    cout << "A media é: ";
+    return media / 10;
+}
+int Maior(float a[])
+{
+    int maior = a[0];
+    for (int i = 0; i < 10; i++)
+    {
+        if (a[i] > maior)
+        {
+            maior = a[i];
+        }
+    }
+    cout << "O maior numero é: ";
+    return maior;
+}
+int Conta_positivo(float a[])
+{
+    int contador = 0;
+    for (int i = 0; i < 10; i++)
+    {
+        if (a[i] > 0)
+        {
+            contador += 1;
+        }
+    }
+    cout << "Quantidade de numeros positivos: ";
+    return contador;
+}
+
+int main()
+{
+    float numero[10];
+
+    for (int i = 0; i < 10; i++)
+    {
+        cout << "Digite o " << (i + 1) << "º numero: ";
+        cin >> numero[i];
+    }
+
+    cout << Media(numero) << endl;
+    cout << Maior(numero) << endl;
+    cout << Conta_positivo(numero) << endl;
 }
