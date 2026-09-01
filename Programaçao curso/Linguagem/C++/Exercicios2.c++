@@ -1546,7 +1546,6 @@ int main()
         {
             if (compra(&Saldo))
             {
-                ;
                 quantidade(Pocoes);
             }
             cout << "Saldo = " << Saldo << "\n"
