@@ -1644,29 +1644,32 @@ int main()
 #include <string>
 using namespace std;
 
-void New (int a[], int b) {
-    for(int i =0; i<b; i++){
-        cout << a[i]<< " ";
-     }
-
+void New(int a[], int b)
+{
+    for (int i = 0; i < b; i++)
+    {
+        cout << a[i] << " ";
+    }
 }
 
-int main() {
+int main()
+{
     int tamanho;
 
-    cout <<"Digite o tamanho do vetor: ";
+    cout << "Digite o tamanho do vetor: ";
     cin >> tamanho;
 
-    int* vetor = new int[tamanho];
+    int *vetor = new int[tamanho];
 
-    for(int i =0; i<tamanho; i++){
-        cout << "Digite o "<< (i+1)<< "º numero: ";
+    for (int i = 0; i < tamanho; i++)
+    {
+        cout << "Digite o " << (i + 1) << "º numero: ";
         cin >> vetor[i];
     }
 
-    New(vetor,tamanho);
+    New(vetor, tamanho);
 
-     delete[] vetor; 
+    delete[] vetor;
 }
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
