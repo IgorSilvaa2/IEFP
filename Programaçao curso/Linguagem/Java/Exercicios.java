@@ -130,3 +130,28 @@ public class Aulas_java {
 
     }
 }
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// exercicio for JAVA 
+
+import java.util.*;
+import java.io.PrintStream; //importa a classe printStream//
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        //Define UTF-98 na janela do NetBeans
+        Scanner entrada = new Scanner(System.in);
+
+      int numero;
+      System.out.print("Digite um numero para tabuada : ");
+      numero = entrada.nextInt();
+
+      for (int i = 0; i<10; i++) {
+        System.out.printf(numero + " x " + (i+1) + " = " + (numero *(i+1)));
+        System.out.print("\n");
+      }
+      
+    }
+}
