@@ -818,7 +818,10 @@ a:focus {
 }
 
 .team .team-img {
-    position: relative;
+     position: relative;
+    width: 100%;
+    overflow: hidden; /* Corta sobras de forma limpa */ 
+    
 }
 
 .team .team-img::after {
@@ -836,6 +839,12 @@ a:focus {
 
 .team .team-img img {
     width: 100%;
+    height: auto; /* Permite que a altura se ajuste à proporção original da foto */
+    max-height: 350px; /* Impede que a imagem cresça demais verticalmente */
+    object-fit: contain; /* Reduz o zoom para a foto caber inteira no espaço */
+    object-position: top center; /* Garante o foco absoluto no topo (cabeça/rosto) */
+    display: block;
+    
 }
 
 .team .team-text {
