@@ -9,10 +9,10 @@ void Nome_usuario(string a)
 {
 
 }
-void Salva_nome(string a){
+void input_nome(string a){
     ofstream ficheiro("Nome_jogadores.txt", ios::app);
     if(ficheiro.is_open()){
-        ficheiro << a << "\n";
+        ficheiro << a << "\n" << "\n";
     }
     ficheiro.close();
 }
@@ -20,23 +20,41 @@ void Salva_nome(string a){
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
-    string Nome;
-    int Escolha;
+    string nome;
+    int escolha = 0;
 
     do{
     cout << "***************************" << endl;
     cout << "*      JOGO DA FORCA      *" << endl;
     cout << "***************************" << endl;
 
+    cout << "Escolha uma opcao";
+
+    switch(escolha){
+    case 1:
+        break;
+    case 2 :
+        break;
+    case 3 :
+        break;
+    }
     cout << "digite o seu nome : ";
-    cin >> Nome;
+    cin >> nome;
 
-    Salva_nome(Nome);
 
-    cout << "Dezeja continuar ? 1 = Sim - 0 = Não : ";
+
+/*
+    input_nome(Nome);
+
+    cout << "Dezeja continuar ? 1 (Sim) - 0 (NÃ£o) : ";
     cin >> Escolha;
     }while(Escolha != 0);
 
+    ofstream teste;
+
+    teste.open("teste.txt", std::ios_base::app);
+    teste << Nome;
+    teste.close();*/
 
     return 0;
 }
