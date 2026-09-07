@@ -155,3 +155,92 @@ public class Main {
       
     }
 }
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import java.util.*;
+import java.io.PrintStream; //importa a classe printStream//
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      
+      Scanner entrada = new Scanner(System.in);
+
+      int numero,divisores = 0,soma=0;
+
+      System.out.print("Digite um numero: ");
+      numero = entrada.nextInt();
+
+      System.out.print("Divisores do numero: ");
+
+        for (int i =1; i<=numero; i++){
+          if (numero % i == 0){
+            divisores = i;
+            soma += i;
+            System.out.print(i + " ");
+          } 
+        } 
+      System.out.print("\n" + "Soma dos numeros: " + soma);
+
+        
+      }
+    }
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import java.util.*;
+import java.io.PrintStream; //importa a classe printStream//
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      
+      Scanner entrada = new Scanner(System.in);
+
+      int numero,soma=0;
+
+      do{
+      System.out.print("Digite um numero: ");
+      numero = entrada.nextInt();
+      soma += numero;
+      }
+      while(numero != 0);
+      System.out.print("Soma:" + soma); 
+        
+      }
+    }
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+import java.util.*;
+import java.io.PrintStream; //importa a classe printStream//
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner entrada = new Scanner(System.in);
+
+        int [] vet = new int [10];
+        int media = 0;
+
+        for (int i =0; i<vet.length; i++){
+        System.out.print("Digite o "+ (i+1)+ "° numero: ");
+        vet [i] = entrada.nextInt();
+        media = media+ vet[i];
+        } 
+
+        System.out.println(media/vet.length);
+        System.out.println("vetor numeros: "+ Arrays.toString(vet));
+
+        entrada.close();
+
+        for(int n: vet){
+        System.out.println("numero: " + n);
+        }
+        
+      }
+    }
+
+
+
