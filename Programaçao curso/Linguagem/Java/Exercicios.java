@@ -157,6 +157,7 @@ public class Main {
 }
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 1) Escreva um programa Java que receba um número inteiro e imprima a sua tabuada. Exemplo 5 X 1 = 5, 5 X 2 = 10 ...
 
 import java.util.*;
 import java.io.PrintStream; //importa a classe printStream//
@@ -188,6 +189,7 @@ public class Main {
     }
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 2) Crie um programa que, dado um número inserido pelo utilizador, verifique quais são os seus divisores, imprimindo no ecrã a sua soma.
 
 import java.util.*;
 import java.io.PrintStream; //importa a classe printStream//
@@ -212,6 +214,7 @@ public class Main {
     }
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 3) Crie um programa que realize a soma de números inteiros dados pelo utilizador, até ser inserido o número 0.
 
 import java.util.*;
 import java.io.PrintStream; //importa a classe printStream//
