@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Testes.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>
