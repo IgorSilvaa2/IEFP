@@ -1,9 +1,13 @@
 # depslib dependency file v1.0
-1788874460 source:c:\users\boxig\documents\iefp\projeto cpp\projeto_forca\main.cpp
+1788892191 source:c:\users\boxig\documents\iefp\projeto cpp\projeto_forca\main.cpp
 	<iostream>
-	<fstream>
 	<string>
-	<vector>
+	<fstream>
+	<clocale>
+	<limits>
+	<ios>
+	<cstdlib>
+	<ctime>
 
 1788798342 source:c:\users\boxig\documents\iefp\projeto cpp\projeto_forca\testes.cpp
 	<iostream>

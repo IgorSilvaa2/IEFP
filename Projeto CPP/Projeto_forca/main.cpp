@@ -2,6 +2,10 @@
 #include <string>
 #include <fstream>
 #include <clocale>
+#include <limits>
+#include <ios>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -20,6 +24,51 @@ void input_String(string a)
     }
     ficheiro.close();
 }
+//////////////////////// FUNCAO MENU DIFICULDADDE //////////////////////////////////
+
+void menu_Dificuldade()
+{
+    int dif;
+    string facil[4] = {"gato","mesa","cola","casa"};
+    string medio[4] = {"computador","teclado","caderno","mochila"};
+    string Dificil[4] = {"paralelepipedo","inconstitucional","arquipelago","parapsicologia"};
+
+
+    cout << "\n 1 - Facil";
+    cout << "\n 2 - Medio";
+    cout << "\n 3 - Dificil \n";
+
+    do
+    {
+        cout << "Escolha uma opcao : ";
+        cin >> dif ;
+        if(dif == 1)
+        {
+            srand(time(NULL));
+            int aletorio = rand() % 4;
+            cout << facil[aletorio];
+        }
+        else if (dif == 2)
+        {
+            srand(time(NULL));
+            int aletorio = rand() % 4;
+            cout << medio[aletorio];
+        }
+        else if(dif == 3)
+        {
+            srand(time(NULL));
+            int aletorio = rand() % 4;
+            cout << Dificil[aletorio];
+        }
+        else
+        {
+            cout << "Opcao invalida ! \n";
+        }
+    }
+    while(dif <1 || dif > 3);
+
+
+}
 ////////////////////////// FUNCAO MENU ////////////////////////////////
 void menu_Inicial()
 {
@@ -29,13 +78,13 @@ void menu_Inicial()
     do
     {
         cout << "============================================================================================\n"
-     << "   _  ___   ____  ___    ____   _      _____ ___  ____   ____   _         +---+\n"
-     << "  | |/ _ \\ / ___|/ _ \\  |  _ \\ / \\    |  ___/ _ \\|  _ \\ / ___| / \\        |   |\n"
-     << "  | | | | | |  _| | | | | | | / _ \\   | |_ | | | | |_) | |    / _ \\       O   |\n"
-     << "  | | |_| | |_| | |_| | | |_/ / ___ \\  |  _|| |_| |  _ <| |___/ ___ \\    /|\\  |\n"
-     << " _/ |\\___/ \\____|\\___/  |____/_/   \\_\\ |_|   \\___/|_| \\_\\\\____/_/   \\_\\  / \\  |\n"
-     << "|__/                                                                          |\n"
-     << "============================================================================================\n" << endl;
+             << "   _  ___   ____  ___    ____   _      _____ ___  ____   ____   _         +---+\n"
+             << "  | |/ _ \\ / ___|/ _ \\  |  _ \\ / \\    |  ___/ _ \\|  _ \\ / ___| / \\        |   |\n"
+             << "  | | | | | |  _| | | | | | | / _ \\   | |_ | | | | |_) | |    / _ \\       O   |\n"
+             << "  | | |_| | |_| | |_| | | |_/ / ___ \\  |  _|| |_| |  _ <| |___/ ___ \\    /|\\  |\n"
+             << " _/ |\\___/ \\____|\\___/  |____/_/   \\_\\ |_|   \\___/|_| \\_\\\\____/_/   \\_\\  / \\  |\n"
+             << "|__/                                                                          |\n"
+             << "============================================================================================\n" << endl;
 
         cout << "Escolha uma opcao !";
         cout << "\n 1 - Jogar";
@@ -43,6 +92,7 @@ void menu_Inicial()
         cout << "\n 3 - Sair";
         cout << "\n =========================================\n";
         cin >> escolha;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
         switch(escolha)
         {
@@ -57,8 +107,9 @@ void menu_Inicial()
                  << "=========================================================================\n" << endl;
 
             cout << "Digite o seu nome : ";
-            cin >> nome;
+            getline (cin,nome);
             input_String(nome);
+            menu_Dificuldade();
             break;
         case 2 :
             limpa_Tela();
@@ -112,26 +163,15 @@ void menu_Inicial()
     }
     while(escolha < 1 || escolha > 3);
 }
+
 //////////////////////// MAIN //////////////////////////////////
 
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
-<<<<<<< HEAD
-
-    menu_Inicial();
-=======
 
     menu_Inicial();
 
-    /*
-    } ofstream teste;
-
-    teste.open("teste.txt", std::ios_base::app);
-    teste << Nome;
-    teste.close();
-    */
->>>>>>> 38b001bcc4bc5611a6ee1ff48af4f9ad77cc05aa
 
     return 0;
 }
