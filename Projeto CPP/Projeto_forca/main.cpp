@@ -117,8 +117,21 @@ void menu_Inicial()
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
+<<<<<<< HEAD
 
     menu_Inicial();
+=======
+
+    menu_Inicial();
+
+    /*
+    } ofstream teste;
+
+    teste.open("teste.txt", std::ios_base::app);
+    teste << Nome;
+    teste.close();
+    */
+>>>>>>> 38b001bcc4bc5611a6ee1ff48af4f9ad77cc05aa
 
     return 0;
 }
