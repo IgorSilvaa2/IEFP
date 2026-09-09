@@ -17,9 +17,10 @@
 	<fstream>
 	<clocale>
 
-1788828794 source:c:\users\boxig\onedrive\documentos\iefp\projeto cpp\projeto_forca\main.cpp
+1788864290 source:c:\users\boxig\onedrive\documentos\iefp\projeto cpp\projeto_forca\main.cpp
 	<iostream>
 	<string>
 	<fstream>
 	<clocale>
+	<time.h>
 

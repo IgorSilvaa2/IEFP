@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
+#include <string_view>
 #include <fstream>
 #include <clocale>
+#include <ctime>
 
 using namespace std;
 
@@ -11,7 +13,7 @@ void limpa_Tela()
     system("CLS");
 }
 /////////////////////// FUNCAO INPUT STRING ///////////////////////////////////
-void input_String(string a)
+void input_String(const string& a)
 {
     ofstream ficheiro("Input_String.txt", ios::app);
     if(ficheiro.is_open())
@@ -35,7 +37,7 @@ void menu_Inicial()
      << "  | | |_| | |_| | |_| | | |_/ / ___ \\  |  _|| |_| |  _ <| |___/ ___ \\    /|\\  |\n"
      << " _/ |\\___/ \\____|\\___/  |____/_/   \\_\\ |_|   \\___/|_| \\_\\\\____/_/   \\_\\  / \\  |\n"
      << "|__/                                                                          |\n"
-     << "============================================================================================\n" << endl;
+     << "============================================================================================\n" << "\n";
 
         cout << "Escolha uma opcao !";
         cout << "\n 1 - Jogar";
@@ -54,7 +56,7 @@ void menu_Inicial()
                  << " |  _ \\|  _| | |\\/| |     \\ \\ / /| |  \\| | | | | | | | | | |\n"
                  << " | |_) | |___| |  | |      \\ V / | | |\\  | |_| | |_| |_|_|_|\n"
                  << " |____/|_____|_|  |_|       \\_/  |_|_| \\_|____/ \\___/(_|_|_)\n"
-                 << "=========================================================================\n" << endl;
+                 << "=========================================================================\n" << "\n";
 
             cout << "Digite o seu nome : ";
             cin >> nome;
@@ -76,7 +78,7 @@ void menu_Inicial()
                  << "3. FIM DE JOGO:\n"
                  << "   - VITORIA: Se descobrir todas as letras.\n"
                  << "   - DERROTA: Se atingir o limite de 6 erros.\n\n"
-                 << "=========================================\n" << endl;
+                 << "=========================================\n" << "\n";
             int sub_Escolha;
 
             do
@@ -96,7 +98,7 @@ void menu_Inicial()
                 }
                 else
                 {
-                    cout << "Invalido " << endl;
+                    cout << "Invalido " << "\n";
                     escolha = 0;
                 }
             }
