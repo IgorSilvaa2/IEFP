@@ -1131,3 +1131,37 @@ int main()
 
     return 0;
 }
+
+//
+ vector<string> faceis;
+    vector<string> medias;
+    vector<string> dificeis;
+
+    ifstream escolheDif("Dificuldades.txt");
+    string linhaInteira;
+
+    if(escolheDif.is_open()){
+        // 1ª Linha -> Fáceis
+        if(getline(escolheDif, linhaInteira)) {
+            // Um truque simples: criamos um fluxo de leitura a partir da linha
+            #include <sstream> // Precisas de adicionar esta biblioteca no topo do ficheiro (.h)
+            stringstream ss(linhaInteira);
+            string palavra;
+            while(ss >> palavra) faceis.push_back(palavra);
+        }
+        // 2ª Linha -> Médias
+        if(getline(escolheDif, linhaInteira)) {
+            stringstream ss(linhaInteira);
+            string palavra;
+            while(ss >> palavra) medias.push_back(palavra);
+        }
+        // 3ª Linha -> Difíceis
+        if(getline(escolheDif, linhaInteira)) {
+            stringstream ss(linhaInteira);
+            string palavra;
+            while(ss >> palavra) dificeis.push_back(palavra);
+        }
+        escolheDif.close();
+    } else {
+        cout << "Erro ao abrir ficheiro \n";
+    }
