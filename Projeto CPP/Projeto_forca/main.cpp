@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <clocale>
 #include <limits>
 #include <vector>
 #include <ios>
@@ -29,43 +28,17 @@ void inputNomes(const string& a)
 
 void menu_Dificuldade()
 {
-    int dificuldade;
-    ofstream criaDificuldade("Dificuldades.txt");
 
-    if(criaDificuldade.is_open())
-    {
-        //FACEIS
-        criaDificuldade << "GATO CASA CARRO PORTA FRUTA LIVRO MESA CHAVE BOLA AGUA \n";
-        criaDificuldade << "GUITARRA CACHORRO ESPELHO COMPUTADOR TRABALHO DINHEIRO PLANETA FLORESTA MOCHILA GIRAFA \n";
-        criaDificuldade << "PARALELEPIPEDO PSICOLOGO OTORRINOLARINGOLOGISTA XILOFONE ARQUEOLOGIA EXCECAO SUBTERRANEO CALEIDOSCOPIO ESFINGE SIMETRIA \n";
-    }
-    else
-    {
-        cout << "O ficheiro de dificuldades nao foi aberto \n";
-    }
-    criaDificuldade.close();
-
-    ifstream escolheDif ("Dificuldades.txt");
-    string salvaDif;
-    vector <string> difVet;
-
-    if(escolheDif.is_open()){
-        while(escolheDif >> salvaDif){
-            difVet.push_back(salvaDif);
-        }
-        escolheDif.close();
-    }else{
-        cout << "Erro ao abrir ficheiro \n";
-    }
-
-    if(difVet.empty()){
-        cout << "O ficheiro esta vazio ! \n";
-    }
+    const string facil [10] = {"GATO", "CAO", "LEAO", "PATO", "RATO", "LOBO", "URSO", "VACA", "SAPO", "AVES"};
+    const string medio[10]= {"GUITARRA", "ESPELHO", "COMPUTADOR", "MOCHILA", "CADERNO", "TELEFONE", "CARTEIRA", "LANTERNA", "RELOGIO", "MARTELO"};
+    const string dificil [10]= {"OTORRINOLARINGOLOGISTA", "PSICOLOGO", "ARQUEOLOGIA", "PROGRAMADOR", "ENGENHEIRO", "ASTRONAUTA", "NUTRICIONISTA", "NEUROCIENTISTA", "EMPREENDEDOR", "FARMACEUTICO"};
 
 
     cout << "\n 1 - Facil";
     cout << "\n 2 - Medio";
     cout << "\n 3 - Dificil \n";
+
+    int dificuldade;
 
     do
     {
@@ -74,20 +47,32 @@ void menu_Dificuldade()
         if(dificuldade == 1)
         {
             srand(time(0));
-            int aletorio = rand() % difVet.size();
-            string difEscolhida = difVet[aletorio];
-            cout << difEscolhida;
+            int aleatorio = rand() % 9;
+            string palavraEscolhida = facil[aleatorio];
+            cout << palavraEscolhida;
+            for (size_t i = 0; i < palavraEscolhida.length(); i++)
+            {
+                cout << "_";
+            }
         }
         else if (dificuldade == 2)
         {
             srand(time(0));
-            int aletorio = rand() % difVet.size();
-
+            int aleatorio = rand() % 9;
+            string palavraEscolhida = medio[aleatorio];
+            cout << palavraEscolhida << "\n";
+            for (size_t i = 0; i < palavraEscolhida.length(); i++)
+            {
+                cout << "_ ";
+            }
+            cout << "A sua palavra e um objeto e tem " << palavraEscolhida.length() << " letras \n";
         }
         else if(dificuldade == 3)
         {
             srand(time(0));
-            int aletorio = rand() % difVet.size();
+            int aleatorio = rand() % 9;
+            string palavraEscolhida = dificil[aleatorio];
+            cout << palavraEscolhida;
 
         }
         else
@@ -104,6 +89,9 @@ void menu_Inicial()
 {
     string nome;
     int escolha;
+    cout << "Digite o seu nome : ";
+    getline (cin,nome);
+    inputNomes(nome);
 
     do
     {
@@ -137,10 +125,6 @@ void menu_Inicial()
                  << " | |_) | |___| |  | |      \\ V / | | |\\  | |_| | |_| |_|_|_|\n"
                  << " |____/|_____|_|  |_|       \\_/  |_|_| \\_|____/ \\___/(_|_|_)\n"
                  << "=========================================================================\n" << "\n";
-
-            cout << "Digite o seu nome : ";
-            getline (cin,nome);
-            inputNomes(nome);
             menu_Dificuldade();
             break;
         case 2 :
@@ -191,6 +175,8 @@ void menu_Inicial()
             limpa_Tela();
             cout << "Ate logo !!";
             break;
+        default:
+            limpa_Tela();
         }
     }
     while(escolha < 1 || escolha > 3);

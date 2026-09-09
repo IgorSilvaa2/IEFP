@@ -6,90 +6,89 @@ import java.io.UnsupportedEncodingException; // Importa a classe para tratar a e
 import java.util.Scanner;
 
 public class Aulas_java {
-    public static void main(String[] args)throws UnsupportedEncodingException {
-        //Define UTF-98 na janela do NetBeans
-        System.setOut(new PrintStream(System.out,true,"UTF8"));
-        
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        // Define UTF-98 na janela do NetBeans
+        System.setOut(new PrintStream(System.out, true, "UTF8"));
+
         Scanner entrada = new Scanner(System.in);
         String nome;
         int id;
         char situacao;
-        
+
         System.out.print("Insira o seu ID : ");
         id = entrada.nextInt();
         System.out.println("O ID inserido foi: " + id);
-        
+
         System.out.print("Insira o seu nome: ");
-        entrada.nextLine(); //Limpa p Enter do t eclado que ficou  da instrução acima.
+        entrada.nextLine(); // Limpa p Enter do t eclado que ficou da instrução acima.
         nome = entrada.nextLine();
         System.out.println("O nome inserido foi : " + nome);
-        
+
         System.out.print("Insira sua situação profissional, d = desempregado, f = Em formação: ");
         situacao = entrada.nextLine().charAt(0);
-        System.out.println("A situação inserida foi: "+ situacao);
-        
+        System.out.println("A situação inserida foi: " + situacao);
+
     }
-    
+
 }
 
-
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 // Exercicio 1 le valores e testa uma candiçao sem if (operador ternario)
 
-
 package javaapplication2;
 
-import java.io.PrintStream; //importa a classe printStream//
+import java.io.PrintStream; // importa a classe printStream//
 import java.io.UnsupportedEncodingException; // Importa a classe para tratar a exceção que //
 import java.util.Scanner;
 
 public class Aulas_java {
-    public static void main(String[] args)throws UnsupportedEncodingException {
-        //Define UTF-98 na janela do NetBeans
-        System.setOut(new PrintStream(System.out,true,"UTF8"));
-        
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        // Define UTF-98 na janela do NetBeans
+        System.setOut(new PrintStream(System.out, true, "UTF8"));
+
         Scanner entrada = new Scanner(System.in);
-        
-        String nome,morada;
-        int telefone,numerocc;
-        float salariobruto,salarioliquido,salariomin;
-        
-        
+
+        String nome, morada;
+        int telefone, numerocc;
+        float salariobruto, salarioliquido, salariomin;
+
         System.out.print("Digite o seu nome: ");
         nome = entrada.nextLine();
-        
+
         System.out.print("Digite o seu Morada: ");
         morada = entrada.nextLine();
-        
+
         System.out.print("Digite o seu Telefone: ");
         telefone = entrada.nextInt();
 
         System.out.print("Digite o seu Numero do CC: ");
         numerocc = entrada.nextInt();
-        
+
         System.out.print("Digite o seu salaraio bruto para saber o valor liquido: ");
         salariobruto = entrada.nextFloat();
-        
+
         System.out.print("Qual e o salario minimo?: ");
         salariomin = entrada.nextFloat();
-        
-        salariobruto = salariobruto >= salariomin ? salariobruto - salariobruto * 0.1f  - salariobruto * 0.21f : salariobruto;
-        
-        System.out.println(nome + "\n" + morada + "\n" + telefone + "\n" + numerocc);
-        System.out.println("O Salario é:" + salariobruto );
 
-        
+        salariobruto = salariobruto >= salariomin ? salariobruto - salariobruto * 0.1f - salariobruto * 0.21f
+                : salariobruto;
+
+        System.out.println(nome + "\n" + morada + "\n" + telefone + "\n" + numerocc);
+        System.out.println("O Salario é:" + salariobruto);
+
     }
-    
+
 }
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//Desenvolva um pequeno programa que verifique se um caracter que é passado ao programa(pode ultilizar uma variavel para simular esse caracter ) é maiusculo e se o for, avise o ultilizador de que o mesmo é mausculo;
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Desenvolva um pequeno programa que verifique se um caracter que é passado ao
+// programa(pode ultilizar uma variavel para simular esse caracter ) é maiusculo
+// e se o for, avise o ultilizador de que o mesmo é mausculo;
 
 package javaapplication2;
 
-import java.io.PrintStream; //importa a classe printStream//
+import java.io.PrintStream; // importa a classe printStream//
 import java.io.UnsupportedEncodingException; // Importa a classe para tratar a exceção que //
 import java.util.Scanner;
 
@@ -131,11 +130,11 @@ public class Aulas_java {
     }
 }
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// exercicio for JAVA 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// exercicio for JAVA
 
 import java.util.*;
-import java.io.PrintStream; //importa a classe printStream//
+import java.io.PrintStream; // importa a classe printStream//
 import java.util.Scanner;
 
 public class Main {
@@ -156,11 +155,12 @@ public class Main {
     }
 }
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// 1) Escreva um programa Java que receba um número inteiro e imprima a sua tabuada. Exemplo 5 X 1 = 5, 5 X 2 = 10 ...
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 1) Escreva um programa Java que receba um número inteiro e imprima a sua
+// tabuada. Exemplo 5 X 1 = 5, 5 X 2 = 10 ...
 
 import java.util.*;
-import java.io.PrintStream; //importa a classe printStream//
+import java.io.PrintStream; // importa a classe printStream//
 import java.util.Scanner;
 
 public class Main {
@@ -188,11 +188,12 @@ public class Main {
       }
     }
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// 2) Crie um programa que, dado um número inserido pelo utilizador, verifique quais são os seus divisores, imprimindo no ecrã a sua soma.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 2) Crie um programa que, dado um número inserido pelo utilizador, verifique
+// quais são os seus divisores, imprimindo no ecrã a sua soma.
 
 import java.util.*;
-import java.io.PrintStream; //importa a classe printStream//
+import java.io.PrintStream; // importa a classe printStream//
 import java.util.Scanner;
 
 public class Main {
@@ -213,11 +214,12 @@ public class Main {
       }
     }
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-// 3) Crie um programa que realize a soma de números inteiros dados pelo utilizador, até ser inserido o número 0.
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// 3) Crie um programa que realize a soma de números inteiros dados pelo
+// utilizador, até ser inserido o número 0.
 
 import java.util.*;
-import java.io.PrintStream; //importa a classe printStream//
+import java.io.PrintStream; // importa a classe printStream//
 import java.util.Scanner;
 
 public class Main {
@@ -245,5 +247,192 @@ public class Main {
       }
     }
 
+/////////////////////STRINGS//////////////////////////////
+
+/*
+ * 1. Escreva um programa Java para obter o caracter no índice fornecido pelo
+ * utilizador dentro da String
+ */
+
+import java.util.*;
+import java.io.PrintStream; // importa a classe printStream//
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        String nome;
+        int indice;
+
+        System.out.printf("Digite um nome :");
+        nome = entrada.nextLine();
+
+        do {
+            System.out.printf("Digite um numero de 1 a " + nome.length() + " :");
+            indice = entrada.nextInt() - 1;
+            if (indice >= 0 && indice <= nome.length() - 1) {
+                System.out.print("O caracter do indice e: " + nome.charAt(indice));
+            } else {
+                System.out.print("O numero escolhido nao e permitido digite novamente! \n");
+            }
+        } while (indice > nome.length() || indice < 0);
+
+    }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+/*
+ * 2. Escreva um programa Java para comparar duas strings recebidas do
+ * utilizador.
+ */
+
+import java.util.*;
+import java.io.PrintStream; // importa a classe printStream//
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner entrada = new Scanner(System.in);
+
+        String nome,nome2;
+
+        System.out.printf("Digite um nome :");
+        nome = entrada.nextLine();
+
+        System.out.printf("Digite um nome :");
+        nome2 = entrada.nextLine();
+
+        if ((nome.compareToIgnoreCase(nome2) == 0)){
+          System.out.println("Sao o mesmo nome ");
+        }else{
+          System.out.println("Não sao iguais");
+        }  
+    }
+}
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*
+ * 3. Escreva um programa Java para concatenar uma determinada string no
+ * final de outra string.
+ */
+
+import java.util.*;
+import java.io.PrintStream; // importa a classe printStream//
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner entrada = new Scanner(System.in);
+
+        String nome,nome2;
+
+        System.out.printf("Digite um nome :");
+        nome = entrada.nextLine();
+
+        System.out.printf("Digite um nome :");
+        nome2 = entrada.nextLine();
+
+        System.out.println(nome.concat(" " + nome2)); 
+    }
+}
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*
+ * 4. Escreva um programa Java para testar se uma determinada string contém a
+ * sequência especificada de caracteres.
+ */
+
+import java.util.*;
+import java.io.PrintStream; // importa a classe printStream//
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner entrada = new Scanner(System.in);
+
+        String nome,nome2;
+
+        System.out.printf("Digite um nome :");
+        nome = entrada.nextLine();
+
+        System.out.printf("Digite a letra para saber se existe na string :");
+        nome2 = entrada.nextLine();
+
+        if (nome.contains(nome2)){
+          System.out.println("Exite o caracter " + nome2 +  " dentro da string");
+        } else{
+          System.out.println("Nao existe");
+        }
 
 
+    }
+}
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*
+ * 5. Escreva um programa Java para verificar se uma determinada string
+ * termina com o conteúdo de outra string (utilize o método “endsWith()”
+ */
+
+import java.util.*;
+import java.io.PrintStream; // importa a classe printStream//
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner entrada = new Scanner(System.in);
+
+        String nome,nome2;
+
+        System.out.printf("Digite um nome :");
+        nome = entrada.nextLine();
+
+        System.out.printf("Digite o segundo nome :");
+        nome2 = entrada.nextLine();
+
+        nome.toLowerCase();
+        nome2.toLowerCase();
+
+        if (nome.endsWith(nome2)){
+          System.out.println("O primeiro nome nao termina com o segundo nome !");
+        }else{
+          System.out.println("O primeiro nao termina com o segundo nome ");
+        }
+
+
+    }
+}
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+/*
+ * 6. Escreva um programa para verificar se de entre 3 strings duas delas são
+ * iguais.
+ */
+
+import java.util.*;
+import java.io.PrintStream; // importa a classe printStream//
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        String nome, nome2, nome3;
+
+        System.out.printf("Digite um nome :");
+        nome = entrada.nextLine();
+
+        System.out.printf("Digite o segundo nome :");
+        nome2 = entrada.nextLine();
+
+        System.out.printf("Digite o terceiro nome :");
+        nome3 = entrada.nextLine();
+
+        if (nome.equalsIgnoreCase(nome2) && nome.equalsIgnoreCase(nome3)) {
+            System.out.println("Os 3 nomes sao iguais");
+        } else {
+            System.out.println("Os 3 nomes nao sao iguais ");
+        }
+
+    }
+}
