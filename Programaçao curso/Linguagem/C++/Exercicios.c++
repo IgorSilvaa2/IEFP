@@ -1018,3 +1018,150 @@ int main()
 
     return 0;
 }
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>FICHEIROS ESCREVER / LER> / ENCONTRAR PALAVRA>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    ofstream meuFicheiro ("dados.txt", std::ios::app);
+
+    if (meuFicheiro.is_open())
+    {
+        meuFicheiro << "Isso e um teste \n";
+        meuFicheiro << "teste dois \n";
+
+        meuFicheiro.close();
+        cout << "Ficheiro criado ! \n";
+    }
+    else
+    {
+        cout << "Erro ao abrir ficheiro ! ";
+    }
+
+    ifstream ficheiroLeitura("dados.txt");
+    string linha;
+
+    if(ficheiroLeitura.is_open())
+    {
+        while(getline(ficheiroLeitura,linha))
+        {
+            cout << linha << "\n";
+        }
+        ficheiroLeitura.close();
+    }
+    else
+    {
+        cout << "Erro ao abrir ficheiro ! ";
+    }
+
+    ifstream procuraPalavra("dados.txt");
+    string palavraLida;
+    string procuraLetra = "teste";
+    bool encontoru = false;
+
+    if(procuraPalavra.is_open())
+    {
+        while(procuraPalavra >> palavraLida)
+        {
+            if(palavraLida == procuraLetra){
+                cout << "Palavra encontrada !";
+                encontoru = true;
+                break;
+            }
+        }
+    }
+
+
+    return 0;
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> FICHEIROS ESCREVER E LER / SORTEAR PALAVRA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>   // Para guardar a lista de palavras
+#include <cstdlib>  // Para usar rand() e srand()
+#include <ctime>    // Para inicializar a semente do gerador de números aleatórios
+
+using namespace std;
+
+int main()
+{
+
+    ofstream salvaNome("nomes.txt");
+
+        if(salvaNome.is_open()){z
+            salvaNome << "computador gato programacao cafe teclado" << "\n";
+        }
+        salvaNome.close();
+
+
+    srand(time(0));
+    ifstream buscaNomes("nomes.txt");
+    string nomeLido;
+    vector <string> listaNomes;
+
+    if(buscaNomes.is_open()){
+        while(buscaNomes >> nomeLido ){
+            listaNomes.push_back(nomeLido);
+        }
+        buscaNomes.close();
+    }else{
+        cout << "Erro ao abrir \n";
+        return 1;
+    }
+
+    if(listaNomes.empty()){
+        cout << "O ficheiro esta vazio ! \n";
+        return 1;
+    }
+
+    int indiceAleatorio = rand() % listaNomes.size();
+    string palavraEscolhida = listaNomes[indiceAleatorio];
+
+    cout << "O programa leu " << listaNomes.size() << " palavras do ficheiro.\n";
+    cout << "A palavra sorteada foi: " << indiceAleatorio << "\n";
+     cout << "A palavra sorteada foi: " << listaNomes[indiceAleatorio] << "\n";
+
+    return 0;
+}
+
+//
+ vector<string> faceis;
+    vector<string> medias;
+    vector<string> dificeis;
+
+    ifstream escolheDif("Dificuldades.txt");
+    string linhaInteira;
+
+    if(escolheDif.is_open()){
+        // 1ª Linha -> Fáceis
+        if(getline(escolheDif, linhaInteira)) {
+            // Um truque simples: criamos um fluxo de leitura a partir da linha
+            #include <sstream> // Precisas de adicionar esta biblioteca no topo do ficheiro (.h)
+            stringstream ss(linhaInteira);
+            string palavra;
+            while(ss >> palavra) faceis.push_back(palavra);
+        }
+        // 2ª Linha -> Médias
+        if(getline(escolheDif, linhaInteira)) {
+            stringstream ss(linhaInteira);
+            string palavra;
+            while(ss >> palavra) medias.push_back(palavra);
+        }
+        // 3ª Linha -> Difíceis
+        if(getline(escolheDif, linhaInteira)) {
+            stringstream ss(linhaInteira);
+            string palavra;
+            while(ss >> palavra) dificeis.push_back(palavra);
+        }
+        escolheDif.close();
+    } else {
+        cout << "Erro ao abrir ficheiro \n";
+    }

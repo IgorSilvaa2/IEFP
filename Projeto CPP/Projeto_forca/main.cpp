@@ -3,6 +3,7 @@
 #include <fstream>
 #include <clocale>
 #include <limits>
+#include <vector>
 #include <ios>
 #include <cstdlib>
 #include <ctime>
@@ -15,9 +16,9 @@ void limpa_Tela()
     system("CLS");
 }
 /////////////////////// FUNCAO INPUT STRING ///////////////////////////////////
-void input_String(string a)
+void inputNomes(const string& a)
 {
-    ofstream ficheiro("Input_String.txt", ios::app);
+    ofstream ficheiro("inputNomes.txt", ios::app);
     if(ficheiro.is_open())
     {
         ficheiro << a << "\n";
@@ -28,10 +29,38 @@ void input_String(string a)
 
 void menu_Dificuldade()
 {
-    int dif;
-    string facil[4] = {"gato","mesa","cola","casa"};
-    string medio[4] = {"computador","teclado","caderno","mochila"};
-    string Dificil[4] = {"paralelepipedo","inconstitucional","arquipelago","parapsicologia"};
+    int dificuldade;
+    ofstream criaDificuldade("Dificuldades.txt");
+
+    if(criaDificuldade.is_open())
+    {
+        //FACEIS
+        criaDificuldade << "GATO CASA CARRO PORTA FRUTA LIVRO MESA CHAVE BOLA AGUA \n";
+        criaDificuldade << "GUITARRA CACHORRO ESPELHO COMPUTADOR TRABALHO DINHEIRO PLANETA FLORESTA MOCHILA GIRAFA \n";
+        criaDificuldade << "PARALELEPIPEDO PSICOLOGO OTORRINOLARINGOLOGISTA XILOFONE ARQUEOLOGIA EXCECAO SUBTERRANEO CALEIDOSCOPIO ESFINGE SIMETRIA \n";
+    }
+    else
+    {
+        cout << "O ficheiro de dificuldades nao foi aberto \n";
+    }
+    criaDificuldade.close();
+
+    ifstream escolheDif ("Dificuldades.txt");
+    string salvaDif;
+    vector <string> difVet;
+
+    if(escolheDif.is_open()){
+        while(escolheDif >> salvaDif){
+            difVet.push_back(salvaDif);
+        }
+        escolheDif.close();
+    }else{
+        cout << "Erro ao abrir ficheiro \n";
+    }
+
+    if(difVet.empty()){
+        cout << "O ficheiro esta vazio ! \n";
+    }
 
 
     cout << "\n 1 - Facil";
@@ -41,31 +70,32 @@ void menu_Dificuldade()
     do
     {
         cout << "Escolha uma opcao : ";
-        cin >> dif ;
-        if(dif == 1)
+        cin >> dificuldade ;
+        if(dificuldade == 1)
         {
-            srand(time(NULL));
-            int aletorio = rand() % 4;
-            cout << facil[aletorio];
+            srand(time(0));
+            int aletorio = rand() % difVet.size();
+            string difEscolhida = difVet[aletorio];
+            cout << difEscolhida;
         }
-        else if (dif == 2)
+        else if (dificuldade == 2)
         {
-            srand(time(NULL));
-            int aletorio = rand() % 4;
-            cout << medio[aletorio];
+            srand(time(0));
+            int aletorio = rand() % difVet.size();
+
         }
-        else if(dif == 3)
+        else if(dificuldade == 3)
         {
-            srand(time(NULL));
-            int aletorio = rand() % 4;
-            cout << Dificil[aletorio];
+            srand(time(0));
+            int aletorio = rand() % difVet.size();
+
         }
         else
         {
             cout << "Opcao invalida ! \n";
         }
     }
-    while(dif <1 || dif > 3);
+    while(dificuldade <1 || dificuldade > 3);
 
 
 }
@@ -78,13 +108,15 @@ void menu_Inicial()
     do
     {
         cout << "============================================================================================\n"
+
              << "   _  ___   ____  ___    ____   _      _____ ___  ____   ____   _         +---+\n"
              << "  | |/ _ \\ / ___|/ _ \\  |  _ \\ / \\    |  ___/ _ \\|  _ \\ / ___| / \\        |   |\n"
              << "  | | | | | |  _| | | | | | | / _ \\   | |_ | | | | |_) | |    / _ \\       O   |\n"
              << "  | | |_| | |_| | |_| | | |_/ / ___ \\  |  _|| |_| |  _ <| |___/ ___ \\    /|\\  |\n"
              << " _/ |\\___/ \\____|\\___/  |____/_/   \\_\\ |_|   \\___/|_| \\_\\\\____/_/   \\_\\  / \\  |\n"
              << "|__/                                                                          |\n"
-             << "============================================================================================\n" << endl;
+             << "============================================================================================\n" << "\n";
+
 
         cout << "Escolha uma opcao !";
         cout << "\n 1 - Jogar";
@@ -104,11 +136,11 @@ void menu_Inicial()
                  << " |  _ \\|  _| | |\\/| |     \\ \\ / /| |  \\| | | | | | | | | | |\n"
                  << " | |_) | |___| |  | |      \\ V / | | |\\  | |_| | |_| |_|_|_|\n"
                  << " |____/|_____|_|  |_|       \\_/  |_|_| \\_|____/ \\___/(_|_|_)\n"
-                 << "=========================================================================\n" << endl;
+                 << "=========================================================================\n" << "\n";
 
             cout << "Digite o seu nome : ";
             getline (cin,nome);
-            input_String(nome);
+            inputNomes(nome);
             menu_Dificuldade();
             break;
         case 2 :
@@ -127,7 +159,7 @@ void menu_Inicial()
                  << "3. FIM DE JOGO:\n"
                  << "   - VITORIA: Se descobrir todas as letras.\n"
                  << "   - DERROTA: Se atingir o limite de 6 erros.\n\n"
-                 << "=========================================\n" << endl;
+                 << "=========================================\n" << "\n";
             int sub_Escolha;
 
             do
@@ -147,7 +179,7 @@ void menu_Inicial()
                 }
                 else
                 {
-                    cout << "Invalido " << endl;
+                    cout << "Invalido " << "\n";
                     escolha = 0;
                 }
             }
