@@ -21,14 +21,14 @@
 	<fstream>
 	<clocale>
 
-1788954768 source:c:\users\boxig\onedrive\documentos\iefp\projeto cpp\projeto_forca\main.cpp
+1789040302 source:c:\users\boxig\onedrive\documentos\iefp\projeto cpp\projeto_forca\main.cpp
 	<iostream>
 	<string>
 	<fstream>
-	<clocale>
 	<limits>
 	<vector>
 	<ios>
 	<cstdlib>
 	<ctime>
+	<cctype>
 

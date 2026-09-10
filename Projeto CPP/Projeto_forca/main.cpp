@@ -6,6 +6,7 @@
 #include <ios>
 #include <cstdlib>
 #include <ctime>
+#include <cctype>
 
 using namespace std;
 
@@ -24,6 +25,71 @@ void inputNomes(const string& a)
     }
     ficheiro.close();
 }
+
+void jogo (const string *palavraSecreta, string categoria)
+{
+    string letrasCertas = "";
+    string letrasErradas = "";
+
+    char letra;
+
+    while (true)
+    {
+        for (size_t i = 0; i < palavraSecreta->size(); i++)
+        {
+            if (letrasCertas.find((*palavraSecreta)[i]) != string::npos)
+            {
+                cout << (*palavraSecreta)[i] << " ";
+            }
+            else
+            {
+                cout << "_ ";
+            }
+        }
+
+        cout << "\nDigite uma letra: ";
+        cin >> letra;
+        letra = toupper(letra);
+
+        if (letrasCertas.find(letra) != string::npos ||
+                letrasErradas.find(letra) != string::npos)
+        {
+            cout << "\n Essa letra ja foi usada!\n";
+            continue;
+        }
+
+        bool encontrou = false;
+
+        for (size_t i = 0; i < palavraSecreta->size(); i++)
+        {
+            if ((*palavraSecreta)[i] == letra)
+            {
+                encontrou = true;
+            }
+        }
+
+        if (encontrou)
+        {
+            letrasCertas += letra;
+        }
+        else
+        {
+            letrasErradas += letra;
+        }
+
+        limpa_Tela();
+        cout << "A sua palavra e um " << categoria
+             << " e tem " << palavraSecreta->size()
+             << " letras\n";
+        cout << "Certas: " << letrasCertas << " \n";
+        cout << "Erradas: " << letrasErradas << " \n";
+
+    }
+
+
+}
+
+
 //////////////////////// FUNCAO MENU DIFICULDADDE //////////////////////////////////
 
 void menu_Dificuldade()
@@ -47,33 +113,27 @@ void menu_Dificuldade()
         if(dificuldade == 1)
         {
             srand(time(0));
-            int aleatorio = rand() % 9;
-            string palavraEscolhida = facil[aleatorio];
-            cout << palavraEscolhida;
-            for (size_t i = 0; i < palavraEscolhida.length(); i++)
-            {
-                cout << "_";
-            }
+            int aleatorio = rand() % 10;
+            const string *palavraEscolhida = &facil[aleatorio];
+            cout << "A sua palavra e um animal e tem " << palavraEscolhida->size() << " letras \n";
+            jogo(palavraEscolhida, "animal");
         }
         else if (dificuldade == 2)
         {
             srand(time(0));
-            int aleatorio = rand() % 9;
-            string palavraEscolhida = medio[aleatorio];
-            cout << palavraEscolhida << "\n";
-            for (size_t i = 0; i < palavraEscolhida.length(); i++)
-            {
-                cout << "_ ";
-            }
-            cout << "A sua palavra e um objeto e tem " << palavraEscolhida.length() << " letras \n";
+            int aleatorio = rand() % 10;
+            const string *palavraEscolhida = &medio[aleatorio];
+            cout << "A sua palavra e um objeto e tem " << palavraEscolhida->size() << " letras \n";
+            jogo(palavraEscolhida, "objeto");
+
         }
         else if(dificuldade == 3)
         {
             srand(time(0));
-            int aleatorio = rand() % 9;
-            string palavraEscolhida = dificil[aleatorio];
-            cout << palavraEscolhida;
-
+            int aleatorio = rand() % 10;
+            const string *palavraEscolhida = &dificil[aleatorio];
+            cout << "A sua palavra e uma profissao e tem " << palavraEscolhida->size() << " letras \n";
+            jogo(palavraEscolhida, "profissao");
         }
         else
         {
@@ -186,9 +246,10 @@ void menu_Inicial()
 
 int main()
 {
+    int *aleatorio;
     setlocale(LC_ALL, "Portuguese");
-
     menu_Inicial();
+
 
 
     return 0;
