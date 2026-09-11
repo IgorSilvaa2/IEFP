@@ -2,18 +2,16 @@
 #include <string>
 #include <fstream>
 #include <limits>
-#include <vector>
-#include <ios>
 #include <cstdlib>
 #include <ctime>
 #include <cctype>
 #include <clocale>
-#include <vector>    // necessario para criar o struct, funï¿½ï¿½o do ranking
-#include <algorithm> // necessario para utilizar sort() para ordenar as pontuaï¿½ï¿½es
+#include <vector>    // necessario para criar o struct, função do ranking
+#include <algorithm> // necessario para utilizar sort() para ordenar as pontuações
 using namespace std;
 
 /////////////////////// FUNCAO GUARDAR RANKING //////////////////////////////
-// funï¿½ï¿½o para a criaï¿½ï¿½o do ranking, assim, o struct permite guardar essas duas informaï¿½ï¿½es juntas.
+// função para a criação do ranking, assim, o struct permite guardar essas duas informações juntas.
 struct Jogador
 {
     string nome;
@@ -37,8 +35,8 @@ void mostrarRanking()
     string pontosTexto;
     string resultado;
 
-    // O programa vai ler atï¿½ encontrar ;
-    while (getline(ficheiro, nome, ';')) // getline = ler uma sequï¿½ncia de caracteres e guardar essa informaï¿½ï¿½o numa string.
+    // O programa vai ler até encontrar ;
+    while (getline(ficheiro, nome, ';'))
     {
         getline(ficheiro, dificuldade, ';');
         getline(ficheiro, palavra, ';');
@@ -50,7 +48,7 @@ void mostrarRanking()
             Jogador jogador;
 
             jogador.nome = nome;
-            jogador.pontuacao = stoi(pontosTexto); // stoi (string to integer)= transformar texto num nï¿½mero inteiro.
+            jogador.pontuacao = stoi(pontosTexto); // stoi (string to integer)= transformar texto num número inteiro.
 
             ranking.push_back(jogador); // colocar no final do vector
         }
@@ -58,7 +56,7 @@ void mostrarRanking()
 
     ficheiro.close();
 
-    // organizar do maior nï¿½mero de pontos para o menor
+    // organizar do maior número de pontos para o menor
     sort(ranking.begin(), ranking.end(),
          [](const Jogador &a, const Jogador &b)
          {
@@ -113,10 +111,16 @@ void guardarPartida(
 
 void limpa_Tela()
 {
+#ifdef _WIN32
     system("CLS");
+#else
+    system("clear");
+#endif
 }
-/////////////////////// FUNCAO INPUT STRING ///////////////////////////////////
-void inputNomes(const string& a)
+
+/////////////////////// FUNCAO INPUT NOME ///////////////////////////////////
+
+void inputNomes(const string &a)
 {
     ofstream ficheiro("inputNomes.txt", ios::app);
 
@@ -128,15 +132,94 @@ void inputNomes(const string& a)
     ficheiro.close();
 }
 
-void jogo (const string *palavraSecreta, string categoria)
+/////////////////////// FUNCAO CONTINUAR ///////////////////////////////////
+
+bool perguntarContinuar()
+{
+    string resposta;
+
+    while (true)
+    {
+        cout << "\nDeseja continuar a jogar? (s/n): ";
+        cin >> resposta;
+
+        if (resposta == "s" || resposta == "S")
+        {
+            return true;
+        }
+        else if (resposta == "n" || resposta == "N")
+        {
+            cout << "Até a próxima!";
+            return false;
+        }
+        else
+        {
+            cout << "Opcao invalida! Digite apenas s ou n.\n";
+        }
+    }
+}
+
+/////////////////////// FUNCAO DESENHO FORCA ////////////////////////////////
+
+void mostrarForca(int erros)
+{
+    cout << "\n";
+    cout << " +---+\n";
+    cout << " |   |\n";
+
+    if (erros >= 1)
+        cout << " O   |\n";
+    else
+        cout << "     |\n";
+
+    if (erros == 2)
+        cout << " |   |\n";
+    else if (erros == 3)
+        cout << "/|   |\n";
+    else if (erros >= 4)
+        cout << "/|\\  |\n";
+    else
+        cout << "     |\n";
+
+    if (erros >= 5)
+        cout << "/    |\n";
+    else
+        cout << "     |\n";
+
+    if (erros >= 6)
+        cout << "/ \\  |\n";
+    else
+        cout << "     |\n";
+
+    cout << "     |\n";
+    cout << "=========\n";
+}
+
+//////////////////////// FUNCAO JOGO ////////////////////////////////////////
+
+bool jogo(const string *palavraSecreta, string categoria, const string &nome, string dificuldade)
 {
     string letrasCertas = "";
     string letrasErradas = "";
 
+    int pontos = 6;
+    int erros = 0;
+
     char letra;
+
+    limpa_Tela();
+
+    cout << "A sua palavra e um " << categoria << " e tem " << palavraSecreta->size() << " letras\n";
+    cout << "Sua pontuacao é: " << pontos << "\n";
 
     while (true)
     {
+        bool ganhou = true;
+
+        ////////////////////// MOSTRAR PALAVRA //////////////////////////////
+
+        cout << "\nPalavra: ";
+
         for (size_t i = 0; i < palavraSecreta->size(); i++)
         {
             if (letrasCertas.find((*palavraSecreta)[i]) != string::npos)
@@ -149,14 +232,66 @@ void jogo (const string *palavraSecreta, string categoria)
                 ganhou = false;
             }
         }
+        cout << "\n";
+
+        ////////////////////// MOSTRAR FORCA ////////////////////////////////
+
+        mostrarForca(erros);
+
+        ////////////////////// MOSTRAR INFORMACOES //////////////////////////
+
+        cout << "\nLetras certas: " << letrasCertas << "\n";
+        cout << "Letras erradas: " << letrasErradas << "\n";
+        cout << "Erros: " << erros << "/6\n";
+        cout << "Pontuacao: " << pontos << "\n";
+        cout << "\n";
+
+        ////////////////////// VERIFICA VITORIA //////////////////////////////
+
+        if (ganhou)
+        {
+            cout << "           PARABENS! GANHOU O JOGO!           \n";
+            cout << "\n";
+            cout << "A palavra era: " << *palavraSecreta << "\n";
+            cout << "Sua pontuacao é: " << pontos << "\n";
+
+            guardarPartida(nome, dificuldade, *palavraSecreta, pontos, "Ganhou");
+
+            return perguntarContinuar();
+        }
+
+        ////////////////////// VERIFICA DERROTA //////////////////////////////
+
+        if (erros >= 6)
+        {
+            cout << "          PERDEU O JOGO!            \n";
+            cout << "\n";
+            cout << "A palavra era: " << *palavraSecreta << "\n";
+            cout << "Sua pontuacao é: " << pontos << "\n";
+
+            guardarPartida(nome, dificuldade, *palavraSecreta, pontos, "Perdeu");
+
+            return perguntarContinuar();
+        }
+
+        ////////////////////// PEDIR LETRA //////////////////////////////////
 
         cout << "\nDigite uma letra: ";
         cin >> letra;
 
         letra = toupper(letra);
 
-        if (letrasCertas.find(letra) != string::npos ||
-                letrasErradas.find(letra) != string::npos)
+        ////////////////////// VERIFICAR SE E LETRA //////////////////////////
+
+        if (!isalpha(letra))
+        {
+            cout << "\nEntrada invalida! Digite apenas uma letra.\n";
+            continue;
+        }
+
+        ////////////////////// VERIFICAR REPETICAO //////////////////////////
+
+        if (letrasCertas.find(letra) != string::npos || letrasErradas.find(letra) != string::npos)
         {
             cout << "\nEssa letra ja foi usada!\n";
             continue;
@@ -165,6 +300,7 @@ void jogo (const string *palavraSecreta, string categoria)
         ////////////////////// PROCURAR LETRA ////////////////////////////////
 
         bool encontrou = false;
+
         for (size_t i = 0; i < palavraSecreta->size(); i++)
         {
             if ((*palavraSecreta)[i] == letra)
@@ -178,53 +314,95 @@ void jogo (const string *palavraSecreta, string categoria)
         if (encontrou)
         {
             letrasCertas += letra;
+            pontos += 1;
+
+            cout << "\nAcertou!\n";
         }
         else
         {
             letrasErradas += letra;
+            pontos -= 1;
+            erros++;
+
+            cout << "\nErrou!\n";
         }
 
         ////////////////////// LIMPAR ECRAN //////////////////////////////////
 
         limpa_Tela();
-        cout << "A sua palavra e um " << categoria
-             << " e tem " << palavraSecreta->size()
-             << " letras\n";
-        cout << "Certas: " << letrasCertas << " \n";
-        cout << "Erradas: " << letrasErradas << " \n";
 
+        cout << "A sua palavra é um " << categoria << " e tem " << palavraSecreta->size() << " letras\n";
     }
-
-
 }
 
+//////////////////////// FUNCAO MENU DIFICULDADE ////////////////////////////
 
-//////////////////////// FUNCAO MENU DIFICULDADDE //////////////////////////////////
-
-void menu_Dificuldade()
+void menu_Dificuldade(const string &nome) // assim ele recebe o nome do jogador
 {
+    const string facil[10] =
+        {
+            "GATO",
+            "CAO",
+            "LEAO",
+            "PATO",
+            "RATO",
+            "LOBO",
+            "URSO",
+            "VACA",
+            "SAPO",
+            "AVES"};
 
-    const string facil [10] = {"GATO", "CAO", "LEAO", "PATO", "RATO", "LOBO", "URSO", "VACA", "SAPO", "AVES"};
-    const string medio[10]= {"GUITARRA", "ESPELHO", "COMPUTADOR", "MOCHILA", "CADERNO", "TELEFONE", "CARTEIRA", "LANTERNA", "RELOGIO", "MARTELO"};
-    const string dificil [10]= {"OTORRINOLARINGOLOGISTA", "PSICOLOGO", "ARQUEOLOGIA", "PROGRAMADOR", "ENGENHEIRO", "ASTRONAUTA", "NUTRICIONISTA", "NEUROCIENTISTA", "EMPREENDEDOR", "FARMACEUTICO"};
+    const string medio[10] =
+        {
+            "GUITARRA",
+            "ESPELHO",
+            "COMPUTADOR",
+            "MOCHILA",
+            "CADERNO",
+            "TELEFONE",
+            "CARTEIRA",
+            "LANTERNA",
+            "RELOGIO",
+            "MARTELO"};
 
+    const string dificil[10] =
+        {
+            "OTORRINOLARINGOLOGISTA",
+            "PSICOLOGO",
+            "ARQUEOLOGIA",
+            "PROGRAMADOR",
+            "ENGENHEIRO",
+            "ASTRONAUTA",
+            "NUTRICIONISTA",
+            "NEUROCIENTISTA",
+            "EMPREENDEDOR",
+            "FARMACEUTICO"};
 
-    cout << "\n 1 - Facil";
-    cout << "\n 2 - Medio";
-    cout << "\n 3 - Dificil \n";
+    bool continuarJogando = true;
 
-    int dificuldade;
+    srand(time(0));
 
-    do
+    while (continuarJogando)
     {
-        cout << "Escolha uma opcao : ";
-        cin >> dificuldade ;
-        if(dificuldade == 1)
+        cout << "          ESCOLHA A DIFICULDADE         \n";
+        cout << "\n";
+        cout << "1 - Facil\n";
+        cout << "2 - Medio\n";
+        cout << "3 - Dificil\n";
+
+        int dificuldade;
+
+        cout << "\nEscolha uma opcao: ";
+        cin >> dificuldade;
+
+        ////////////////////// DIFICULDADE FACIL ////////////////////////////
+
+        if (dificuldade == 1)
         {
             int aleatorio = rand() % 10;
-            const string *palavraEscolhida = &facil[aleatorio];
-            cout << "A sua palavra e um animal e tem " << palavraEscolhida->size() << " letras \n";
-            jogo(palavraEscolhida, "animal");
+
+            continuarJogando =
+                jogo(&facil[aleatorio], "animal", nome, "Facil");
         }
 
         ////////////////////// DIFICULDADE MEDIA ////////////////////////////
@@ -232,10 +410,9 @@ void menu_Dificuldade()
         else if (dificuldade == 2)
         {
             int aleatorio = rand() % 10;
-            const string *palavraEscolhida = &medio[aleatorio];
-            cout << "A sua palavra e um objeto e tem " << palavraEscolhida->size() << " letras \n";
-            jogo(palavraEscolhida, "objeto");
 
+            continuarJogando =
+                jogo(&medio[aleatorio], "objeto", nome, "Medio");
         }
 
         ////////////////////// DIFICULDADE DIFICIL //////////////////////////
@@ -243,23 +420,31 @@ void menu_Dificuldade()
         else if (dificuldade == 3)
         {
             int aleatorio = rand() % 10;
-            const string *palavraEscolhida = &dificil[aleatorio];
-            cout << "A sua palavra e uma profissao e tem " << palavraEscolhida->size() << " letras \n";
-            jogo(palavraEscolhida, "profissao");
+
+            continuarJogando =
+                jogo(&dificil[aleatorio], "profissao", nome, "Dificil");
         }
 
         ////////////////////// OPCAO INVALIDA ///////////////////////////////
 
         else
         {
-            cout << "Opcao invalida ! \n";
+            cout << "\nOpcao invalida!";
+            cout << "\nPressione Enter para tentar novamente.";
+
+            cin.clear();
+
+            cin.ignore(
+                numeric_limits<streamsize>::max(),
+                '\n');
+
+            cin.get();
         }
     }
-    while(dificuldade <1 || dificuldade > 3);
-
-
 }
-////////////////////////// FUNCAO MENU ////////////////////////////////
+
+////////////////////////// FUNCAO MENU INICIAL //////////////////////////////
+
 void menu_Inicial()
 {
     string nome;
@@ -414,7 +599,6 @@ void menu_Inicial()
 
 int main()
 {
-    int *aleatorio;
     setlocale(LC_ALL, "Portuguese");
 
     menu_Inicial();
