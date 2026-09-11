@@ -1,12 +1,19 @@
-<<<<<<< HEAD
-i
-f
-d
 Igor
 i
+g
+s
 a
 igor
+igor
+h
+igor
+igor
+d
+igor
+1
+d
+e
+g
+s
+i
 Igor
-=======
-
->>>>>>> cf0ee3632ce4fd26e02f891515295ce2047e2da1
