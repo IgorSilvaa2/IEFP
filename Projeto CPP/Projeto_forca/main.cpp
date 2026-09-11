@@ -151,6 +151,7 @@ bool perguntarContinuar()
         }
         else if (resposta == "n" || resposta == "N")
         {
+            limpa_Tela();
             cout << "Ate a proxima!\n";
             break;
         }
@@ -198,7 +199,6 @@ void mostrarForca(int erros)
 }
 
 //////////////////////// FUNCAO JOGO ////////////////////////////////////////
-
 bool jogo(const string *palavraSecreta, string categoria, const string &nome, string dificuldade)
 {
     string letrasCertas = "";
@@ -207,7 +207,7 @@ bool jogo(const string *palavraSecreta, string categoria, const string &nome, st
     int pontos = 6;
     int erros = 0;
 
-    char letra;
+    string entrada;
 
     limpa_Tela();
 
@@ -232,6 +232,7 @@ bool jogo(const string *palavraSecreta, string categoria, const string &nome, st
                 ganhou = false;
             }
         }
+
         cout << "\n";
 
         mostrarForca(erros);
@@ -266,16 +267,61 @@ bool jogo(const string *palavraSecreta, string categoria, const string &nome, st
             return perguntarContinuar();
         }
 
-        cout << "\nDigite uma letra: ";
-        cin >> letra;
+        cout << "\nDigite uma letra ou tente adivinhar a palavra: ";
+        cin >> entrada;
+
         limpa_Tela();
         limparBuffer();
 
-        letra = toupper(letra);
+
+        if (entrada.size() > 1)
+        {
+
+            for (char &c : entrada)
+                c = toupper(c);
+
+            string palavra = *palavraSecreta;
+
+            for (char &c : palavra)
+                c = toupper(c);
+
+            if (entrada == palavra)
+            {
+                pontos += 1;
+
+                cout << "\nAcertou a palavra!\n";
+
+                cout << "\nPalavra: ";
+                for (size_t i = 0; i < palavraSecreta->size(); i++)
+                    cout << (*palavraSecreta)[i] << " ";
+
+                cout << "\n";
+
+                cout << "\n           PARABENS! GANHOU O JOGO!           \n";
+                cout << "\n";
+                cout << "A palavra era: " << *palavraSecreta << "\n";
+                cout << "Sua pontuacao e: " << pontos << "\n";
+
+                guardarPartida(nome, dificuldade, *palavraSecreta, pontos, "Ganhou");
+
+                return perguntarContinuar();
+            }
+            else
+            {
+                pontos -= 1;
+                erros++;
+
+                cout << "\nPalavra errada!\n";
+            }
+
+            continue;
+        }
+
+        char letra = toupper(entrada[0]);
 
         if (!isalpha(letra))
         {
-            cout << "\nEntrada invalida! Digite apenas uma letra.\n";
+            cout << "\nEntrada invalida! Digite apenas uma letra ou uma palavra.\n";
             continue;
         }
 
@@ -316,7 +362,6 @@ bool jogo(const string *palavraSecreta, string categoria, const string &nome, st
         cout << "A sua palavra e um " << categoria << " e tem " << palavraSecreta->size() << " letras\n";
     }
 }
-
 //////////////////////// FUNCAO MENU DIFICULDADE ////////////////////////////
 
 void menu_Dificuldade(const string &nome)
