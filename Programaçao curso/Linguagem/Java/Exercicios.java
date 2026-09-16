@@ -436,3 +436,94 @@ public class Main {
 
     }
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Métodos construtores - Exemplo
+// GestaoPessoas.java
+
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
+
+public class GestaoPessoas {
+
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        System.setOut(new PrintStream(System.out, true,"UTF8"));
+        //Declaração dos objetos
+        Pessoa p1,p2;
+        // Criação dos objetos
+        p1 = new Pessoa("Pedro Silva","Av. da Liberdade",123456789,"ana.silva@email.pt",true);
+        p2 = new Pessoa();
+       
+       
+        // Preenchimento do objeto p2
+        p2.nome = "José Costa";
+        p2.morada ="Av. da Republica";
+        p2.nif = 111222333;
+        p2.email = "jose.costa@email.pt";
+        p2.casado = false;
+       
+        System.out.println(p1.toString());
+
+    }
+}
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+package com.mycompany.gestaopessoas;
+
+import java.io.PrintStream; // importa a classe printStream//
+import java.io.UnsupportedEncodingException; // Importa a classe para tratar a exceção que //
+import java.util.Scanner; // classe para ler 
+
+public class GestaoPessoas {
+
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        System.setOut(new PrintStream(System.out, true, "UTF8"));
+
+        Scanner entrada = new Scanner(System.in);
+
+        Pessoa p1 = new Pessoa();
+
+        System.out.println("Digite o nome: ");
+        p1.nome = entrada.nextLine();
+
+        System.out.println("Digite a morada: ");
+        p1.morada = entrada.nextLine();
+
+        System.out.println("Digite o nif: ");
+        p1.nif = entrada.nextInt();
+        entrada.nextLine();
+
+        System.out.println("Digite o email: ");
+        p1.email = entrada.nextLine();
+
+        System.out.println(p1.toString());
+    }
+}
+
+
+// Classe Pessoa.java com this 
+
+    /*public Pessoa(String nome, String morada, int nif, String email, boolean casado)
+    {
+        this.nome = nome;
+        this.morada = morada;
+        this.nif = nif;
+        this.email = email;
+        this.casado = casado;
+    }*/
+
+package com.mycompany.gestaopessoas;
+public class Pessoa {
+    String nome;
+    String morada;
+    String email;
+    int nif;
+    
+    public String toString(){
+        return ("Nome: " + nome +" \n" 
+                + "Morada: " + morada + " \n" 
+                + "Email: " + email + " \n" 
+                + "Nif: " + nif + " \n");
+    }
+    
+}
