@@ -527,3 +527,138 @@ public class Pessoa {
     }
     
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>CLASSES E CONSTRUTORES E GET,SET>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*1. Escreva um modelo (classe) Empregado que represente um
+empregado de uma empresa. Considere que os dados nome,
+departamento, horasTrabalhadasNoMês e salárioPorHora devam ser
+guardados e que devem ser implementadas as operações mostraDados
+e calculaSalárioMensal;*/
+
+/*2. Crie um método construtor, que possibilite a criação de um empregado
+com todos os dados preenchidos;*/
+
+/* 3. Ajuste o encapsulamento de acordo com as boas práticas e crie os
+respetivos métodos “get” e “set”; */
+
+/*4. Baseado no exercício do ponto 1, imagine que os empregados de uma
+empresa tenham dois valores de salário para horas trabalhadas,
+diferenciados entre horas normais e horas extras. Modifique a classe
+Empregado para que os dois valores de horas trabalhadas e dois
+valores de salário/hora sejam usados. */
+/*5. Adicione o método calculaSalárioMensalBonus no modelo Empregado
+(exercício do ponto 1) para que todos os empregados do
+departamento Direção tenham 10% de bônus salarial. */
+/* 6. Crie um método para mostrar todos os dados de um empregado.*/
+
+/*4. Baseado no exercício do ponto 1, imagine que os empregados de uma
+empresa tenham dois valores de salário para horas trabalhadas,
+diferenciados entre horas normais e horas extras. Modifique a classe
+Empregado para que os dois valores de horas trabalhadas e dois
+valores de salário/hora sejam usados.*/
+package com.mycompany.gestaopessoas;
+
+import java.io.PrintStream; // importa a classe priantStream//
+import java.io.UnsupportedEncodingException; // Importa a classe para tratar a exceção que //
+import java.util.Scanner; // classe para ler 
+
+public class GestaoPessoas {
+
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        System.setOut(new PrintStream(System.out, true, "UTF8"));
+
+        Empregado p1 = new Empregado("Igor", "direcao", 120, 16, 8, 32);
+        
+
+        p1.mostraDados();
+        System.out.println("O salario mensal é : " + p1.calculaSalárioMensal());
+        System.out.println("Salario de horas extras: " + p1.calculaHorasExtras());
+        System.out.println("O salario com bonus mensal e: " + p1.calculaSalárioMensalBonus());
+
+    }
+}
+
+//////CLASSE DO EXT 1 - 2 - 3 - 4 - 5 - 6//////
+
+/*5. Adicione o método calculaSalárioMensalBonus no modelo Empregado
+(exercício do ponto 1) para que todos os empregados do
+departamento Direção tenham 10% de bônus salarial.*/
+package com.mycompany.gestaopessoas;
+
+public class Empregado {
+
+    private String nome;
+    private String departamento;
+    private int horasTrabalhadasNoMês;
+    private double salárioPorHora;
+    private int horasExtras;
+    private double salarioExtra;
+
+    public Empregado(String nome, String departamento, int horasTrabalhadasNoMês, double salárioPorHora, int horasExtras, double salarioExtra) {
+        this.nome = nome;
+        this.departamento = departamento;
+        this.horasTrabalhadasNoMês = horasTrabalhadasNoMês;
+        this.salárioPorHora = salárioPorHora;
+        this.horasExtras = horasExtras;
+        this.salarioExtra = salarioExtra;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
+    public int getHorasTrabalhadasNoMês() {
+        return horasTrabalhadasNoMês;
+    }
+
+    public void setHorasTrabalhadasNoMês(int horasTrabalhadasNoMês) {
+        this.horasTrabalhadasNoMês = horasTrabalhadasNoMês;
+    }
+
+    public double getSalárioPorHora() {
+        return salárioPorHora;
+    }
+
+    public void setSalárioPorHora(double salárioPorHora) {
+        this.salárioPorHora = salárioPorHora;
+    }
+
+    public void mostraDados() {
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Departamento: " + this.departamento);
+        System.out.println("horasTrabalhadasNoMês: " + this.horasTrabalhadasNoMês);
+        System.out.println("salárioPorHora: " + this.salárioPorHora);
+    }
+
+    public double calculaSalárioMensal() {
+        double calculo = this.horasTrabalhadasNoMês * this.salárioPorHora;
+        return calculo;
+    }
+
+    public double calculaHorasExtras() {
+        double calculoExtra = this.horasExtras * this.salarioExtra;
+        return calculoExtra;
+    }
+
+    public double calculaSalárioMensalBonus() {
+        double salarioBase = calculaSalárioMensal();
+        if (this.departamento.equalsIgnoreCase("direção") || this.departamento.equalsIgnoreCase("direcao")) {
+            System.out.println("O Bonus é: " + salarioBase * 0.10);
+            return salarioBase + (salarioBase * 0.10);
+        }
+        return salarioBase;
+
+    }
+}
+
