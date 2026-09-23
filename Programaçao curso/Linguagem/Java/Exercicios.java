@@ -436,3 +436,244 @@ public class Main {
 
     }
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// Métodos construtores - Exemplo
+// GestaoPessoas.java
+
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
+
+public class GestaoPessoas {
+
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        System.setOut(new PrintStream(System.out, true,"UTF8"));
+        //Declaração dos objetos
+        Pessoa p1,p2;
+        // Criação dos objetos
+        p1 = new Pessoa("Pedro Silva","Av. da Liberdade",123456789,"ana.silva@email.pt",true);
+        p2 = new Pessoa();
+       
+       
+        // Preenchimento do objeto p2
+        p2.nome = "José Costa";
+        p2.morada ="Av. da Republica";
+        p2.nif = 111222333;
+        p2.email = "jose.costa@email.pt";
+        p2.casado = false;
+       
+        System.out.println(p1.toString());
+
+    }
+}
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+package com.mycompany.gestaopessoas;
+
+import java.io.PrintStream; // importa a classe printStream//
+import java.io.UnsupportedEncodingException; // Importa a classe para tratar a exceção que //
+import java.util.Scanner; // classe para ler 
+
+public class GestaoPessoas {
+
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        System.setOut(new PrintStream(System.out, true, "UTF8"));
+
+        Scanner entrada = new Scanner(System.in);
+
+        Pessoa p1 = new Pessoa();
+
+        System.out.println("Digite o nome: ");
+        p1.nome = entrada.nextLine();
+
+        System.out.println("Digite a morada: ");
+        p1.morada = entrada.nextLine();
+
+        System.out.println("Digite o nif: ");
+        p1.nif = entrada.nextInt();
+        entrada.nextLine();
+
+        System.out.println("Digite o email: ");
+        p1.email = entrada.nextLine();
+
+        System.out.println(p1.toString());
+    }
+}
+
+
+// Classe Pessoa.java com this 
+
+    /*public Pessoa(String nome, String morada, int nif, String email, boolean casado)
+    {
+        this.nome = nome;
+        this.morada = morada;
+        this.nif = nif;
+        this.email = email;
+        this.casado = casado;
+    }*/
+
+package com.mycompany.gestaopessoas;
+public class Pessoa {
+    String nome;
+    String morada;
+    String email;
+    int nif;
+    
+    public String toString(){
+        return ("Nome: " + nome +" \n" 
+                + "Morada: " + morada + " \n" 
+                + "Email: " + email + " \n" 
+                + "Nif: " + nif + " \n");
+    }
+    
+}
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>CLASSES E CONSTRUTORES E GET,SET>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+/*1. Escreva um modelo (classe) Empregado que represente um
+empregado de uma empresa. Considere que os dados nome,
+departamento, horasTrabalhadasNoMês e salárioPorHora devam ser
+guardados e que devem ser implementadas as operações mostraDados
+e calculaSalárioMensal;*/
+
+/*2. Crie um método construtor, que possibilite a criação de um empregado
+com todos os dados preenchidos;*/
+
+/* 3. Ajuste o encapsulamento de acordo com as boas práticas e crie os
+respetivos métodos “get” e “set”; */
+
+/*4. Baseado no exercício do ponto 1, imagine que os empregados de uma
+empresa tenham dois valores de salário para horas trabalhadas,
+diferenciados entre horas normais e horas extras. Modifique a classe
+Empregado para que os dois valores de horas trabalhadas e dois
+valores de salário/hora sejam usados. */
+/*5. Adicione o método calculaSalárioMensalBonus no modelo Empregado
+(exercício do ponto 1) para que todos os empregados do
+departamento Direção tenham 10% de bônus salarial. */
+/* 6. Crie um método para mostrar todos os dados de um empregado.*/
+
+/*4. Baseado no exercício do ponto 1, imagine que os empregados de uma
+empresa tenham dois valores de salário para horas trabalhadas,
+diferenciados entre horas normais e horas extras. Modifique a classe
+Empregado para que os dois valores de horas trabalhadas e dois
+valores de salário/hora sejam usados.*/
+package com.mycompany.gestaopessoas;
+
+import java.io.PrintStream; // importa a classe priantStream//
+import java.io.UnsupportedEncodingException; // Importa a classe para tratar a exceção que //
+import java.util.Scanner; // classe para ler 
+
+public class GestaoPessoas {
+
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        System.setOut(new PrintStream(System.out, true, "UTF8"));
+        Scanner entrada = new Scanner(System.in);
+
+        Empregado p1 = new Empregado("Igor", "direcao", 120, 16, 8, 32);
+        
+
+        p1.mostraDados();
+        System.out.println("O salario mensal é : " + p1.calculaSalárioMensal());
+        System.out.println("Salario de horas extras: " + p1.calculaHorasExtras());
+        System.out.println("O salario com bonus mensal e: " + p1.calculaSalárioMensalBonus());
+
+    }
+}
+
+//////CLASSE DO EXT 1 - 2 - 3 - 4 - 5 - 6//////
+
+/*5. Adicione o método calculaSalárioMensalBonus no modelo Empregado
+(exercício do ponto 1) para que todos os empregados do
+departamento Direção tenham 10% de bônus salarial.*/
+package com.mycompany.gestaopessoas;
+
+public class Empregado {
+
+    private String nome;
+    private String departamento;
+    private int horasTrabalhadasNoMês;
+    private double salárioPorHora;
+    private int horasExtras;
+    private double salarioExtra;
+
+    public Empregado(String nome, String departamento, int horasTrabalhadasNoMês, double salárioPorHora, int horasExtras, double salarioExtra) {
+        this.nome = nome;
+        this.departamento = departamento;
+        this.horasTrabalhadasNoMês = horasTrabalhadasNoMês;
+        this.salárioPorHora = salárioPorHora;
+        this.horasExtras = horasExtras;
+        this.salarioExtra = salarioExtra;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
+    public int getHorasTrabalhadasNoMês() {
+        return horasTrabalhadasNoMês;
+    }
+
+    public void setHorasTrabalhadasNoMês(int horasTrabalhadasNoMês) {
+        this.horasTrabalhadasNoMês = horasTrabalhadasNoMês;
+    }
+
+    public double getSalárioPorHora() {
+        return salárioPorHora;
+    }
+
+    public void setSalárioPorHora(double salárioPorHora) {
+        this.salárioPorHora = salárioPorHora;
+    }
+
+    public void mostraDados() {
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Departamento: " + this.departamento);
+        System.out.println("horasTrabalhadasNoMês: " + this.horasTrabalhadasNoMês);
+        System.out.println("salárioPorHora: " + this.salárioPorHora);
+    }
+
+    public double calculaSalárioMensal() {
+        double calculo = this.horasTrabalhadasNoMês * this.salárioPorHora;
+        return calculo;
+    }
+
+    public double calculaHorasExtras() {
+        double calculoExtra = this.horasExtras * this.salarioExtra;
+        return calculoExtra;
+    }
+
+    public double calculaSalárioMensalBonus() {
+        double salarioBase = calculaSalárioMensal();
+        if (this.departamento.equalsIgnoreCase("direção") || this.departamento.equalsIgnoreCase("direcao")) {
+            System.out.println("O Bonus é: " + salarioBase * 0.10);
+            return salarioBase + (salarioBase * 0.10);
+        }
+        return salarioBase;
+
+    }
+}
+
+ /*Atividade 5 – Herança, Polimorfismo e Encapsulamento
+
+1. Escreva um programa em JAVA que permita guardar os dados de funcionários externos e internos
+da empresa:
+Nota: Faça uso das principais propriedades da POO, tais como, Herança, Polimorfismo e
+Encapsulamento, usando-as adequadamente.
+a. Crie uma classe Pessoa com métodos chamados getPrimeiroNome() e getUltimoNome()
+e os atributos genéricos de uma pessoa.
+b. Crie uma subclasse chamada funcInterno que adicione um novo método chamado
+getIdEmpregado() e substitua o método geUltimoNome() para incluir também o cargo do
+funcionário.
+c. Crie uma classe que descreva um funcionário externo (funcExterno) que contenha apenas
+os atributos código e tipo de serviço prestado. */
+

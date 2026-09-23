@@ -1,0 +1,8 @@
+Igor;Facil;GATO;7;Ganhou
+i;Facil;PATO;7;Ganhou
+igor;Facil;PATO;7;Ganhou
+igor;Facil;CAO;8;Ganhou
+igor;Facil;LOBO;5;Ganhou
+igor;Facil;PATO;6;Ganhou
+Igor;Facil;GATO;6;Ganhou
+Igor;Dificil;FARMACEUTICO;9;Ganhou
