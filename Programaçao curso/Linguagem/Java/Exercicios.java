@@ -565,6 +565,7 @@ public class GestaoPessoas {
 
     public static void main(String[] args) throws UnsupportedEncodingException {
         System.setOut(new PrintStream(System.out, true, "UTF8"));
+        Scanner entrada = new Scanner(System.in);
 
         Empregado p1 = new Empregado("Igor", "direcao", 120, 16, 8, 32);
         
