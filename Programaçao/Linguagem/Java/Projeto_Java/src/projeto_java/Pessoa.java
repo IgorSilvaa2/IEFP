@@ -1,27 +1,63 @@
-/*Atividade 5 – Herança, Polimorfismo e Encapsulamento
-
-1. Escreva um programa em JAVA que permita guardar os dados de funcionários externos e internos
-da empresa:
-Nota: Faça uso das principais propriedades da POO, tais como, Herança, Polimorfismo e
-Encapsulamento, usando-as adequadamente.
-a. Crie uma classe Pessoa com métodos chamados getPrimeiroNome() e getUltimoNome()
-e os atributos genéricos de uma pessoa.
-b. Crie uma subclasse chamada funcInterno que adicione um novo método chamado
-getIdEmpregado() e substitua o método geUltimoNome() para incluir também o cargo do
-funcionário.
-c. Crie uma classe que descreva um funcionário externo (funcExterno) que contenha apenas
-os atributos código e tipo de serviço prestado. */
-
+//Classe
 package projeto_java;
 
 public class Pessoa {
+    private String primeiroNome;
+    private String ultimoNome;
+    private String morada;
+    private String email;
+    private int nif;
+    private boolean casado;
 
-        private String nome = "Igor";
-        private String Endereço;
-        private int idade;
-        private int nif;
-        
-        public String getPrimeiroNome(){
-            return nome.split(" ")[0];
-        }
+    public Pessoa(String primeiroNome, String ultimoNome, String morada, String email, int nif, Boolean casado){
+        this.primeiroNome = primeiroNome;
+        this.ultimoNome = ultimoNome;
+        this.morada = morada;
+        this.email = email;
+        this.nif = nif;
+        this.casado = casado;
+    }
+ 
+    public String getPrimeiroNome() {
+        return primeiroNome;
+    }
+    public void setPrimeiroNome(String primeiroNome) {
+        this.primeiroNome = primeiroNome;
+    }
+    public String getUltimoNome() {
+        return ultimoNome;
+    }
+    public void setUltimoNome(String ultimoNome) {
+        this.ultimoNome = ultimoNome;
+    }
+    public String getMoradaString() {
+        return morada;
+    }
+    public void setMorada(String morada) {
+        this.morada = morada;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public int getNif() {
+        return nif;
+    }
+    public void setNif(int nif) {
+        this.nif = nif;
+    }
+    public boolean isCasado() {
+        return casado;
+    }
+    public void setCasado(boolean casado) {
+        this.casado = casado;
+    }
+
+    public void exibirDados() {
+        System.out.println("{\n\tPrimeiro nome: " + primeiroNome + "\n\tUltimo Nome: " + ultimoNome + "\n\tMorada: " + morada + "\n\tEmail: " + email + "\n\tNIF: " + nif + "\n\tCasado? " + casado + "\n}");
+    }
 }
+ 
+

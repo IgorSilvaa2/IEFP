@@ -21,13 +21,19 @@ import java.util.Scanner; // classe para ler
 public class Projeto_Java {
 
     public static void main(String[] args) throws UnsupportedEncodingException {
-        System.setOut(new PrintStream(System.out, true, "UTF8"));
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("Ola");
+        System.setOut(new PrintStream(System.out, true,"UTF8"));
+        //Declaração dos objetos
+        // Criar instâncias das subclasses
+        funcInterno func1 = new funcInterno("Igor", "Silva", "Sao Cristovao", "boxigor@gmail.com",01234567 , true, 12345, "Silva", "TI");
+        funcExterno func2 = new funcExterno("Igor", "Silva", "Sao Cristovao", "boxigor@gmail.com", 01234567, false, 67891, "aplicação");
+
+        // Exibir os dados de cada um
+        System.out.println("--- Dados dos Funcionários ---");
+        func1.exibirDados();
+        System.out.printf("\n----------------------------------");
+        func2.exibirDados();
+        System.out.printf
+        ("\n----------------------------------");
+        }
+      }
         
-        Pessoa p1 = new Pessoa();
-        
-        System.out.println(p1.getPrimeiroNome());
-        
-    }
-}
