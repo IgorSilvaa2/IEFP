@@ -10,10 +10,10 @@ public class Divisao {
 
             try {
 
-                System.out.println("Digite um numero: ");
+                System.out.print("Digite um numero: ");
                 int i = entrada.nextInt();
 
-                System.out.println("Digite outro numero: ");
+                System.out.print("Digite outro numero: ");
                 int j = entrada.nextInt();
 
                 i = i / j;
