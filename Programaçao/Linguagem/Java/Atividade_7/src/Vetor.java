@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Vetor {
+    Scanner entrada = new Scanner(System.in);
+    int[] vet = new int[10];
+
+    public void lerVetor() {
+        do {
+
+            try {
+
+                for (int i = 0; i < vet.length; i++) {
+                    System.out.println("Digite o " + (i + 1) + " Valor :");
+                    vet[i] = entrada.nextInt();
+                }
+            } catch (InputMismatchException) {
+                System.out.println("O valor deve ser numerico !");
+            } catch (ArrayIndexOutOfBoundsException) {
+                System.out.println("Valores acima de 10 posiçoes !");
+            }
+        }
+
+    }
+}
