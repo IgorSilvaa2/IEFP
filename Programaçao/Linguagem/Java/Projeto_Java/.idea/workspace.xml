@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="45e24447-3c11-498e-b2b4-4fc7786c8a91" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/.netbeans_update_resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/projeto_java/Pessoa.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/projeto_java/Projeto_Java.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/projeto_java/funcExterno.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/projeto_java/funcInterno.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projeto_java/Pessoa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projeto_java/Projeto_Java.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projeto_java/funcExterno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projeto_java/funcInterno.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/build.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/build/classes/.netbeans_automatic_build" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/build/classes/.netbeans_update_resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/build/classes/projeto_java/Carro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/build/classes/projeto_java/Veiculo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/build/classes/projeto_java/projeto_Java.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/manifest.mf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/nbproject/build-impl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/nbproject/genfiles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/nbproject/project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/nbproject/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/out/production/treinoJava/projeto_java/Carro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/out/production/treinoJava/projeto_java/Veiculo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/out/production/treinoJava/projeto_java/projeto_Java.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/src/projeto_java/Carro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/src/projeto_java/Veiculo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/src/projeto_java/projeto_Java.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../treinoJava/treinoJava.iml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3K3MkSMC1FW3VxxILkFbVhZ4fmr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/boxig/OneDrive/Documentos/IEFP/Programaçao/Linguagem/Java/Projeto_Java"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <setting name="addClasspath" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45e24447-3c11-498e-b2b4-4fc7786c8a91" name="Changes" comment="" />
+      <created>1790781941070</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1790781941070</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
