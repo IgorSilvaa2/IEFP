@@ -14,5 +14,6 @@ public class projeto_Java {
         
         System.out.println(p1.marca);
         meuCarro.buzinar();
+        System.out.println("Ola");
     }
 }
