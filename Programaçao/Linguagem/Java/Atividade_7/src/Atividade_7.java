@@ -12,7 +12,6 @@ public class Atividade_7 {
 
         p.condicao();
         p2.lerVetor();
-
     }
 }
 
