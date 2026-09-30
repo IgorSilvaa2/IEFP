@@ -14,8 +14,12 @@ public class Vetor {
                 for (int i = 0; i <= vet.length; i++) {
                     System.out.println("Digite o " + (i + 1) + " Valor :");
                     vet[i] = entrada.nextInt();
+                    if (vet[i] == 0) {
+                        System.out.println("Programa finalizado !");
+                        condicao = false;
+                        break;
+                    }
                 }
-                condicao = false;
             } catch (InputMismatchException e) {
                 System.out.println("O valor deve ser numerico !");
             } catch (ArrayIndexOutOfBoundsException e) {
