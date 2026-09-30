@@ -10,7 +10,7 @@ public class Atividade_7 {
         Divisao p = new Divisao();
         Vetor p2 = new Vetor();
 
-
+        p.condicao();
         p2.lerVetor();
 
     }
