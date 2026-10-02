@@ -5,9 +5,7 @@ public class Divisao {
     boolean condicao = true;
 
     public void condicao() {
-        this.condicao = condicao;
         do {
-
             try {
 
                 System.out.print("Digite um numero: ");
