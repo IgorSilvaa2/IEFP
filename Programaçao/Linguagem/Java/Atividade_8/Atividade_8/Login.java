@@ -2,32 +2,30 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Login {
-  private String utilizador;
-  private String pass ;
+    private String utilizador;
+    private String pass;
 
 
-public Login (String utilizador, String pass) {
-  this.utilizador = utilizador;
-  this.pass = pass;
-}
-
-public void setPass (String pass) {
-this.pass = pass;// Troca a pass do utilizador.
-}
-
-public boolean fazerLogin(String utilizador, String pass)
-{
-  try{
-  if (!this.utilizador.equals(utilizador) || !this.pass.equals(pass) ){
-    throw new Exception("Utilizador ou senha incorreta");
-  } 
-    return true ;
-  }
-    catch (Exception e){
-      System.out.println("Erro");
-      return false;
+    public Login(String utilizador, String pass) {
+        this.utilizador = utilizador;
+        this.pass = pass;
     }
-}
+
+    public void setPass(String pass) {
+        this.pass = pass;// Troca a pass do utilizador.
+    }
+
+    public boolean fazerLogin(String utilizador, String pass) {
+        try {
+            if (!this.utilizador.equals(utilizador) || !this.pass.equals(pass)) {
+                throw new Exception("Utilizador ou senha incorreta");
+            }
+            return true;
+        } catch (Exception e) {
+            System.out.println("Erro");
+            return false;
+        }
+    }
 
 
 /*
