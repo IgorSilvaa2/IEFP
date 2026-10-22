@@ -1,0 +1,2 @@
+-- UC02830 | Nome: | Tema:
+-- Definição da estrutura da base de dados.

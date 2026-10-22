@@ -1,4 +1,3 @@
-
 public class Produto {
     private String titulo;
     private double precoBase;
@@ -9,18 +8,21 @@ public class Produto {
     }
 
     public String getTitulo() {
+
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
+    public void setTitulo  (String titulo) {
         this.titulo = titulo;
     }
 
-    public double getPrecoBase() {
+    public double getPrecoBase () {
+
         return precoBase;
     }
 
     public void setPrecoBase(double precoBase) {
+
         this.precoBase = precoBase;
     }
 

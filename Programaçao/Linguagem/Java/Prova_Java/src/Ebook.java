@@ -1,5 +1,6 @@
 public class Ebook extends Produto {
     public Ebook(String titulo, double precoBase) {
+
         super(titulo, precoBase);
     }
 
