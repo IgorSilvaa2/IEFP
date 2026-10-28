@@ -1,0 +1,481 @@
+<mxfile host="app.diagrams.net" agent="MoneyWise">
+  <diagram id="wireframes-moneywise" name="Wireframes MoneyWise">
+    <mxGraphModel dx="1694" dy="940" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1560" pageHeight="1250" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#BFDBFE;strokeWidth=1;fontColor=#1D4ED8;fontSize=23;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="MONEYWISE  |  WIREFRAMES&amp;nbsp;" vertex="1">
+          <mxGeometry height="49" width="1490" x="35" y="12" as="geometry" />
+        </mxCell>
+        <mxCell id="n37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=13;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Protótipos editáveis • Os valores apresentados são ilustrativos • Formato móvel" vertex="1">
+          <mxGeometry height="36" width="1490" x="35" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="n38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;fontColor=#172033;fontSize=15;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="" vertex="1">
+          <mxGeometry height="535" width="274" x="25" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="n39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="MoneyWise" vertex="1">
+          <mxGeometry height="45" width="254" x="35" y="139" as="geometry" />
+        </mxCell>
+        <mxCell id="n40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=16;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Visão geral" vertex="1">
+          <mxGeometry height="30" width="252" x="36" y="191" as="geometry" />
+        </mxCell>
+        <mxCell id="n41" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=14;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="SALDO DISPONÍVEL&lt;br&gt;&lt;font style=&quot;font-size:23px&quot;&gt;920,00 €&lt;/font&gt;" vertex="1">
+          <mxGeometry height="67" width="250" x="37" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="n42" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=11;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Salário 1.500 €   |   Gastos 580 €" vertex="1">
+          <mxGeometry height="29" width="250" x="37" y="307" as="geometry" />
+        </mxCell>
+        <mxCell id="n43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=11;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Poupança 250 €  |  Investido 1.200 €" vertex="1">
+          <mxGeometry height="29" width="250" x="37" y="343" as="geometry" />
+        </mxCell>
+        <mxCell id="n44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=13;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="PLANEAMENTO DO MÊS" vertex="1">
+          <mxGeometry height="28" width="250" x="37" y="379" as="geometry" />
+        </mxCell>
+        <mxCell id="n45" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Contas 50%  |  Lazer 20%" vertex="1">
+          <mxGeometry height="40" width="250" x="37" y="413" as="geometry" />
+        </mxCell>
+        <mxCell id="n46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Conhecimento 10%" vertex="1">
+          <mxGeometry height="40" width="250" x="37" y="461" as="geometry" />
+        </mxCell>
+        <mxCell id="n47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Investimento 15%  |  Reserva 5%" vertex="1">
+          <mxGeometry height="40" width="250" x="37" y="509" as="geometry" />
+        </mxCell>
+        <mxCell id="n48" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#60A5FA;strokeWidth=1;fontColor=#1D4ED8;fontSize=13;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Adicionar movimento" vertex="1">
+          <mxGeometry height="38" width="218" x="53" y="557" as="geometry" />
+        </mxCell>
+        <mxCell id="n49" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#1D4ED8;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Início" vertex="1">
+          <mxGeometry height="35" width="50.8" x="35" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n50" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Gastos" vertex="1">
+          <mxGeometry height="35" width="50.8" x="85.8" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n51" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Salário" vertex="1">
+          <mxGeometry height="35" width="50.8" x="136.6" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n52" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Investir" vertex="1">
+          <mxGeometry height="35" width="50.8" x="187.39999999999998" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Relatórios" vertex="1">
+          <mxGeometry height="35" width="50.8" x="238.2" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n54" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;fontColor=#172033;fontSize=15;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="" vertex="1">
+          <mxGeometry height="535" width="274" x="334" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="n55" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="MoneyWise" vertex="1">
+          <mxGeometry height="45" width="254" x="344" y="139" as="geometry" />
+        </mxCell>
+        <mxCell id="n56" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=16;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Controlo de despesas" vertex="1">
+          <mxGeometry height="30" width="252" x="345" y="191" as="geometry" />
+        </mxCell>
+        <mxCell id="n57" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=14;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="TOTAL GASTO NO MÊS&lt;br&gt;580,00 €" vertex="1">
+          <mxGeometry height="67" width="250" x="346" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="n58" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=13;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Movimentos recentes" vertex="1">
+          <mxGeometry height="28" width="250" x="346" y="307" as="geometry" />
+        </mxCell>
+        <mxCell id="n59" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Supermercado  -85,00 €" vertex="1">
+          <mxGeometry height="40" width="250" x="346" y="341" as="geometry" />
+        </mxCell>
+        <mxCell id="n60" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Transportes  -40,00 €" vertex="1">
+          <mxGeometry height="40" width="250" x="346" y="389" as="geometry" />
+        </mxCell>
+        <mxCell id="n61" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Lazer  -25,00 €" vertex="1">
+          <mxGeometry height="40" width="250" x="346" y="437" as="geometry" />
+        </mxCell>
+        <mxCell id="n62" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=11;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Filtrar por categoria" vertex="1">
+          <mxGeometry height="29" width="250" x="346" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="n63" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#60A5FA;strokeWidth=1;fontColor=#1D4ED8;fontSize=13;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Adicionar despesa" vertex="1">
+          <mxGeometry height="38" width="218" x="362" y="521" as="geometry" />
+        </mxCell>
+        <mxCell id="n64" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Início" vertex="1">
+          <mxGeometry height="35" width="50.8" x="344" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#1D4ED8;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Gastos" vertex="1">
+          <mxGeometry height="35" width="50.8" x="394.8" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n66" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Salário" vertex="1">
+          <mxGeometry height="35" width="50.8" x="445.6" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n67" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Investir" vertex="1">
+          <mxGeometry height="35" width="50.8" x="496.4" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n68" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Relatórios" vertex="1">
+          <mxGeometry height="35" width="50.8" x="547.2" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n69" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;fontColor=#172033;fontSize=15;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="" vertex="1">
+          <mxGeometry height="535" width="274" x="643" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="n70" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="MoneyWise" vertex="1">
+          <mxGeometry height="45" width="254" x="653" y="139" as="geometry" />
+        </mxCell>
+        <mxCell id="n71" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=16;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="O Meu Salário" vertex="1">
+          <mxGeometry height="30" width="252" x="654" y="191" as="geometry" />
+        </mxCell>
+        <mxCell id="n72" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=14;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="SALÁRIO MENSAL&lt;br&gt;1.500,00 €" vertex="1">
+          <mxGeometry height="67" width="250" x="655" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="n73" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=13;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Distribuição do salário" vertex="1">
+          <mxGeometry height="28" width="250" x="655" y="307" as="geometry" />
+        </mxCell>
+        <mxCell id="n74" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Contas essenciais 50%   750 €" vertex="1">
+          <mxGeometry height="40" width="250" x="655" y="341" as="geometry" />
+        </mxCell>
+        <mxCell id="n75" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Lazer 20%   300 €" vertex="1">
+          <mxGeometry height="40" width="250" x="655" y="389" as="geometry" />
+        </mxCell>
+        <mxCell id="n76" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Conhecimento 10%   150 €" vertex="1">
+          <mxGeometry height="40" width="250" x="655" y="437" as="geometry" />
+        </mxCell>
+        <mxCell id="n77" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Investimentos 15%   225 €" vertex="1">
+          <mxGeometry height="40" width="250" x="655" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="n78" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Reserva 5%   75 €" vertex="1">
+          <mxGeometry height="40" width="250" x="655" y="533" as="geometry" />
+        </mxCell>
+        <mxCell id="n79" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#60A5FA;strokeWidth=1;fontColor=#1D4ED8;fontSize=13;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Editar percentagens" vertex="1">
+          <mxGeometry height="38" width="218" x="671" y="581" as="geometry" />
+        </mxCell>
+        <mxCell id="n80" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Início" vertex="1">
+          <mxGeometry height="35" width="50.8" x="653" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n81" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Gastos" vertex="1">
+          <mxGeometry height="35" width="50.8" x="703.8" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n82" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#1D4ED8;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Salário" vertex="1">
+          <mxGeometry height="35" width="50.8" x="754.6" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n83" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Investir" vertex="1">
+          <mxGeometry height="35" width="50.8" x="805.4" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n84" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Relatórios" vertex="1">
+          <mxGeometry height="35" width="50.8" x="856.2" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n85" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;fontColor=#172033;fontSize=15;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="" vertex="1">
+          <mxGeometry height="535" width="274" x="952" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="n86" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="MoneyWise" vertex="1">
+          <mxGeometry height="45" width="254" x="962" y="139" as="geometry" />
+        </mxCell>
+        <mxCell id="n87" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=16;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Investimentos" vertex="1">
+          <mxGeometry height="30" width="252" x="963" y="191" as="geometry" />
+        </mxCell>
+        <mxCell id="n88" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=14;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="VALOR DA CARTEIRA&lt;br&gt;1.200,00 €" vertex="1">
+          <mxGeometry height="67" width="250" x="964" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="n89" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=13;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Os meus investimentos" vertex="1">
+          <mxGeometry height="28" width="250" x="964" y="307" as="geometry" />
+        </mxCell>
+        <mxCell id="n90" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="ETF Global  |  650 €" vertex="1">
+          <mxGeometry height="40" width="250" x="964" y="341" as="geometry" />
+        </mxCell>
+        <mxCell id="n91" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Ações  |  350 €" vertex="1">
+          <mxGeometry height="40" width="250" x="964" y="389" as="geometry" />
+        </mxCell>
+        <mxCell id="n92" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Fundo  |  200 €" vertex="1">
+          <mxGeometry height="40" width="250" x="964" y="437" as="geometry" />
+        </mxCell>
+        <mxCell id="n93" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=11;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Ganhos/perdas e evolução" vertex="1">
+          <mxGeometry height="29" width="250" x="964" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="n94" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#60A5FA;strokeWidth=1;fontColor=#1D4ED8;fontSize=13;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Adicionar investimento" vertex="1">
+          <mxGeometry height="38" width="218" x="980" y="521" as="geometry" />
+        </mxCell>
+        <mxCell id="n95" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Início" vertex="1">
+          <mxGeometry height="35" width="50.8" x="962" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n96" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Gastos" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1012.8" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n97" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Salário" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1063.6" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n98" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#1D4ED8;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Investir" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1114.4" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n99" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Relatórios" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1165.2" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n100" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;fontColor=#172033;fontSize=15;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="" vertex="1">
+          <mxGeometry height="535" width="274" x="1261" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="n101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="MoneyWise" vertex="1">
+          <mxGeometry height="45" width="254" x="1271" y="139" as="geometry" />
+        </mxCell>
+        <mxCell id="n102" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=16;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Relatórios" vertex="1">
+          <mxGeometry height="30" width="252" x="1272" y="191" as="geometry" />
+        </mxCell>
+        <mxCell id="n103" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=14;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="RESUMO DO MÊS&lt;br&gt;Receitas vs. despesas" vertex="1">
+          <mxGeometry height="67" width="250" x="1273" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="n104" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=14;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Gráfico de despesas [área]" vertex="1">
+          <mxGeometry height="67" width="250" x="1273" y="307" as="geometry" />
+        </mxCell>
+        <mxCell id="n105" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=14;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Poupança acumulada [área]" vertex="1">
+          <mxGeometry height="67" width="250" x="1273" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="n106" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Análise por categoria" vertex="1">
+          <mxGeometry height="40" width="250" x="1273" y="461" as="geometry" />
+        </mxCell>
+        <mxCell id="n107" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#60A5FA;strokeWidth=1;fontColor=#1D4ED8;fontSize=13;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Consultar outro mês" vertex="1">
+          <mxGeometry height="38" width="218" x="1289" y="509" as="geometry" />
+        </mxCell>
+        <mxCell id="n108" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Início" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1271" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n109" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Gastos" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1321.8" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n110" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Salário" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1372.6" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n111" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Investir" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1423.4" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n112" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#1D4ED8;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Relatórios" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1474.2" y="619" as="geometry" />
+        </mxCell>
+        <mxCell id="n113" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;fontColor=#172033;fontSize=15;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="" vertex="1">
+          <mxGeometry height="535" width="274" x="25" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="n114" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="MoneyWise" vertex="1">
+          <mxGeometry height="45" width="254" x="35" y="709" as="geometry" />
+        </mxCell>
+        <mxCell id="n115" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=16;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Metas e hábitos" vertex="1">
+          <mxGeometry height="30" width="252" x="36" y="761" as="geometry" />
+        </mxCell>
+        <mxCell id="n116" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=14;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="META DE POUPANÇA&lt;br&gt;750 € / 1.000 €" vertex="1">
+          <mxGeometry height="67" width="250" x="37" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="n117" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=13;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Objetivos ativos" vertex="1">
+          <mxGeometry height="28" width="250" x="37" y="877" as="geometry" />
+        </mxCell>
+        <mxCell id="n118" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Reserva de emergência" vertex="1">
+          <mxGeometry height="40" width="250" x="37" y="911" as="geometry" />
+        </mxCell>
+        <mxCell id="n119" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Curso profissional" vertex="1">
+          <mxGeometry height="40" width="250" x="37" y="959" as="geometry" />
+        </mxCell>
+        <mxCell id="n120" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=11;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Revisão semanal: pendente" vertex="1">
+          <mxGeometry height="29" width="250" x="37" y="1007" as="geometry" />
+        </mxCell>
+        <mxCell id="n121" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Notificações e lembretes" vertex="1">
+          <mxGeometry height="40" width="250" x="37" y="1043" as="geometry" />
+        </mxCell>
+        <mxCell id="n122" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#60A5FA;strokeWidth=1;fontColor=#1D4ED8;fontSize=13;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Criar nova meta" vertex="1">
+          <mxGeometry height="38" width="218" x="53" y="1091" as="geometry" />
+        </mxCell>
+        <mxCell id="n123" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#1D4ED8;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Início" vertex="1">
+          <mxGeometry height="35" width="50.8" x="35" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n124" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Gastos" vertex="1">
+          <mxGeometry height="35" width="50.8" x="85.8" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n125" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Salário" vertex="1">
+          <mxGeometry height="35" width="50.8" x="136.6" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n126" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Investir" vertex="1">
+          <mxGeometry height="35" width="50.8" x="187.39999999999998" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n127" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Relatórios" vertex="1">
+          <mxGeometry height="35" width="50.8" x="238.2" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n128" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;fontColor=#172033;fontSize=15;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="" vertex="1">
+          <mxGeometry height="535" width="274" x="334" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="n129" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="MoneyWise" vertex="1">
+          <mxGeometry height="45" width="254" x="344" y="709" as="geometry" />
+        </mxCell>
+        <mxCell id="n130" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=16;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Adicionar movimento" vertex="1">
+          <mxGeometry height="30" width="252" x="345" y="761" as="geometry" />
+        </mxCell>
+        <mxCell id="n131" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=13;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="TIPO DE MOVIMENTO" vertex="1">
+          <mxGeometry height="28" width="250" x="346" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="n132" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Receita / Despesa" vertex="1">
+          <mxGeometry height="40" width="250" x="346" y="834" as="geometry" />
+        </mxCell>
+        <mxCell id="n133" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Valor (€)" vertex="1">
+          <mxGeometry height="40" width="250" x="346" y="882" as="geometry" />
+        </mxCell>
+        <mxCell id="n134" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Categoria" vertex="1">
+          <mxGeometry height="40" width="250" x="346" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="n135" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Data" vertex="1">
+          <mxGeometry height="40" width="250" x="346" y="978" as="geometry" />
+        </mxCell>
+        <mxCell id="n136" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Descrição (opcional)" vertex="1">
+          <mxGeometry height="40" width="250" x="346" y="1026" as="geometry" />
+        </mxCell>
+        <mxCell id="n137" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#60A5FA;strokeWidth=1;fontColor=#1D4ED8;fontSize=13;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Guardar movimento" vertex="1">
+          <mxGeometry height="38" width="218" x="362" y="1074" as="geometry" />
+        </mxCell>
+        <mxCell id="n138" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=11;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Cancelar" vertex="1">
+          <mxGeometry height="29" width="250" x="346" y="1123" as="geometry" />
+        </mxCell>
+        <mxCell id="n139" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Início" vertex="1">
+          <mxGeometry height="35" width="50.8" x="344" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n140" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#1D4ED8;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Gastos" vertex="1">
+          <mxGeometry height="35" width="50.8" x="394.8" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n141" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Salário" vertex="1">
+          <mxGeometry height="35" width="50.8" x="445.6" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n142" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Investir" vertex="1">
+          <mxGeometry height="35" width="50.8" x="496.4" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n143" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Relatórios" vertex="1">
+          <mxGeometry height="35" width="50.8" x="547.2" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n144" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;fontColor=#172033;fontSize=15;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="" vertex="1">
+          <mxGeometry height="535" width="274" x="643" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="n145" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="MoneyWise" vertex="1">
+          <mxGeometry height="45" width="254" x="653" y="709" as="geometry" />
+        </mxCell>
+        <mxCell id="n146" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=16;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Editar orçamento" vertex="1">
+          <mxGeometry height="30" width="252" x="654" y="761" as="geometry" />
+        </mxCell>
+        <mxCell id="n147" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=13;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="SALÁRIO LÍQUIDO (€)" vertex="1">
+          <mxGeometry height="28" width="250" x="655" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="n148" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="1500,00" vertex="1">
+          <mxGeometry height="40" width="250" x="655" y="834" as="geometry" />
+        </mxCell>
+        <mxCell id="n149" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=13;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Definir percentagens" vertex="1">
+          <mxGeometry height="28" width="250" x="655" y="882" as="geometry" />
+        </mxCell>
+        <mxCell id="n150" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Contas: 50%    Lazer: 20%" vertex="1">
+          <mxGeometry height="40" width="250" x="655" y="916" as="geometry" />
+        </mxCell>
+        <mxCell id="n151" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Conhecimento: 10%" vertex="1">
+          <mxGeometry height="40" width="250" x="655" y="964" as="geometry" />
+        </mxCell>
+        <mxCell id="n152" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Investimento: 15%" vertex="1">
+          <mxGeometry height="40" width="250" x="655" y="1012" as="geometry" />
+        </mxCell>
+        <mxCell id="n153" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Reserva: 5%" vertex="1">
+          <mxGeometry height="40" width="250" x="655" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="n154" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=11;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Total: 100%  [válido]" vertex="1">
+          <mxGeometry height="29" width="250" x="655" y="1108" as="geometry" />
+        </mxCell>
+        <mxCell id="n155" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#60A5FA;strokeWidth=1;fontColor=#1D4ED8;fontSize=13;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Guardar plano" vertex="1">
+          <mxGeometry height="38" width="218" x="671" y="1144" as="geometry" />
+        </mxCell>
+        <mxCell id="n156" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Início" vertex="1">
+          <mxGeometry height="35" width="50.8" x="653" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n157" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Gastos" vertex="1">
+          <mxGeometry height="35" width="50.8" x="703.8" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n158" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#1D4ED8;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Salário" vertex="1">
+          <mxGeometry height="35" width="50.8" x="754.6" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n159" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Investir" vertex="1">
+          <mxGeometry height="35" width="50.8" x="805.4" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n160" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Relatórios" vertex="1">
+          <mxGeometry height="35" width="50.8" x="856.2" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n161" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;fontColor=#172033;fontSize=15;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="" vertex="1">
+          <mxGeometry height="535" width="274" x="952" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="n162" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="MoneyWise" vertex="1">
+          <mxGeometry height="45" width="254" x="962" y="709" as="geometry" />
+        </mxCell>
+        <mxCell id="n163" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=16;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Adicionar investimento" vertex="1">
+          <mxGeometry height="30" width="252" x="963" y="761" as="geometry" />
+        </mxCell>
+        <mxCell id="n164" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=13;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="TIPO DE INVESTIMENTO" vertex="1">
+          <mxGeometry height="28" width="250" x="964" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="n165" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="ETF / Ação / Fundo / Outro" vertex="1">
+          <mxGeometry height="40" width="250" x="964" y="834" as="geometry" />
+        </mxCell>
+        <mxCell id="n166" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Nome do ativo" vertex="1">
+          <mxGeometry height="40" width="250" x="964" y="882" as="geometry" />
+        </mxCell>
+        <mxCell id="n167" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Valor investido (€)" vertex="1">
+          <mxGeometry height="40" width="250" x="964" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="n168" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Valor atual (€)" vertex="1">
+          <mxGeometry height="40" width="250" x="964" y="978" as="geometry" />
+        </mxCell>
+        <mxCell id="n169" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Data de aquisição" vertex="1">
+          <mxGeometry height="40" width="250" x="964" y="1026" as="geometry" />
+        </mxCell>
+        <mxCell id="n170" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#60A5FA;strokeWidth=1;fontColor=#1D4ED8;fontSize=13;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Guardar investimento" vertex="1">
+          <mxGeometry height="38" width="218" x="980" y="1074" as="geometry" />
+        </mxCell>
+        <mxCell id="n171" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=11;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Cancelar" vertex="1">
+          <mxGeometry height="29" width="250" x="964" y="1123" as="geometry" />
+        </mxCell>
+        <mxCell id="n172" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Início" vertex="1">
+          <mxGeometry height="35" width="50.8" x="962" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n173" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Gastos" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1012.8" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n174" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Salário" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1063.6" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n175" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#1D4ED8;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Investir" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1114.4" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n176" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Relatórios" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1165.2" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n177" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;fontColor=#172033;fontSize=15;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="" vertex="1">
+          <mxGeometry height="535" width="274" x="1261" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="n178" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=17;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="MoneyWise" vertex="1">
+          <mxGeometry height="45" width="254" x="1271" y="709" as="geometry" />
+        </mxCell>
+        <mxCell id="n179" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=16;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="Criar meta" vertex="1">
+          <mxGeometry height="30" width="252" x="1272" y="761" as="geometry" />
+        </mxCell>
+        <mxCell id="n180" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#FFFFFF;strokeWidth=1;fontColor=#172033;fontSize=13;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;fontStyle=1;" value="NOVA META FINANCEIRA" vertex="1">
+          <mxGeometry height="28" width="250" x="1273" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="n181" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Nome do objetivo" vertex="1">
+          <mxGeometry height="40" width="250" x="1273" y="834" as="geometry" />
+        </mxCell>
+        <mxCell id="n182" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Montante pretendido (€)" vertex="1">
+          <mxGeometry height="40" width="250" x="1273" y="882" as="geometry" />
+        </mxCell>
+        <mxCell id="n183" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Prazo" vertex="1">
+          <mxGeometry height="40" width="250" x="1273" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="n184" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1;fontColor=#172033;fontSize=12;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Valor inicial (€)" vertex="1">
+          <mxGeometry height="40" width="250" x="1273" y="978" as="geometry" />
+        </mxCell>
+        <mxCell id="n185" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=11;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Lembrete semanal" vertex="1">
+          <mxGeometry height="29" width="250" x="1273" y="1026" as="geometry" />
+        </mxCell>
+        <mxCell id="n186" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#60A5FA;strokeWidth=1;fontColor=#1D4ED8;fontSize=13;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Guardar meta" vertex="1">
+          <mxGeometry height="38" width="218" x="1289" y="1062" as="geometry" />
+        </mxCell>
+        <mxCell id="n187" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#172033;fontSize=11;fontFamily=Arial;align=left;verticalAlign=middle;spacing=7;" value="Cancelar" vertex="1">
+          <mxGeometry height="29" width="250" x="1273" y="1111" as="geometry" />
+        </mxCell>
+        <mxCell id="n188" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#1D4ED8;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;fontStyle=1;" value="Início" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1271" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n189" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Gastos" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1321.8" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n190" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Salário" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1372.6" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n191" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Investir" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1423.4" y="1189" as="geometry" />
+        </mxCell>
+        <mxCell id="n192" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#E2E8F0;strokeWidth=1;fontColor=#64748B;fontSize=10;fontFamily=Arial;align=center;verticalAlign=middle;spacing=7;" value="Relatórios" vertex="1">
+          <mxGeometry height="35" width="50.8" x="1474.2" y="1189" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
