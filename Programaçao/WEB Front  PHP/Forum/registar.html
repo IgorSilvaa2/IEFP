@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registo</title>
+</head>
+
+<body>
+    <h1>Inserir Clientes</h1>
+    <form action="registar.php" method="post">
+        <p> Nick: <input type="text" name="nick" size="100" maxlength="100" required><br></p>
+        <p> Nome: <input type="text" name="nome" size="100" maxlength="100" required><br></p>
+        <p> E-mail: <input type="email" name="email" size="100" maxlength="100" required><br></p>
+        <p> Data de nascimento: <input type="date" name="data_nasc" size="9" maxlength="9" required><br></p>
+        <p> Pass: <input type="password" name="pass" size="100" maxlength="100" required><br></p>
+        <p> Foto (URL): <br>
+            <textarea name="foto" cols="80" rows="4"></textarea><br><br>
+            <input type="submit" value="registar">
+            <input type="reset" value="Limpar">
+            <br><br>
+            <input type="button" value="Cancelar" onclick="window.history.go(-1)">
+        </p>
+    </form>
+
+
+</body>
+
+</html>
