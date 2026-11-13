@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Inserir Clientes</title>
 </head>
+
 <body>
     <h1>Inserir Clientes</h1>
     <form action="inserir.php" method="post">
-   <p> Nome: <input type="text" name="nome" size="100" maxlength="100" required><br></p>
-    <p> Morada: <input type="text" name="morada" size="100" maxlength="100" required><br></p>
-    <p> Zona: <input type="text" name="zona" size="100" maxlength="100" required><br></p>
-    <p> NIF: <input type="text" name="nif" size="9" maxlength="9" required><br></p>
-    <p> Volume de faturação: <input type="text" name="volume_faturacao" size="100" maxlength="100" required><br></p>
-    <br><br>
-    <p>
-        <input type="submit" value="Inserir">
-        <input type="reset" value="Limpar">
+        <p> Nome: <input type="text" name="nome" size="100" maxlength="100" required><br></p>
+        <p> Morada: <input type="text" name="morada" size="100" maxlength="100" required><br></p>
+        <p> Zona: <input type="text" name="zona" size="100" maxlength="100" required><br></p>
+        <p> NIF: <input type="text" name="nif" size="9" maxlength="9" required><br></p>
+        <p> Volume de faturação: <input type="text" name="volume_faturacao" size="100" maxlength="100" required><br></p>
         <br><br>
-        <input type="button" value="Cancelar" onclick="window.history.go(-1)">
-    </p>
+        <p>
+            <input type="submit" value="Inserir">
+            <input type="reset" value="Limpar">
+            <br><br>
+            <input type="button" value="Cancelar" onclick="window.history.go(-1)">
+        </p>
     </form>
-    
-    
+
+
 </body>
+
 </html>

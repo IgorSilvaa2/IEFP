@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão de Clientes - RM </title>
+    <link rel="stylesheet" href="style.css">
+    <title>Gestão de Clientes - IS </title>
 </head>
 
 <body>
