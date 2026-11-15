@@ -18,6 +18,19 @@
         die("Erro na ligação: " . mysqli_connect_error());
     }
     $sql = "INSERT INTO t_cliente (nome, morada, zona, nif, vol_fatur) VALUES 
+<<<<<<< HEAD
+        ('  $_POST[nome]  ', 
+        '  $_POST[morada] ', 
+        '  $_POST[zona]  ',
+        '  $_POST[nif]  ',
+           $_POST[volume_fatur]  )";
+    echo $sql;
+
+    if (mysqli_query($ligacao, $sql)) {
+        echo "<h1>Cliente inserido com sucesso!</h1>";
+    }
+
+=======
         ('$_POST[nome]',
          '$_POST[morada]',
           '$_POST[zona]',
@@ -30,6 +43,7 @@
     } else
         mysqli_error($ligacao);
 
+>>>>>>> 5c239d105a8c1f0737fdbe89798105a14abbf291
     mysqli_close($ligacao);
 
     ?>
