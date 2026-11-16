@@ -1,61 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <title>Gestão de Clientes - IS </title>
+    <title>Gerir Utilizadores </title>
 </head>
 
 <body>
-    <h1>Gestão</h1>
-    <h2>Listagem de users </h2>
-    <?php
-    // Código PHP para listar os clientes
-    $ligacao = mysqli_connect("127.0.0.1", "root", "", "bd_forum");
-    // tratar o erro de ligação à base de dados
-    if ($ligacao->connect_error) {
-        die("Erro na ligação à base de dados: " . mysqli_connect_error($ligacao));
+    <?php //abre o código php
+    session_start();
 
+    // estabelece a conexão ao servidor
+    $ligacao = mysqli_connect("127.0.0.1", "root", "", "bd_forum");
+    // tento efetuar a conexão
+    if ($ligacao->connect_error) {
+        die(mysqli_error($ligacao));
     }
-    // crio a instrução SQL para selecionar todos os clientes da tabela t_forum
+
     $sql = "SELECT * FROM t_user";
-    // executo a instrução SQL no meu servidor e verifico se ocorreu algum erro
-    $resultado = mysqli_query($ligacao, $sql) or die("Erro na consulta SQL: " . mysqli_error($ligacao));
-    
-    // crio um siclo para percorrer todos os registos retornados pela consulta SQL
+    // executo o SQL no meu servidor
+    $resultado = mysqli_query($ligacao, $sql) or die(mysqli_error($ligacao));
+    $numreg = 0;
+    $numbloq = 0;
+
+    // repete este ciclo enquanto houver linhas
     while ($linha = mysqli_fetch_assoc($resultado)) {
-        echo "id: " . $linha['id'] . "<br>";
+        if ($linha['apagado'] == 1) // apenas para colocar o fundo azul
+            echo "<div style='background-color:lightblue'>";
+
+        echo "<br>Id: " . $linha['id'] . "<br>";
         echo "Nick: " . $linha['nick'] . "<br>";
-        echo "nome: " . $linha['nome'] . "<br>";
-        echo "E-mail: " . $linha['email'] . "<br>";
-        echo "Data de Nascimento: " . $linha['data_nasc'] . "<br>";
-        echo "Password: " . $linha['pass'] . "<br>";
-        echo "Foto: <br> <img src='" . $linha['foto'] . " 'height='100' ><br>";
-        //função para alterar ultilizadores  
-        echo "<form action='alterar_u.php' method='post'>";
-        echo "<input type='hidden' name='id' value='" . $linha['id'] . "'>";
-        echo "<input type='submit'  value='Alterar'></form" ;
-        mysqli_close($ligacao);
-        if ($linha ['apagado']== 0) 
-            {
-            // caso o uttilizador esteja bloqueado 
+        echo "Nome: " . $linha['nome'] . "<br>";
+        echo "Email: " . $linha['email'] . "<br>";
+        echo "Data de nascimento: " . $linha['data_nasc'] . "<br>";
+        echo "Foto:<br> <img src='" . $linha['foto'] . "' height='100'><br><br>";
+
+        if ($linha['apagado'] == 0) {
+            // caso o utilizador não esteja bloqueado
             ?>
             <form action="bloquear_u.php" method="post">
-            <input type="hidden" >
+                <input type="hidden" name="id_user" value="<?php echo $linha['id']; ?>"><br>
+                <input type="submit" value="Bloquear">
             </form><br>
-            
-            
+            <?php
+        } else {
+            // caso o utilizador esteja bloqueado
+            $numbloq = $numbloq + 1;
+            ?>
+            <form action="desbloquear_u.php" method="post">
+                <input type="hidden" name="id_user" value="<?php echo $linha['id']; ?>"><br>
+                <input type="submit" value="Desbloquear">
+            </form><br>
+            <?php
+            echo "</div>";
         }
+        ?>
+
+        <form action="alterar_u.php" method="post">
+            <input type="hidden" name="id_user" value="<?php echo $linha['id']; ?>"><br>
+            <input type="submit" value="Alterar">
+        </form><br>
+
+        <?php
+        echo "<hr>";
+        $numreg = $numreg + 1;
     }
 
-    echo "Número de registos: " . $num_reg . "<br>";
+    echo "N. total de utilizadores > " . $numreg;
+    echo "<br>N. de utilizadores bloqueados > " . $numbloq;
+
     mysqli_close($ligacao);
     ?>
-
     <br><br>
-    <input type="button" value="Voltar ao menu" onclick="window.history.go(-1)">
+    <input type="button" value="Voltar ao menu" onclick="window.history.go(-1);">
+
 </body>
 
 </html>

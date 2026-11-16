@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="10;url=index.html" />
     <link rel="stylesheet" href="style.css">
-    <title>Inserir Clientes</title>
+    <title>Forum dos Programadores</title>
 </head>
 
 <body>
@@ -28,8 +28,9 @@
     
     if (mysqli_query($ligacao, $sql)) {
         echo "<h1>Cliente registado com sucesso!</h1>";
-    } else
-        mysqli_error($ligacao);
+    } else {
+        echo "<h1>Erro ao registar: " . mysqli_error($ligacao) . "</h1>";
+    }
 
     mysqli_close($ligacao);
 

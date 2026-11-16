@@ -17,15 +17,15 @@
     if (!$ligacao) {
         die("Erro na ligação: " . mysqli_connect_error());
     }
-    $sql = "UPDATE t_user set apagado=
-    WHERE id =" . $_POST["id"] .
+    $sql = "UPDATE t_user set apagado=1
+    WHERE id =" . $_POST["id_user"] ;
     // echo $sql;
     
     if (mysqli_query($ligacao, $sql)) {
-        echo "<h1>Uaer bloqueado com sucesso</h1>";
+        echo "<h1>User bloqueado com sucesso</h1>";
     } else
         echo "Ocorreu um erro na alterção com sucesso";
-
+    mysqli_close($ligacao);
     ?>
     <a href="index.html" target="_self"></a>
     <h2>Aguarde que vai ser redirecionado...</h2>
