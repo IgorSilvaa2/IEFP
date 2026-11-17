@@ -33,6 +33,7 @@
             $_SESSION['id'] = $linha['id'];
             $_SESSION['nick'] = $linha['nick'];
             header('Location: login2.php');
+            echo "<h4>Login efetuado com sucesso!</h4>";
         } else {
             //a senha está incorreta
             echo "<h4>Dados inválidos!</h4>";

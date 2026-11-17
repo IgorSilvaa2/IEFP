@@ -12,7 +12,7 @@
     <h1>Forum dos Programadores X - RM</h1>
     <h2>Bem vindo <?php echo $_SESSION['nick']; ?></h2>
 
-    <a href="editarperfil.php">Editar Perfil</a> <br>
+    <input type="button" value="Editar Perfil" onclick="windows.open('perfil.php','_self')">
     <a href="inserir_p.php">Inserir Post/notícia</a> <br>
     <a href="listar_p.php">Listar Posts/notícias</a> <br>
     <a href="meus_p.php">Meus Posts/notícias</a> <br>
