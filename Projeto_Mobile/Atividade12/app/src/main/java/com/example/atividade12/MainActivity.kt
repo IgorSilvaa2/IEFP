@@ -12,6 +12,8 @@ class MainActivity : ComponentActivity() {
         val a = 5
         if (a > 0) {
             Log.d("EXERCICIO", "O numero e positivo: $a")
+        } else {
+            Log.d("EXERCICIO", "O numero e negativo: $a")
         }
         val b = 20
         if (b >= 0 && b <= 9) {
@@ -25,13 +27,20 @@ class MainActivity : ComponentActivity() {
         }
 
         val season = 1
-
         when (season) {
             1 -> Log.d("EXERCICIO", "Inverno (21 de dezembro a 19 de março)")
             2 -> Log.d("EXERCICIO", "Verão (21 de junho a 22 de setembro)")
             3 -> Log.d("EXERCICIO", "Primavera (20 de março a 20 de junho)")
             4 -> Log.d("EXERCICIO", "Outono (23 de setembro a 20 de dezembro)")
             else -> Log.d("EXERCICIO", "Invalido")
+        }
+
+        val idade = 18
+
+        when (idade) {
+            in 1..17 -> Log.d("EXERCICIO", "Menor de idade!")
+            in 18..60 -> Log.d("EXERCICIO", "Adulto idade media")
+            in 61..80 -> Log.d("EXERCICIO", "Idoso idade avançada")
         }
 
     }
