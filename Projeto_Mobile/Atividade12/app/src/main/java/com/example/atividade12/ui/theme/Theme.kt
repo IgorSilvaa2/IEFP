@@ -53,4 +53,6 @@ fun Atividade12Theme(
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
-        co
+        content = content
+    )
+}
