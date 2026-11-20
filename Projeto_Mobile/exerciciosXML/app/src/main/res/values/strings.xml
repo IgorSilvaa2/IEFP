@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">exerciciosXML</string>
+    <string name="bem_vindo_ao_android">Bem-vindo ao Android!</string>
+    <string name="continuar">Continuar</string>
 </resources>
