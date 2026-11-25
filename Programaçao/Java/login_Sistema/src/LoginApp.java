@@ -37,10 +37,11 @@ public class LoginApp extends javax.swing.JFrame {
 
         jLabel1.setText("Password:");
 
-        btnLogin.setText("Registar");
+        btnLogin.setText("Login");
         btnLogin.addActionListener(this::btnLoginActionPerformed);
 
-        btnRegistar.setText("Cadastar");
+        btnRegistar.setText("Registar");
+        btnRegistar.addActionListener(this::btnRegistarActionPerformed);
 
         titulo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         titulo.setText("Login no Sistema");
@@ -101,7 +102,7 @@ public class LoginApp extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         String user = txtUtilizador.getText(); // 1. ler o username do campo de texto
-        String pass = new String(txtPassword.getText()); // 2. ler a password do campo de password
+        String pass = new String(txtPassword.getPassword()); // 2. ler a password do campo de password
         if (gestao.autenticar(user, pass)) { // 3. perguntar ao gestor se as credenciais estão certas
             JOptionPane.showMessageDialog(this, "Utilizador autenticado com sucesso!");// 4. mostrar a mensagem certa
         } else {
@@ -109,6 +110,11 @@ public class LoginApp extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnRegistarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistarActionPerformed
+       RegistoFrame registar = new RegistoFrame ();
+       registar.setVisible(true);
+    }//GEN-LAST:event_btnRegistarActionPerformed
 
     /**
      * @param args the command line arguments

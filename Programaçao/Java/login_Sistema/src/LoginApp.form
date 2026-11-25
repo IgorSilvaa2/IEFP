@@ -101,7 +101,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnLogin">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Registar"/>
+        <Property name="text" type="java.lang.String" value="Login"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLoginActionPerformed"/>
@@ -109,8 +109,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnRegistar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cadastar"/>
+        <Property name="text" type="java.lang.String" value="Registar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="titulo">
       <Properties>

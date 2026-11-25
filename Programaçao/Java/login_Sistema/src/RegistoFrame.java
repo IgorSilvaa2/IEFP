@@ -1,21 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 
-/**
- *
- * @author boxig
- */
+import javax.swing.JOptionPane;
+
 public class RegistoFrame extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(RegistoFrame.class.getName());
 
-    /**
-     * Creates new form Cadasto
-     */
-    public RegistoFrame() {
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(RegistoFrame.class.getName());
+    private GestorUtilizadores gestao;
+
+    public RegistoFrame(GestorUtilizadores gestao) {
         initComponents();
+        this.gestao = gestao;
     }
 
     /**
@@ -32,31 +25,35 @@ public class RegistoFrame extends javax.swing.JFrame {
         nome_Usuario = new javax.swing.JTextField();
         pass_Texto = new javax.swing.JLabel();
         pass2_Texto = new javax.swing.JLabel();
-        pass = new javax.swing.JPasswordField();
         cancelar_tecto = new javax.swing.JButton();
         gaurdar_texto = new javax.swing.JButton();
         pass2 = new javax.swing.JPasswordField();
+        pass = new javax.swing.JPasswordField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         cadato_Titulo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        cadato_Titulo.setText("Cadasto");
+        cadato_Titulo.setText("Registo");
 
         user_Texto.setText("Novo Utilizador:");
 
         nome_Usuario.setColumns(10);
+        nome_Usuario.addActionListener(this::nome_UsuarioActionPerformed);
 
         pass_Texto.setText("Palavra-passe:");
 
         pass2_Texto.setText("Confirmar palavra-passe:");
 
-        pass.setColumns(10);
-
         cancelar_tecto.setText("Cancelar");
+        cancelar_tecto.addActionListener(this::cancelar_tectoActionPerformed);
 
         gaurdar_texto.setText("Guardar");
+        gaurdar_texto.addActionListener(this::gaurdar_textoActionPerformed);
 
         pass2.setColumns(10);
+        pass2.addActionListener(this::pass2ActionPerformed);
+
+        pass.addActionListener(this::passActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -75,28 +72,27 @@ public class RegistoFrame extends javax.swing.JFrame {
                             .addComponent(pass2_Texto)
                             .addComponent(gaurdar_texto))
                         .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nome_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(nome_Usuario)
                             .addComponent(cancelar_tecto)
-                            .addComponent(pass2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(pass2)
+                            .addComponent(pass))))
                 .addContainerGap(84, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(5, 5, 5)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(cadato_Titulo)
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(user_Texto)
-                            .addComponent(nome_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(35, 35, 35)
-                        .addComponent(pass_Texto))
+                .addComponent(cadato_Titulo)
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(user_Texto)
+                    .addComponent(nome_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pass_Texto)
                     .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(pass2_Texto)
                     .addComponent(pass2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -111,30 +107,42 @@ public class RegistoFrame extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void gaurdar_textoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gaurdar_textoActionPerformed
+        String user = nome_Usuario.getText();
+        String pass_2 = new String(pass2.getPassword());
+        String pass_1 = new String(pass.getPassword());
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new RegistoFrame().setVisible(true));
-    }
+        if (user.isBlank() || pass_1.isBlank()|| pass_2.isBlank()) {
+            JOptionPane.showMessageDialog(this, "Preenche todos os campos!");
+            return;
+        }
+
+        if (!pass_1.equals(pass_2)) {
+            JOptionPane.showMessageDialog(this, "As senhas nao são iguais!");
+            return;
+        }
+
+        if (gestao.registar(user, pass_1)) {
+            JOptionPane.showMessageDialog(this, "Utilizador registado com sucesso!");
+            dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "O utilizador já existe ou o limite de registos foi atingido!");
+        }
+    }//GEN-LAST:event_gaurdar_textoActionPerformed
+
+    private void cancelar_tectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelar_tectoActionPerformed
+        dispose();
+    }//GEN-LAST:event_cancelar_tectoActionPerformed
+
+    private void pass2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pass2ActionPerformed
+    }//GEN-LAST:event_pass2ActionPerformed
+
+    private void nome_UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nome_UsuarioActionPerformed
+    }//GEN-LAST:event_nome_UsuarioActionPerformed
+
+    private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
+    }//GEN-LAST:event_passActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel cadato_Titulo;
