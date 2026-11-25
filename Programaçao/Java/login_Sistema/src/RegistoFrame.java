@@ -42,7 +42,7 @@ public class RegistoFrame extends javax.swing.JFrame {
         cadato_Titulo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cadato_Titulo.setText("Cadasto");
 
-        user_Texto.setText("Novo Ultilizador:");
+        user_Texto.setText("Novo Utilizador:");
 
         nome_Usuario.setColumns(10);
 
@@ -108,6 +108,7 @@ public class RegistoFrame extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**

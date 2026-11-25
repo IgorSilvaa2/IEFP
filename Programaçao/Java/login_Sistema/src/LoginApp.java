@@ -1,21 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 
-/**
- *
- * @author boxig
- */
+import javax.swing.JOptionPane;
+
 public class LoginApp extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(LoginApp.class.getName());
 
-    /**
-     * Creates new form Gestao_layout
-     */
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(LoginApp.class.getName());
+    private GestorUtilizadores gestao;
+
     public LoginApp() {
         initComponents();
+        gestao = new GestorUtilizadores();
     }
 
     /**
@@ -27,28 +20,27 @@ public class LoginApp extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        user = new javax.swing.JTextField();
+        txtUtilizador = new javax.swing.JTextField();
         usuario_Text = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        pass = new javax.swing.JTextField();
-        login = new javax.swing.JButton();
-        cadastar = new javax.swing.JButton();
+        btnLogin = new javax.swing.JButton();
+        btnRegistar = new javax.swing.JButton();
         titulo = new javax.swing.JLabel();
+        txtPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        user.setColumns(10);
-        user.addActionListener(this::userActionPerformed);
+        txtUtilizador.setColumns(10);
+        txtUtilizador.addActionListener(this::txtUtilizadorActionPerformed);
 
-        usuario_Text.setText("Nome de Usuario:");
+        usuario_Text.setText("Utilizador");
 
         jLabel1.setText("Password:");
 
-        pass.setColumns(10);
+        btnLogin.setText("Registar");
+        btnLogin.addActionListener(this::btnLoginActionPerformed);
 
-        login.setText("Login");
-
-        cadastar.setText("Cadastar");
+        btnRegistar.setText("Cadastar");
 
         titulo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         titulo.setText("Login no Sistema");
@@ -60,20 +52,23 @@ public class LoginApp extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(87, 87, 87)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(login)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(usuario_Text)
-                                .addComponent(jLabel1)))
-                        .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cadastar)))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(139, 139, 139)
-                        .addComponent(titulo)))
+                        .addComponent(titulo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(87, 87, 87)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(usuario_Text)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(btnLogin)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel1)
+                                        .addGap(42, 42, 42)))
+                                .addGap(37, 37, 37)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtUtilizador)
+                                    .addComponent(btnRegistar)
+                                    .addComponent(txtPassword))))))
                 .addContainerGap(80, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -84,15 +79,15 @@ public class LoginApp extends javax.swing.JFrame {
                 .addGap(88, 88, 88)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usuario_Text)
-                    .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtUtilizador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(pass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(login)
-                    .addComponent(cadastar))
+                    .addComponent(btnLogin)
+                    .addComponent(btnRegistar))
                 .addContainerGap(59, Short.MAX_VALUE))
         );
 
@@ -100,9 +95,20 @@ public class LoginApp extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userActionPerformed
+    private void txtUtilizadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUtilizadorActionPerformed
+        //
+    }//GEN-LAST:event_txtUtilizadorActionPerformed
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        String user = txtUtilizador.getText(); // 1. ler o username do campo de texto
+        String pass = new String(txtPassword.getText()); // 2. ler a password do campo de password
+        if (gestao.autenticar(user, pass)) { // 3. perguntar ao gestor se as credenciais estão certas
+            JOptionPane.showMessageDialog(this, "Utilizador autenticado com sucesso!");// 4. mostrar a mensagem certa
+        } else {
+            JOptionPane.showMessageDialog(this, "Utilizador ou palavra-passe incorretos!");
+        }
+        
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,12 +136,12 @@ public class LoginApp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cadastar;
+    private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnRegistar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton login;
-    private javax.swing.JTextField pass;
     private javax.swing.JLabel titulo;
-    private javax.swing.JTextField user;
+    private javax.swing.JPasswordField txtPassword;
+    private javax.swing.JTextField txtUtilizador;
     private javax.swing.JLabel usuario_Text;
     // End of variables declaration//GEN-END:variables
 }
