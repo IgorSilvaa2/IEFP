@@ -112,7 +112,7 @@ public class LoginApp extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnRegistarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistarActionPerformed
-       RegistoFrame registar = new RegistoFrame ();
+       RegistoFrame registar = new RegistoFrame (gestao);
        registar.setVisible(true);
     }//GEN-LAST:event_btnRegistarActionPerformed
 
