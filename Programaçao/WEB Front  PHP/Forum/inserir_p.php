@@ -1,39 +1,26 @@
-<?php 
-session_start(); 
-if (!isset($_SESSION['id'])) {
-    header("Location: index.html");
-    exit();
-}
-?>
 <!DOCTYPE html>
-<html lang="pt">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Forum dos Programadores X - IS</title>
+    <title>Forum dos Programadores - BA</title>
 </head>
-
 <body>
-    <h1>Forum dos Programadores X - RM</h1>
-    <h2>Bem vindo <?php echo htmlspecialchars($_SESSION['nick']); ?></h2>
-    <h3>Inserir Posts/Noticias</h3>
-    
-    <form action="inserir_p2.php" method="post">
-        Id do Utilizador: <input type="text" name="id" readonly size="20" value="<?php echo htmlspecialchars($_SESSION['id']); ?>"><br>
-        Tema: <input type="text" name="tema" size="50" maxlength="20" required><br>
-        Título: <input type="text" name="titulo" size="50" maxlength="20" required><br><br>
-        Texto: <br>
-        <textarea name="texto" cols="80" rows="3" required></textarea><br><br>
-        Foto: <br>
-        <textarea name="foto" cols="80" rows="3"></textarea><br><br>
-        
-        <input type="submit" value="Enviar">
+    <?php session_start(); ?>
+    <h1>Inserir Posts - BA</h1>
+    <form action="inserir_p2.php" method="post" name="f1">
+        Id user: <input type="text" size="20" maxlength="20" name="id" readonly value="<?php echo $_SESSION['id']?>"><br><br>
+        Tema: <input type="text" size="20" maxlength="50" name="tema" required>
+        Título: <input type="text" size="100" maxlength="100" name="titulo" required>
+        Texto: <textarea cols="80" rows="4" name="texto" required></textarea>
+        Foto: <textarea cols="80" rows="4" name="foto"></textarea>
+        <br><br>
+        <input type="submit" value="Colocar Post">
         <input type="reset" value="Limpar">
+        <input type="button" value="Voltar" onclick="window.history.go(-1);">
     </form>
     <br>
-    <a href="login2.php">Voltar ao menu</a>
+    <input type="button" value="Voltar ao Login" onclick="window.open('index.html','_self');">
 </body>
-
 </html>
