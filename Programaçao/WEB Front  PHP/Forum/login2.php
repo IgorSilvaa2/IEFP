@@ -1,32 +1,35 @@
-<?php
-session_start();
-// Proteção extra: se alguém tentar abrir o login2.php sem fazer login, volta para o início
-if (!isset($_SESSION['id'])) {
-    header('Location: index.html');
-    exit();
-}
-?>
-<!DOCTYPE html>
-<html lang="pt">
+<?php session_start(); ?>
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Forum dos Programadores X - IS</title>
+    <title>Forum dos Programadores - BA</title>
 </head>
-
 <body>
-    <h1>Forum dos Programadores X - RM</h1>
-    <h2>Bem vindo <?php echo htmlspecialchars($_SESSION['nick']); ?></h2>
+    <h1>Forum dos Programadores - BA</h1>
+    <h2>Bem vindo <?php echo $_SESSION['nick'];?></h2><br>
+    
+    <input type="button" value="Editar Perfil" onclick="window.open('editarperfil.php', '_self')">
+    <input type="button" value="Inserir Post/notícia" onclick="window.open('inserir_p.php', '_self')">
+    <input type="button" value="Listar Posts/notícias" onclick="window.open('listar_p.php', '_self')">
+    <input type="button" value="Meus Posts/notícias" onclick="window.open('meus_p.php', '_self')">
+    <input type="button" value="Minhas Respostas" onclick="window.open('minhas_r.php', '_self')">
+    <input type="button" value="Terminar sessão" onclick="window.open('logout.php', '_self')">
 
-    <input type="button" value="Editar Perfil" onclick="window.open('perfil.php','_self')">
-    <input type="button" value="Colocar Post" onclick="window.open('inserir_p.php','_self')">
-    <input type="button" value="Listar Posts" onclick="window.open('listar_P.php','_self')">
-    <input type="button" value="Meus Posts" onclick="window.open('meusP.php','_self')">
-    <input type="button" value="Minhas Respostas" onclick="window.open('minhasR.php','_self')">
-    <input type="button" value="Logout" onclick="window.open('logout.php','_self')">
-
+   <?php
+    if(strcmp($_SESSION['nick'], "admin") == 0) {
+    ?>    
+        <br><h2>Área de Administração</h2><br>
+        <input type="button" value="Gerir Utilizadores" onclick="window.open('gerir_u.php', '_self')">
+        <input type="button" value="Gerir Posts/Notícias" onclick="window.open('gerir_p.php', '_self')">
+        <input type="button" value="Gerir Respostas" onclick="window.open('gerir_r.php', '_self')">
+    <?php    
+    }
+    ?> 
+    <br><br>
+    <a href="index.html" target="self">Sair</a>
 </body>
-
 </html>

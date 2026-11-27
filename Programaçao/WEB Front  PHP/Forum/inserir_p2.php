@@ -1,51 +1,31 @@
-<?php
-session_start();
-
-// Verifica se o utilizador tem sessão iniciada e se o formulário foi submetido
-if (!isset($_SESSION['id']) || $_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header("Location: index.html");
-    exit();
-}
-
-$ligacao = mysqli_connect("127.0.0.1", "root", "", "bd_forum");
-
-if (!$ligacao) {
-    die("Erro na ligação: " . mysqli_connect_error());
-}
-
-// Insere o post na tabela t_post usando Prepared Statements
-$stmt = $ligacao->prepare("INSERT INTO t_post (tema, titulo, texto, foto, id_user) VALUES (?, ?, ?, ?, ?)");
-$stmt->bind_param(
-    "ssssi",
-    $_POST['tema'],
-    $_POST['titulo'],
-    $_POST['texto'],
-    $_POST['foto'],
-    $_SESSION['id']
-);
-
-if ($stmt->execute()) {
-    $mensagem = "Post colocado com sucesso!";
-} else {
-    $mensagem = "Erro ao colocar post: " . $stmt->error;
-}
-
-$stmt->close();
-mysqli_close($ligacao);
-?>
 <!DOCTYPE html>
-<html lang="pt">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="refresh" content="2;url=login2.php" />
+    <meta http-equiv="refresh" content="10;login2.php">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Inserir Posts</title>
+    <title>Forum dos Programadores - BA</title>
 </head>
-
 <body>
-    <h1><?php echo htmlspecialchars($mensagem); ?></h1>
-    <input type="button" value="Continuar" onclick="window.location.href='login2.php'">
+    <h1>Forum dos Programadores - BA</h1>
+    <h2>Inserir Post</h2>
+    <?php
+    $ligacao = mysqli_connect("127.0.0.1", "root", "", "bd_forum");
+    if(!$ligacao) {
+        die("Erro na ligação" . mysqli_connect_error());
+    }
+   
+    $sql = "INSERT INTO t_post (tema, titulo, texto, foto, id_user) VALUES ('$_POST[tema]', '$_POST[titulo]', '$_POST[texto]', '$_POST[foto]', '$_POST[id]')";
+    //echo $sql;
+    if(mysqli_query($ligacao, $sql)) {
+        echo "<h4>Post colocado com sucesso!</h4>";
+    }
+    else
+        echo "<h4>Ocorreu um erro!</h4>";
+    mysqli_close($ligacao);
+    ?>
+    <br><br>
+    <input type="button" value="Continuar" onclick="window.history.go(-2);">
 </body>
-
 </html>

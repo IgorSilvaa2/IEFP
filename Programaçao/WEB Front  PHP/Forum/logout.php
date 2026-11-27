@@ -1,21 +1,22 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="5;url=index.html" />
-        <link rel="stylesheet" href="style.css">
-        <title>FORUM DO FRONTEND</title>
-    </head>
-    <body>
-
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="3;login2.php">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Forum dos Programadores - BA</title>
+</head>
+<body>
+    <h1>Forum dos Programadores - BA</h1>
+    <h2>Terminar Sessão</h2>
+    <?php
     session_start();
-    // Apaga todas as variáveis da sessão
-    $_SESSION = array();
-    // Finalmente, destrói a sessão
+    $SESSTION = array();
     session_destroy();
-?>
-<h2 align="center">Sessão Terminada com sucesso!</h2>
-
-<input type="button" value="Voltar ao início" onclick="window.open('index.html','_self')">
-    </body>
+    ?>
+    <h2>Sessão terminada com sucesso!</h2>
+    <br><br>
+    <input type="button" value="Voltar ao inicio" onclick="window.open('index.html','_self');">
+</body>
 </html>

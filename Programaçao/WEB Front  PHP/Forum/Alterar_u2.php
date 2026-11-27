@@ -1,36 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="refresh" content="5;url=index.html" />
-        <title>Alterar Utilizadores</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-<?php
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Forum dos Programadores - BA</title>
+</head>
+<body>
+    <h1>Forum dos Programadores - BA</h1>
+    <h2>Alterar Conta</h2>
+    <?php
     $ligacao = mysqli_connect("127.0.0.1", "root", "", "bd_forum");
-    
-    if (!$ligacao) {
-        die("Erro na ligação: " . mysqli_connect_error());
+    if(!$ligacao) {
+        die("Erro na ligação" . mysqli_connect_error());
     }
-
-    $sql = "UPDATE t_user SET
-        nick='$_POST[nick]',
-        nome='$_POST[nome]',
-        email='$_POST[email]',
-        data_nasc='$_POST[data_nasc]',
-        pass='$_POST[pass]',
-        foto='$_POST[foto]'
-        WHERE id=$_POST[id]";
-
-    if (mysqli_query($ligacao, $sql)) {
-        echo "<h1>Utilizador alterado com sucesso!</h1>";
-    } else {
-        echo "<h1>Erro ao alterar: " . mysqli_error($ligacao) . "</h1>";
+   
+    $sql = "UPDATE t_user SET nome = ('$_POST[nick]', '$_POST[nome]', '$_POST[email]', '$_POST[data_nasc]', '$_POST[pass]', '$_POST[foto]') WHERE id = '$_POST[id]'";
+    //echo $sql;
+    if(mysqli_query($ligacao, $sql)) {
+        echo "<h4>Registo alterado com sucesso!</h4>";
     }
-
+    else
+        echo "<h4>Ocorreu um erro na inserção de dados!</h4>";
     mysqli_close($ligacao);
-?>
-        <h2>Aguarde que vai ser redirecionado...</h2>
-    </body>
+    ?>
+    <h2>Aguarde que vai ser redirecionado</h2>
+    <br><br>
+    <input type="button" value="Voltar ao menu" onclick="window.history.go(-2);">
+    <a href="gerir_u.php" target="self">Voltar</a>
+</body>
 </html>
