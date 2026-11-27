@@ -46,6 +46,8 @@ public class LoginApp extends javax.swing.JFrame {
         titulo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         titulo.setText("Login no Sistema");
 
+        txtPassword.addActionListener(this::txtPasswordActionPerformed);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -115,6 +117,10 @@ public class LoginApp extends javax.swing.JFrame {
        RegistoFrame registar = new RegistoFrame (gestao);
        registar.setVisible(true);
     }//GEN-LAST:event_btnRegistarActionPerformed
+
+    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPasswordActionPerformed
 
     /**
      * @param args the command line arguments
